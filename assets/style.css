@@ -14,14 +14,18 @@
   text-decoration: none;
 }
 
+html{
+  scroll-behavior: smooth;
+
+}
+
 body::-webkit-scrollbar {
   appearance: none;
   display: none;
 }
 body {
-  scroll-behavior: smooth;
-  max-width: 100vw;
-  overflow-x: hidden;
+  /* max-width: 100vw; */
+  /* overflow-x: hidden; */
 }
 
 main{
@@ -149,8 +153,17 @@ nav {
   transform: translate(0%);
 }
 
-.second-section {
+.second-section{
   background: var(--white);
+  color: var(--black);
+  height: 100vh;
+  padding: 45px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.third-section{
+  background: var(--black);
   height: 100vh;
   padding: 45px;
 }

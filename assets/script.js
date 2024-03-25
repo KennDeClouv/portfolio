@@ -10,3 +10,18 @@ document.addEventListener("click", function (e) {
     b.classList.remove("active");
   }
 });
+
+
+const container = document.querySelector('.second-section')
+const sections = gsap.utils.toArray('.second-content')
+
+let scrollTween = gsap.to(sections,{
+  xPercent : -100 *(sections.length - 1),
+  ease:"none",
+  scrollTrigger:{
+    trigger: ".second-section",
+    pin: true,
+    scrub: 1,
+    end:'+=3000'
+  }
+})
