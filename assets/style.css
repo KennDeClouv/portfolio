@@ -157,6 +157,7 @@ nav {
   background: var(--white);
   color: var(--black);
   height: 100vh;
+  overflow: hidden;
   padding: 45px;
   display: flex;
   /* justify-content: center; */
