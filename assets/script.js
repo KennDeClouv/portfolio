@@ -13,36 +13,37 @@ document.addEventListener("click", function (e) {
 });
 
 // LOADER
-// document.addEventListener("DOMContentLoaded", () => {
-//   function calculatePercentage() {
-//     const totalElements = document.getElementsByTagName("*").length; // Total number of elements
-//     const loadedElements = document.querySelectorAll(
-//       "*"
-//     ).length; // Number of loaded elements
+document.addEventListener("DOMContentLoaded", () => {
+  function calculatePercentage() {
+    const totalElements = document.getElementsByTagName("*").length; // Total number of elements
+    const loadedElements = document.querySelectorAll(
+      "*"
+    ).length; // Number of loaded elements
 
-//     return Math.floor((loadedElements / totalElements) * 100); // Calculate percentage
-//   }
+    return Math.floor((loadedElements / totalElements) * 100); // Calculate percentage
+  }
 
-//   // Update the <h1> element with the loading percentage
-//   function updatePercentage() {
-//     const percentage = calculatePercentage();
-//     document.querySelector("#DOM").textContent = `${percentage}%`;
-//   }
+  // Update the <h1> element with the loading percentage
+  function updatePercentage() {
+    const percentage = calculatePercentage();
+    document.querySelector("#DOM").textContent = `${percentage}%`;
+    document.querySelector(".loader-bar div").style = `width:${percentage}%`
+  }
 
-//   // Call the updatePercentage function initially and attach it to the window's load event
-//   updatePercentage();
-//   window.addEventListener("load", updatePercentage);
-//   setTimeout(() => {
-//     document.querySelector(".transition").classList.add("loaded");
-//     setTimeout(()=>{
-//       document.body.removeChild(document.querySelector(".loader"));
+  // Call the updatePercentage function initially and attach it to the window's load event
+  updatePercentage();
+  window.addEventListener("load", updatePercentage);
+  setTimeout(() => {
+    document.querySelector(".transition").classList.add("loaded");
+    setTimeout(()=>{
+      document.body.removeChild(document.querySelector(".loader"));
 
-//     },2000)
-//     setTimeout(() => {
-//       document.body.removeChild(document.querySelector(".transition"));
-//     }, 6000);
-//   }, 1000);
-// });
+    },2000)
+    setTimeout(() => {
+      document.body.removeChild(document.querySelector(".transition"));
+    }, 6000);
+  }, 1000);
+});
 
 const container = document.querySelector(".second-section");
 const sections = gsap.utils.toArray(".second-content");
