@@ -19,7 +19,7 @@ const content = document.querySelector('.second-content')
 gsap.registerPlugin(ScrollTrigger); 
 
 
-let contentWidth = 0;
+let contentWidth = 0 ;
 // Iterate over each section to calculate the total width
 sections.forEach(section => {
   contentWidth += section.offsetWidth;
@@ -29,19 +29,23 @@ sections.forEach(section => {
 let amountToScroll = contentWidth - window.innerWidth;
 
 
+if (window.innerWidth > 768) {
+  const tween = gsap.to(content,{
+    x : -amountToScroll - 400,
+    duration : 3,
+    ease : "none"
+  })
+  
+  ScrollTrigger.create({
+    trigger : ".second-section",
+    start : "top",
+    end : "+=" + amountToScroll,
+    pin : true,
+    animation : tween,
+    scrub : 1,
+    // markers : true
+  })  
+}
 
-const tween = gsap.to(content,{
-  x : -amountToScroll - 400,
-  duration : 3,
-  ease : "none"
-})
-
-ScrollTrigger.create({
-  trigger : ".second-section",
-  start : "top",
-  end : "+=" + amountToScroll,
-  pin : true,
-  animation : tween,
-  scrub : 1,
-  // markers : true
-})
+const secondSectionsL = gsap.utils.toArray('.third-section_left')
+const secondSectionsR = gsap.utils.toArray('.third-section_right')
