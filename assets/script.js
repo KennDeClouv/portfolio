@@ -12,6 +12,46 @@ document.addEventListener("click", function (e) {
   }
 });
 
+//CURSOR
+
+let links = document.querySelectorAll('a');
+let cursor = document.querySelector('.cursor');
+let cursorO = document.querySelector('.cursor-outline');
+
+window.addEventListener('mousemove', (e) => {
+
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  cursor.style.left = `${posX}px`;
+  cursor.style.top = `${posY}px`;
+
+  cursorO.animate({
+    left: `${posX}px`,
+    top: `${posY}px`
+  }, { duration: 1000, fill: "forwards" })
+
+  links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+          cursor.classList.add("hover-link");
+          cursorO.classList.add("hoverO-link");
+      })
+      link.addEventListener("mouseleave", () => {
+          cursor.classList.remove("hover-link");
+          cursorO.classList.remove("hoverO-link");
+      })
+    })
+})
+
+window.addEventListener("mousedown", () => {
+  cursor.classList.add("hover");
+  cursorO.classList.add("hoverO");
+})
+window.addEventListener("mouseup", () => {
+  cursor.classList.remove("hover");
+  cursorO.classList.remove("hoverO");
+})
+
 // LOADER
 document.addEventListener("DOMContentLoaded", () => {
   function calculatePercentage() {
