@@ -16,7 +16,7 @@ html {
     cursor: none;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     appearance: none;
     display: none;
 }
@@ -538,6 +538,7 @@ nav {
 /* ----------------------------------------------
     TAB 768 px
 -----------------------------------------------*/
+
 @media screen and (max-width:768px) {
     .main-section {
         --main-section-font: 500 6rem "Rubik", sans-serif;
