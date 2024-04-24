@@ -13,7 +13,6 @@ document.addEventListener("click", function (e) {
 });
 
 //CURSOR
-
 let links = document.querySelectorAll('a');
 let cursor = document.querySelector('.cursor');
 let cursorO = document.querySelector('.cursor-outline');
@@ -32,15 +31,15 @@ window.addEventListener('mousemove', (e) => {
   }, { duration: 1000, fill: "forwards" })
 
   links.forEach(link => {
-      link.addEventListener("mouseenter", () => {
-          cursor.classList.add("hover-link");
-          cursorO.classList.add("hoverO-link");
-      })
-      link.addEventListener("mouseleave", () => {
-          cursor.classList.remove("hover-link");
-          cursorO.classList.remove("hoverO-link");
-      })
+    link.addEventListener("mouseenter", () => {
+      cursor.classList.add("hover-link");
+      cursorO.classList.add("hoverO-link");
     })
+    link.addEventListener("mouseleave", () => {
+      cursor.classList.remove("hover-link");
+      cursorO.classList.remove("hoverO-link");
+    })
+  })
 })
 
 window.addEventListener("mousedown", () => {
@@ -52,38 +51,74 @@ window.addEventListener("mouseup", () => {
   cursorO.classList.remove("hoverO");
 })
 
+// SMOOTH SCROLL
+// Scrollbar.init(document.querySelector('#my-scrollbar'))
+
+
 // LOADER
-document.addEventListener("DOMContentLoaded", () => {
-  function calculatePercentage() {
-    const totalElements = document.getElementsByTagName("*").length; // Total number of elements
-    const loadedElements = document.querySelectorAll(
-      "*"
-    ).length; // Number of loaded elements
+// document.addEventListener("DOMContentLoaded", () => {
+//   function calculatePercentage() {
+//     const totalElements = document.getElementsByTagName("*").length; // Total number of elements
+//     const loadedElements = document.querySelectorAll(
+//       "*"
+//     ).length; // Number of loaded elements
 
-    return Math.floor((loadedElements / totalElements) * 100); // Calculate percentage
-  }
+//     return Math.floor((loadedElements / totalElements) * 100); // Calculate percentage
+//   }
 
-  // Update the <h1> element with the loading percentage
-  function updatePercentage() {
-    const percentage = calculatePercentage();
-    document.querySelector("#DOM").textContent = `${percentage}%`;
-    document.querySelector(".loader-bar div").style = `width:${percentage}%`
-  }
+//   // Update the <h1> element with the loading percentage
+//   function updatePercentage() {
+//     const percentage = calculatePercentage();
+//     document.querySelector("#DOM").textContent = `${percentage}%`;
+//     document.querySelector(".loader-bar div").style = `width:${percentage}%`
+//   }
 
-  // Call the updatePercentage function initially and attach it to the window's load event
-  updatePercentage();
-  window.addEventListener("load", updatePercentage);
-  setTimeout(() => {
-    document.querySelector(".transition").classList.add("loaded");
-    setTimeout(()=>{
-      document.body.removeChild(document.querySelector(".loader"));
+//   // Call the updatePercentage function initially and attach it to the window's load event
+//   updatePercentage();
+//   window.addEventListener("load", updatePercentage);
+//   setTimeout(() => {
+//     document.querySelector(".transition").classList.add("loaded");
+//     setTimeout(() => {
+//       document.body.removeChild(document.querySelector(".loader"));
 
-    },2000)
-    setTimeout(() => {
-      document.body.removeChild(document.querySelector(".transition"));
-    }, 6000);
-  }, 1000);
-});
+//     }, 2000)
+//     setTimeout(() => {
+//       document.body.removeChild(document.querySelector(".transition"));
+//     }, 6000);
+//   }, 1000);
+// });
+
+// const container = document.querySelector(".second-section");
+// const sections = gsap.utils.toArray(".second-content");
+// const content = document.querySelector(".second-content");
+// gsap.registerPlugin(ScrollTrigger);
+
+// let contentWidth = 0;
+// // Iterate over each section to calculate the total width
+// // sections.forEach((section) => {
+//   contentWidth += sections.offsetWidth;
+// // });
+
+// // Calculate the amount to scroll horizontally
+// let amountToScroll = contentWidth - window.innerWidth;
+
+// if (window.innerWidth > 768) {
+//   const tween = gsap.to(content, {
+//     x: -amountToScroll - 400,
+//     duration: 3,
+//     ease: "none",
+//   });
+
+//   ScrollTrigger.create({
+//     trigger: ".second-section",
+//     start: "top",
+//     end: "+=" + amountToScroll,
+//     pin: true,
+//     animation: tween,
+//     scrub: 1,
+//     // markers : true
+//   });
+// }
 
 const container = document.querySelector(".second-section");
 const sections = gsap.utils.toArray(".second-content");
@@ -102,7 +137,7 @@ let amountToScroll = contentWidth - window.innerWidth;
 if (window.innerWidth > 768) {
   const tween = gsap.to(content, {
     x: -amountToScroll - 400,
-    duration: 3,
+    duration: 1,
     ease: "none",
   });
 
@@ -119,3 +154,21 @@ if (window.innerWidth > 768) {
 
 const secondSectionsL = gsap.utils.toArray(".third-section_left");
 const secondSectionsR = gsap.utils.toArray(".third-section_right");
+
+if (window.innerWidth > 768) {
+  const tween = gsap.to(secondSectionsR, {
+    x:  window.innerWidth / 2,
+    duration: 5,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: ".third-section",
+    start: "1px top",
+    end: "+=" + window.innerWidth / 2,
+    pin: true,
+    animation: tween,
+    scrub: 1,
+    // markers : true
+  });
+}

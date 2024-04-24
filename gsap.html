@@ -9,14 +9,19 @@
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.css"> -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css"> -->
   <!-- <link rel="stylesheet" href="https://izzulaverroes.github.io/ave/avecdn.css"> -->
-  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="assets/base.css"> -->
   <link rel="stylesheet" href="style.css" />
   <title>Zull</title>
 </head>
 
-<body>
-
-  <div class="loader">
+<body id="my-scrollbar">
+    <!-- CURSOR -->
+    <div class="cursor"></div>
+    <div class="cursor-outline"></div>
+  <!-- CURSOR END -->
+  <!-- LOADER -->
+  <!-- <div class="loader">
     <div style="display: flex;height: 100%;width: 100%;justify-content: space-between;">
       <h1 style="font-size: 6rem;" id="DOM">0%</h1>
       <h1 style="font-size: 6rem; margin-top: auto;">ZULL</h1>
@@ -24,16 +29,24 @@
     <div class="loader-bar">
       <div></div>
     </div>
-  </div>
-  <div class="transition">
+  </div> -->
+  <!-- LOADER END -->
+  <!-- TRANSITION -->
+  <!-- <div class="transition">
     <div></div>
     <div></div>
     <div></div>
+    <div>
+      <h1>Welcome.</h1>
+    </div>
     <div></div>
     <div></div>
     <div></div>
-  </div>
+  </div> -->
+  <!-- TRANSITION END-->
+  <!-- MAIN PAGE -->
   <main class="main">
+    <!-- HERO BANNER -->
     <section class="main-section">
       <div class="container">
         <div class="main-section_main-content">
@@ -48,50 +61,101 @@
           <!-- <span>ZU</span><span>LL</span> -->
         </div>
         <div class="main-section_bottom-content">
-          <!-- <div class="social">
-              <a href="http://"><i class="fa-brands fa-instagram fa-2x"></i></a>
-              <a href="http://"><i class="fa-brands fa-facebook fa-2x"></i></a>
-              <a href="http://"><i class="fa-brands fa-x-twitter fa-2x"></i></a>
-            </div> -->
           <a href="#second-section" class="scroll-navigation">
             SCROLL<i class="fa-solid fa-arrow-down"></i>
           </a>
         </div>
       </div>
     </section>
-
+    <!-- HERO END -->
+    <!-- SECOND SECTION -->
     <section class="second-section " id="second-section">
       <!-- DESKTOP -->
-      <h1 class="second-content d-none d-md-block" style="font-size: 10rem;white-space: nowrap;">
-        Hello .. Im Muhammad Ken Izzulhaq Programmer and Designer who combines beauty and functionality in every design.
-      </h1>
-      <!-- MOBILE -->
-      <h1 class="text-center" style="font-size: 1.5rem;">
-        Hello .. Im Muhammad Ken Izzulhaq Programmer and Designer who combines beauty and functionality in every design.
+      <h1 class="second-content">
+        &emsp;Hello .. Im Muhammad Ken Izzulhaq Programmer and Designer who combines beauty and functionality in every
+        design.
       </h1>
     </section>
-
+    <!-- SECOND SECTION END-->
+    <!-- THIRD SECTION -->
     <section class="third-section" id="scroll-container">
       <div class="container">
         <div class="row">
-          <div class="col third-section_left ">
+          <div class="col-12 col-md-6 third-section_left ">
             <img src="" alt="">
           </div>
-          <div class="col third-section_right text-reveal">
-            <h2 style="font-size: 3rem;">I was born at 2006 in Indonesia I can speak 3 language English, Bahasa, and Arabic.</h2>
+          <div class="col-12 col-md-6 third-section_right text-reveal">
+            <h1 >about me</h1>
+            <div class="mt-5 ts_main-content">
+              <h4>Full name</h4>
+              <p class="fs-3">Muhammad Ken Izzulhaq</p>
+            </div>
+            <div class="mt-3 ts_main-content">
+              <h4>age</h4>
+              <p class="fs-3">17 Years old</p>
+            </div>
+            <div class="mt-3 ts_main-content">
+              <h4>education</h4>
+              <p class="fs-3">High school</p>
+            </div>
+            <div class="mt-3 ts_main-content">
+              <h4>nationality</h4>
+              <p class="fs-3">Indonesian</p>
+            </div>
+            <div class="mt-3 ts_main-content">
+              <h4>language</h4>
+              <p class="fs-3">English, Bahasa, Arabic</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- THIRD SECTION END-->
+    <!-- FOURTH SECTION -->
+    <section class="fourth-section d-flex flex-column pb-5">
+      <h1>education</h1>
+      <div class="d-flex mt-5 mx-auto fs_main-content" style="transform: translateX(8%);">
+        <h1>KINDERGARTEN</h1>
+        <h6 class="text-start mt-3">TK Dharma Wanita,<br> Surabaya</h6>
+      </div>
+      <div class="d-flex mt-1 mx-auto fs_main-content " style="transform: translateX(-6%);">
+        <h6 class="text-end mt-3">SDN Percobaan 2, <br>Malang</h6>
+        <h1>elementary</h1>
+      </div>
+      <div class="d-flex mt-1 mx-auto fs_main-content" style="transform: translateX(8%);">
+        <h1>Junior high</h1>
+        <h6 class="text-start mt-3">Ibnu abbas, <br>Malang</h6>
+      </div>
+      <div class="d-flex mt-1 mx-auto fs_main-content" style="transform: translateX(-6%);">
+        <h6 class="text-end mt-3">Averroes Digital School, <br>Malang</h6>
+        <h1>high school</h1>
+      </div>
+    </section>
+    <!-- FOURTH SECTION END-->
+    <!-- FIFTH SECTION -->
+    <section class="fifth-section py-5  ">
+      <h1>WORKS</h1>
+      <div class="mt-5 main-work">
+        <div class="work-hover-wrapper">
+          <div class="work-hover"></div>
+        </div>
+      </div>
+    </section>
+    <!-- FIFTH SECTION END-->
   </main>
   <!-- NAVBAR -->
   <div class="top">
     <div class="burger-body">
       <ul>
-        <li><a href="">Home</a><div></div></li>
-        <li><a href="">About</a><div></div></li>
-        <li><a href="">Playground</a><div></div></li>
-        <li><a href="">Contact</a><div></div></li>
+        <li><a href="#">Home</a>
+          <div></div>
+        </li>
+        <li><a href="#">Education</a>
+          <div></div>
+        </li>
+        <li><a href="#">Contact</a>
+          <div></div>
+        </li>
       </ul>
     </div>
     <nav>
@@ -103,16 +167,23 @@
     </nav>
   </div>
   <!-- NAV END -->
-    <!-- CURSOR -->
-    <div class="cursor"></div>
-    <div class="cursor-outline"></div>
-    <!-- CURSOR END -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+
+  <!-- GSAP CDN -->
+  <script src="assets/gsap.js"></script>
+  <script src="assets/scrollTrigger.js"></script>
+  <!-- SMOOTH SCROLL CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"
+    integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.js"
+    integrity="sha512-vfE8OCUETP038fi2pHsLeJC/5xd48FyLsATJLulbdsCRBXgRWxA+0K9he4GClcPjT24vMJk1mFMFbjYS9J7NpA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.js"
+    integrity="sha512-7RJJepMYGySQYUtVVI+ShJWXDp4qUAWo3ovhCEHFOv5Ga16+lzRQHR6HQe/EBqNoO/aUQfhMU2PGrsQeAThIoQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.min.js"
+    integrity="sha512-LZ6YBzwuQvIG41twjliX3HUVeAd+ErnJ0UsqRnkI4firX2l71jxbKJoax/hu7XY2tiyLl0YA2kcnz/XEW+9O3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <!-- <script type="module" src="assets/locomotive.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.6.0/dist/locomotive-scroll.min.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script> -->
