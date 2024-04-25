@@ -242,8 +242,8 @@ html {
 }
 
 .fs_main-content {
-  opacity: 0.4;
-  transition: all 0.2s ease-in-out;
+  opacity: 0.2;
+  transition: all 0.3s ease-in-out;
 }
 .fs_main-content:hover {
   opacity: 1;
@@ -264,9 +264,11 @@ html {
   opacity: 0;
   width: 100%;
   height: 100%;
+  transition: opacity 0.3s ease-in 0.2s;
 }
 .fifth-section .container .work-hover:hover {
   opacity: 1;
+  transition: opacity 0s;
 }
 .fifth-section .container .main-work {
   display: block;
@@ -314,9 +316,6 @@ html {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
-.fifth-section .container .trans {
-  transition: all 0.2s ease 0.4s;
-}
 .fifth-section .container .work-des:hover a span {
   width: 100%;
 }
@@ -330,4 +329,40 @@ html {
   width: 0;
   height: 2px;
   border-radius: 100%;
+}
+
+.sixth-section {
+  background-color: #fefefe;
+}
+.sixth-section h1 {
+  font: 500 7rem "Rubik", sans-serif;
+}
+.sixth-section .skill-slider {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 300%;
+  gap: 2rem;
+}
+.sixth-section .skill-slider .skill {
+  background-color: #222831;
+  color: #fefefe;
+  width: 80%;
+  padding: 2.3rem 2.3rem 1.5rem 2.3rem;
+  overflow: hidden;
+  border-radius: 3.5rem;
+  border: #fff 2px solid;
+}
+.sixth-section .skill-slider .skill img {
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+}
+.sixth-section .skill-slider .skill p {
+  font: 400 1.8rem "Rubik", sans-serif;
+  text-transform: uppercase;
+}
+.sixth-section .skill-slider .skill h2 {
+  font-size: 4rem;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

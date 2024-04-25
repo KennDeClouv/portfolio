@@ -301,8 +301,8 @@ html {
   }
 }
 .fs_main-content {
-  opacity: 0.4;
-  transition: all 0.2s ease-in-out;
+  opacity: 0.2;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     opacity: 1;
@@ -331,10 +331,11 @@ html {
       // z-index: 1;
       width: 100%;
       height: 100%;
-      //   transition: all 0.2s ease 0.4s;
-
+      transition: opacity .3s ease-in .2s;
+      
       &:hover {
         opacity: 1;
+        transition: opacity 0s;
       }
     }
 
@@ -354,24 +355,24 @@ html {
       aspect-ratio: 16/9;
       border-radius: 2rem;
       img {
-          width: 100%;
-          height: 100%;
-        }
+        width: 100%;
+        height: 100%;
+      }
     }
     .main-work {
-        @include work-hover();
-        aspect-ratio: 16/8;
-        
-        .work-hover-wrapper {
-            @include work-hover-wrapper();
-            grid-template-columns: repeat(17, 1fr);
-            grid-template-rows: repeat(8, 1fr);
-        }
+      @include work-hover();
+      aspect-ratio: 16/8;
+
+      .work-hover-wrapper {
+        @include work-hover-wrapper();
+        grid-template-columns: repeat(17, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+      }
     }
-    
+
     .side-work {
-        @include work-hover();
-        aspect-ratio: 16/9;
+      @include work-hover();
+      aspect-ratio: 16/9;
 
       .work-hover-wrapper {
         @include work-hover-wrapper();
@@ -379,26 +380,73 @@ html {
         grid-template-rows: repeat(4, 1fr);
       }
     }
-
-    .trans {
-      transition: all 0.2s ease 0.4s;
-    }
-
+    
     .work-des {
-      &:hover a span{
+      &:hover a span {
         width: 100%;
       }
 
       a {
         color: $white;
         span {
-        transition: all .2s ease-in;
+          transition: all 0.2s ease-in;
           display: block;
           background-color: $white;
           width: 0;
           height: 2px;
           border-radius: 100%;
         }
+      }
+    }
+  }
+}
+
+// ==============================================
+// FIFTH SECTION
+// ==============================================
+
+.sixth-section {
+  $skillcolor1:#222831;
+  $skillcolor2:#6B9A9C;
+  $skillcolor3:#BCBCBC;
+  background-color: $white;
+
+  h1 {
+    font: $title-font;
+  }
+
+  .skill-slider {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 300%;
+    gap: 2rem;
+    // padding: 0 4rem 0 0;
+    // white-space: no-wrap;
+
+    // @mixin skill-global{}
+    .skill {
+      background-color: $skillcolor1;
+      color: $white;
+      width: 80%;
+      padding:2.3rem 2.3rem 1.5rem 2.3rem;
+      overflow: hidden;
+      border-radius:3.5rem;
+      border: #fff 2px solid;
+      img {
+        max-width: 250px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+      }
+        
+      p {
+        font: 400 1.8rem "Rubik", sans-serif;
+        text-transform: uppercase;
+      }
+
+      h2{
+        font-size: 4rem;
+        margin: 0 ;
       }
     }
   }

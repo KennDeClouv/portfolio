@@ -55,17 +55,6 @@ window.addEventListener("mouseup", () => {
 
 // CURSOR TRAIL
 const workHover = document.querySelectorAll(".work-hover");
-// workHover.addEventListener("mouseleave",()=>{
-
-// })
-workHover.forEach((element) => {
-  element.addEventListener("mouseleave", () => {
-    element.classList.add("trans");
-    setTimeout(()=>{
-        element.classList.remove("trans");
-    },600)
-  });
-});
 
 // SMOOTH SCROLL
 // Scrollbar.init(document.querySelector('#my-scrollbar'))
@@ -181,6 +170,39 @@ if (window.innerWidth > 768) {
     trigger: ".third-section",
     start: "1px top",
     end: "+=" + window.innerWidth / 2,
+    pin: true,
+    animation: tween,
+    scrub: 1,
+    // markers : true
+  });
+}
+
+
+
+const container2 = document.querySelector(".slider-container");
+const sections2 = gsap.utils.toArray(".skill-slider");
+const content2 = document.querySelector(".skill-slider");
+
+let contentWidth2 = 0;
+// Iterate over each section to calculate the total width
+sections2.forEach((section2) => {
+  contentWidth2 += section2.offsetWidth;
+});
+
+// Calculate the amount to scroll horizontally
+let amountToScroll2 = contentWidth2 - window.innerWidth;
+
+if (window.innerWidth > 768) {
+  const tween = gsap.to(content2, {
+    x: -amountToScroll2 - 400,
+    duration: 1,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: ".slider-container",
+    start: "top",
+    end: "+=" + amountToScroll2,
     pin: true,
     animation: tween,
     scrub: 1,
