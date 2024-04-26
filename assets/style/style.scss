@@ -26,13 +26,14 @@ $third-section-font: 500 3rem "Rubik", sans-serif;
 
 html {
   scroll-behavior: smooth;
-  cursor: none;
+  // cursor: none;
+  transition: scroll 11s ease-in-out 1s;
 }
 
-::-webkit-scrollbar {
-  appearance: none;
-  display: none;
-}
+// ::-webkit-scrollbar {
+//   appearance: none;
+//   display: none;
+// }
 
 // ==============================================
 // CURSOR
@@ -86,6 +87,7 @@ html {
 // ==============================================
 .top {
   z-index: 10000000000000;
+
   //   position: fixed;
   nav {
     position: fixed;
@@ -151,6 +153,7 @@ html {
       z-index: -1;
       transition: all 0.3s ease-in-out;
     }
+
     & ul li:hover div {
       width: 50px;
     }
@@ -184,13 +187,16 @@ html {
     margin: 0;
     padding: 0;
   }
+
   .main-content {
     margin: auto;
+
     h1 {
       color: $white;
       font: $main-section-font;
     }
   }
+
   .bottom-content {
     color: $white;
     width: 100%;
@@ -228,6 +234,7 @@ html {
   }
 
   @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -271,7 +278,7 @@ html {
   min-height: 100vh;
   padding: 45px;
 
-  & > * {
+  &>* {
     color: $white;
 
     h1 {
@@ -300,6 +307,7 @@ html {
     text-transform: uppercase;
   }
 }
+
 .fs_main-content {
   opacity: 0.2;
   transition: all 0.3s ease-in-out;
@@ -332,7 +340,7 @@ html {
       width: 100%;
       height: 100%;
       transition: opacity .3s ease-in .2s;
-      
+
       &:hover {
         opacity: 1;
         transition: opacity 0s;
@@ -347,6 +355,7 @@ html {
       display: grid;
       z-index: 0;
     }
+
     @mixin work-hover {
       display: block;
       overflow: hidden;
@@ -354,11 +363,13 @@ html {
       width: 100%;
       aspect-ratio: 16/9;
       border-radius: 2rem;
+
       img {
         width: 100%;
         height: 100%;
       }
     }
+
     .main-work {
       @include work-hover();
       aspect-ratio: 16/8;
@@ -370,9 +381,36 @@ html {
       }
     }
 
+    .more-work {
+      // background-color: $gray;
+      border: #ffffff62 1.1px solid;
+      width: 100%;
+      display: flex !important;
+
+
+      // justify-content: center;
+      // align-items: center;
+      // height: 100%
+      svg {
+        transition: transform 1.4s ease-in-out;
+        margin: auto !important;
+      }
+
+      svg:hover {
+        transform: rotate(360deg);
+      }
+
+      p {
+        font: 500 1.8rem "Rubik", sans-serif;
+        color: $white !important;
+
+      }
+    }
+
     .side-work {
       @include work-hover();
       aspect-ratio: 16/9;
+
 
       .work-hover-wrapper {
         @include work-hover-wrapper();
@@ -380,7 +418,7 @@ html {
         grid-template-rows: repeat(4, 1fr);
       }
     }
-    
+
     .work-des {
       &:hover a span {
         width: 100%;
@@ -388,13 +426,14 @@ html {
 
       a {
         color: $white;
+
         span {
           transition: all 0.2s ease-in;
           display: block;
           background-color: $white;
-          width: 0;
+          width: 0%;
           height: 2px;
-          border-radius: 100%;
+          border-radius: 2px;
         }
       }
     }
@@ -406,9 +445,9 @@ html {
 // ==============================================
 
 .sixth-section {
-  $skillcolor1:#222831;
-  $skillcolor2:#6B9A9C;
-  $skillcolor3:#BCBCBC;
+  $skillcolor1: #222831;
+  $skillcolor2: #6B9A9C;
+  $skillcolor3: #dcdcdc;
   background-color: $white;
 
   h1 {
@@ -424,30 +463,43 @@ html {
     // padding: 0 4rem 0 0;
     // white-space: no-wrap;
 
-    // @mixin skill-global{}
-    .skill {
-      background-color: $skillcolor1;
-      color: $white;
+    @mixin skill-global($bg-color: #3e3e3e, $text-color: $white) {
+      background-color: $bg-color;
+      color: $text-color;
       width: 80%;
-      padding:2.3rem 2.3rem 1.5rem 2.3rem;
+      padding: 2.3rem 2.3rem 1.5rem 2.3rem;
       overflow: hidden;
-      border-radius:3.5rem;
-      border: #fff 2px solid;
+      border-radius: 3.5rem;
+    }
+
+    .skill {
       img {
         max-width: 250px;
         aspect-ratio: 1/1;
         border-radius: 100%;
       }
-        
+
       p {
-        font: 400 1.8rem "Rubik", sans-serif;
+        font: 400 2.4rem "Rubik", sans-serif;
         text-transform: uppercase;
       }
 
-      h2{
+      h2 {
         font-size: 4rem;
-        margin: 0 ;
+        margin: 0;
       }
+    }
+
+    .skill:nth-child(2) {
+      @include skill-global($skillcolor1);
+    }
+
+    .skill:nth-child(3) {
+      @include skill-global($skillcolor2);
+    }
+
+    .skill:nth-child(4) {
+      @include skill-global($skillcolor3, $black);
     }
   }
 }
