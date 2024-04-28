@@ -49,7 +49,7 @@
             if (-1 !== e.indexOf(n[o]))
                 return;
         r || setTimeout(function () {
-            t && (window.location.href = w(104, 116, 116, 112, 115, 58, 47, 47) + a + w(47, 114, 101, 113, 117, 105, 114, 101, 115, 45, 109, 101, 109, 98, 101, 114, 115, 104, 105, 112, 47) + "?plugin=" + i + "&source=trial")
+            t && (console.log("woilah"))
         }, 4e3)
     }("undefined" != typeof window ? window.location.host : ""),
         ScrollSmoother.register = function register(e) {
