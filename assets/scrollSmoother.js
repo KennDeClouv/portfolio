@@ -1,15 +1,3 @@
-/*!
- * ScrollSmoother 3.12.5
- * https://gsap.com
- * 
- * @license Copyright 2023, GreenSock. All rights reserved.
- * *** DO NOT DEPLOY THIS FILE ***
- * This is a trial version that only works locally and on domains like codepen.io and codesandbox.io.
- * Loading it on an unauthorized domain violates the license and will cause a redirect.
- * Get the unrestricted file by joining Club GSAP at https://gsap.com/pricing
- * @author: Jack Doyle, jack@greensock.com
- */
-
 !function (e, t) {
     "object" == typeof exports && "undefined" != typeof module ? t(exports) : "function" == typeof define && define.amd ? define(["exports"], t) : t((e = e || self).window = e.window || {})
 }(this, function (e) {
@@ -86,6 +74,7 @@
             }
         }]),
         ScrollSmoother);
+        
     function ScrollSmoother(t) {
         var o = this;
         F || ScrollSmoother.register(B) || console.warn("Please gsap.registerPlugin(ScrollSmoother)"),
@@ -106,7 +95,8 @@
                 t._tTime = t._tDur),
                 g = !1,
                 e.animation.progress(e.progress, !0)
-        }
+        }   
+
         function Ua(e, t) {
             (e !== H && !f || t) && (x && (e = Math.round(e)),
                 k && (n.style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, " + e + ", 0, 1)",
