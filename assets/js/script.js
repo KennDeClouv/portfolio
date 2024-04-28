@@ -53,8 +53,13 @@ window.addEventListener("mouseup", () => {
   cursorO.classList.remove("hoverO");
 });
 
-// CURSOR TRAIL
-const workHover = document.querySelectorAll(".work-hover");
+// 
+// const bodySmooth = document.querySelector("body");
+// gsap.to(bodySmooth, {
+//   scrollTop: 1, // Example scroll position
+//   duration: 2, // Duration of the animation
+//   ease: "power4.inOut" // Easing function for smooth scrolling
+// });
 
 // SMOOTH SCROLL
 // Scrollbar.init(document.querySelector('#my-scrollbar'))
@@ -127,6 +132,7 @@ const workHover = document.querySelectorAll(".work-hover");
 const container = document.querySelector(".second-section");
 const sections = gsap.utils.toArray("#ss_main-content");
 const content = document.querySelector("#ss_main-content");
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 gsap.registerPlugin(ScrollTrigger);
 
 let contentWidth = 0;
@@ -168,7 +174,7 @@ if (window.innerWidth > 768) {
 
   ScrollTrigger.create({
     trigger: ".third-section",
-    start: "1px top",
+    start: "-8px top",
     end: "+=" + window.innerWidth / 2,
     pin: true,
     animation: tween,
@@ -209,3 +215,82 @@ if (window.innerWidth > 768) {
     // markers : true
   });
 }
+
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollTrigger.normalizeScroll(true)
+
+let smoother = ScrollSmoother.create({
+  wrapper: '#smooth-wrapper',
+  content: '#smooth-content',
+  smooth:2,
+  normalizeScroll: true,
+  effects: true,
+  smoothTouch: 0.1,
+});
+
+
+// document.querySelector('#scroll-container').addEventListener('scroll', () => {
+//   smoothScroll(this);
+// });
+
+// function smoothScroll(element) {
+//   let targetY = 0; // Target Y position (scroll position)
+//   const scrollSpeed = 0.1; // Scroll speed
+//   const easeAmount = 0.01; // Ease amount (lower value for smoother scrolling)
+
+//   // Calculate the distance to scroll
+//   const distance = targetY - element.scrollTop;
+
+//   // Apply easing to the scroll position
+//   element.scrollTop += distance * easeAmount;
+
+//   // Request another frame until target position is reached
+//   if (Math.abs(distance) > 1) {
+//     requestAnimationFrame(function() {
+//       smoothScroll(element);
+//     });
+//   }
+// }
+
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function () {
+  let currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down
+    document.querySelector(".logo").classList.remove("logo-active")
+  } else {
+    // Scrolling up
+    document.querySelector(".logo").classList.add("logo-active")
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+
+// const body = document.body,
+//   scrollWrap = document.querySelector("#my-scrollbar")
+
+// height = scrollWrap.getBoundingClientRect().height - 1,
+//   speed = 0.01;
+
+// var offset = 0;
+
+// body.style.height = Math.floor(height) + "px";
+
+// function smoothScroll() {
+
+//   offset += (window.scrollY - offset) * speed;
+
+//   var scroll = "translateY(-" + offset + "px) translateZ(0)";
+
+//   scrollWrap.style.transform = scroll;
+
+//   callScroll = requestAnimationFrame(smoothScroll);
+// }
+
+// smoothScroll();
+

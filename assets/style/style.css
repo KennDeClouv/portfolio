@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css");
+@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css");
+@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css");
+@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css");
+@font-face {
+  font-display: swap;
+  font-family: fk;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/font/fk.woff2) format("woff2"), url(/assets/font/fk.woff) format("woff");
+}
+
 *,
 ::before,
 ::after {
@@ -5,15 +18,19 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   list-style: none;
   text-decoration: none !important;
 }
 
 html {
   scroll-behavior: smooth;
-  -webkit-transition: scroll 11s ease-in-out 1s;
-  transition: scroll 11s ease-in-out 1s;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+          appearance: none;
+  display: none;
 }
 
 .cursor {
@@ -70,10 +87,141 @@ html {
 }
 
 .top nav {
+  background-color: #fefefe;
+  padding: 20px 40px 20px 100px;
   position: fixed;
-  top: 40px;
-  right: 40px;
-  mix-blend-mode: difference;
+  top: 0px;
+  right: 0px;
+  border-radius: 0 0 0 10px;
+}
+
+.top nav svg:nth-child(1) {
+  position: absolute;
+  top: 8px;
+  left: -13px;
+}
+
+.top nav svg:nth-child(2) {
+  position: absolute;
+  bottom: -13px;
+  right: 8px;
+}
+
+.top nav .frame-svg {
+  position: fixed;
+  left: 8px;
+  top: 7.4px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.top nav .frame-svg-r {
+  position: fixed;
+  right: 8px;
+  bottom: 7.4px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.top nav .frame-svg-b {
+  position: fixed;
+  left: 7.4px;
+  bottom: 8px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.top nav .frame {
+  width: 100vw;
+  height: 8px;
+  background-color: #fefefe;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.top nav .frame-r {
+  width: 8px;
+  height: 100vh;
+  background-color: #fefefe;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.top nav .frame-b {
+  width: 100vw;
+  height: 8px;
+  background-color: #fefefe;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.top nav .frame-l {
+  width: 8px;
+  height: 100vh;
+  background-color: #fefefe;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.top nav .logo {
+  width: 100px;
+  height: 100px;
+  background-color: #fefefe;
+  border-radius: 0 0 10px 0;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  -webkit-transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s,width .2s ease-in .2s,height .2s ease-in .2s;
+  transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s,width .2s ease-in .2s,height .2s ease-in .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top nav .logo svg:nth-child(3) {
+  position: absolute;
+  bottom: -12.2px;
+  left: 8px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.top nav .logo svg:nth-child(2) {
+  position: absolute;
+  top: 7.4px;
+  right: -13px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.top nav .logo:hover {
+  width: 110px;
+  height: 200px;
+}
+
+.top nav .logo-active {
+  top: 0;
+  left: 0;
+}
+
+.top nav .logo-zull {
+  color: #121212;
+  font-family: "Chakra Petch";
+  font-size: 2.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 93.769%;
+  text-transform: uppercase;
+  /* 1.99256rem */
+}
+
+.top nav .logo-zull span:nth-child(2) {
+  color: #121212;
+  letter-spacing: 0.21625rem;
 }
 
 .top .burger {
@@ -97,10 +245,9 @@ html {
 }
 
 .top .burger div {
-  background-color: #fefefe;
-  mix-blend-mode: difference;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  background-color: #121212;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   height: 6px;
 }
 
@@ -116,6 +263,38 @@ html {
 
 .top .burger:hover div {
   width: 100%;
+}
+
+@-webkit-keyframes bounce-nav {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    width: 100%;
+  }
+  40% {
+    width: 130%;
+  }
+  60% {
+    width: 115%;
+  }
+}
+
+@keyframes bounce-nav {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    width: 100%;
+  }
+  40% {
+    width: 130%;
+  }
+  60% {
+    width: 115%;
+  }
 }
 
 .top .burger-body {
@@ -161,9 +340,11 @@ html {
 }
 
 .main-section {
+  margin: 8px;
   background: #121212;
-  height: 100vh;
+  height: 98vh;
   padding: 45px;
+  border-radius: 10px;
 }
 
 .main-section .container {
@@ -186,7 +367,7 @@ html {
 
 .main-section .main-content h1 {
   color: #fefefe;
-  font: 500 12rem "Rubik", sans-serif;
+  font: 600 12rem "Chakra Petch", sans-serif;
 }
 
 .main-section .bottom-content {
@@ -281,6 +462,7 @@ html {
 
 .second-section {
   color: #121212;
+  background: center/cover url("/assets/img/second-back.png");
   min-height: 100vh;
   overflow: hidden;
   padding: 45px;
@@ -293,13 +475,17 @@ html {
 }
 
 .second-section h1 {
-  font: 500 10rem "Rubik", sans-serif;
+  font: 600 10rem "Chakra Petch", sans-serif;
   white-space: nowrap;
 }
 
 .third-section {
+  border-radius: 10px 10px 0 0;
+  width: 99vw;
   background: #121212;
+  color: #fefefe;
   min-height: 100vh;
+  margin: 0 auto;
   padding: 45px;
 }
 
@@ -308,7 +494,7 @@ html {
 }
 
 .third-section > * h1 {
-  font: 500 4rem "Rubik";
+  font: 500 4rem "Chakra Petch";
   text-transform: uppercase;
 }
 
@@ -318,14 +504,16 @@ html {
 }
 
 .fourth-section {
-  min-height: 100vh;
-  text-align: center;
-  background-color: #121212;
+  width: 99vw;
+  background: #121212;
   color: #fefefe;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .fourth-section h1 {
-  font: 500 7rem "Rubik", sans-serif;
+  font: 600 7rem "Chakra Petch", sans-serif;
   text-transform: uppercase;
 }
 
@@ -340,15 +528,23 @@ html {
 }
 
 .fifth-section {
-  padding-top: 100px;
-  min-height: 100vh;
-  text-align: center;
-  background-color: #121212;
+  width: 99vw;
+  background: #121212;
   color: #fefefe;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 100px;
+  border-radius: 0 0 10px 10px;
+  position: relative;
 }
 
-.fifth-section .container h1 {
-  font: 500 7rem "Rubik", sans-serif;
+.fifth-section h1 {
+  font: 600 5rem "Chakra Petch";
+  padding: 0 50px;
+  background-color: #fefefe;
+  color: #121212;
+  display: inline-block;
+  border-radius: 0 10px 10px 0;
 }
 
 .fifth-section .container .work-hover {
@@ -417,7 +613,7 @@ html {
 }
 
 .fifth-section .container .more-work p {
-  font: 500 1.8rem "Rubik", sans-serif;
+  font: 500 1.8rem "Chakra Petch", sans-serif;
   color: #fefefe !important;
 }
 
@@ -468,12 +664,38 @@ html {
   border-radius: 2px;
 }
 
+.fifth-section .fifth-transition {
+  background-color: #fefefe;
+  width: 40vw;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px 0 0 0;
+}
+
+.fifth-section .fifth-transition svg:nth-child(1) {
+  position: absolute;
+  bottom: -1px;
+  left: -13px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fifth-section .fifth-transition svg:nth-child(2) {
+  position: absolute;
+  top: -12.4px;
+  right: 0px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .sixth-section {
   background-color: #fefefe;
 }
 
 .sixth-section h1 {
-  font: 500 7rem "Rubik", sans-serif;
+  font: 600 7rem "Chakra Petch", sans-serif;
 }
 
 .sixth-section .skill-slider {
@@ -496,7 +718,7 @@ html {
 }
 
 .sixth-section .skill-slider .skill p {
-  font: 400 2.4rem "Rubik", sans-serif;
+  font: 400 2.4rem "Chakra Petch", sans-serif;
   text-transform: uppercase;
 }
 
