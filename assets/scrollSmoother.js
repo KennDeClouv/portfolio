@@ -77,7 +77,7 @@
         
     function ScrollSmoother(t) {
         var o = this;
-        F || ScrollSmoother.register(B) || console.warn("Please gsap.registerPlugin(ScrollSmoother)"),
+        F || ScrollSmoother.register(B) || console.warn("Please"),
             t = this.vars = t || {},
             K && K.kill(),
             Q(K = this);

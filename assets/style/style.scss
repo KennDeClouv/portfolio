@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css');
-@import url('https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css');
-@import url('https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css');
-@import url('https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css');
 
 // ==============================================
 // VARIABLE
@@ -17,7 +13,7 @@ $second-section-font: 600 10rem "Chakra Petch", sans-serif;
 $third-section-font: 600 3rem "Chakra Petch", sans-serif;
 
 // ==============================================
-// FONT
+// CUSTOM FONT
 // ==============================================
 @font-face {
   font-display: swap;
@@ -25,6 +21,14 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url(/assets/font/fk.woff2) format("woff2"), url(/assets/font/fk.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Monorama;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/font/monorama.woff2) format("woff2"), url(/assets/font/monorama.woff) format("woff")
 }
 
 // ==============================================
@@ -196,13 +200,13 @@ html {
       position: fixed;
       top: -100px;
       left: -100px;
-      transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s,width .2s ease-in .2s,height .2s ease-in .2s;
+      transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s, width .2s ease-in .2s, height .2s ease-in .2s;
       display: flex;
 
       & svg:nth-child(3) {
         position: absolute;
         bottom: -12.2px;
-        left: 8px ;
+        left: 8px;
         transform: rotate(-90deg);
       }
 
@@ -212,7 +216,8 @@ html {
         right: -13px;
         transform: rotate(-90deg);
       }
-      &:hover{
+
+      &:hover {
         width: 110px;
         height: 200px;
       }
@@ -337,12 +342,62 @@ html {
     ul li a {
       font-size: 1.5rem;
       color: $black;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
 
   .burger-body.active {
     transform: translate(0%);
+  }
+
+  @keyframes wave {
+    0% {
+      transform: scaleY(1);
+    }
+
+    // 25% {
+    //   transform: scaleY(.2);
+    // }
+
+    50% {
+      transform: scaleY(2.6);
+    }
+
+    100% {
+      transform: scaleY(1);
+    }
+  }
+
+  .sound-bar-wrapper{
+    background-color: $white;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    right: 8px;
+    bottom: 30px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+
+    div{
+      background-color: $black;
+      width: 3.2px;
+      height: 5px;
+    }
+    &.active div:nth-child(1){
+      animation: wave 1.5s linear infinite;
+    }
+    &.active div:nth-child(2){
+      animation: wave 1.5s linear infinite .4s;
+    }
+    &.active div:nth-child(3){
+      animation: wave 1.5s linear infinite .8s;
+    }
+    &.active div:nth-child(4){
+      animation: wave 1.5s linear infinite 1.2s;
+    }
   }
 }
 
@@ -464,20 +519,176 @@ html {
 .third-section {
   border-radius: 10px 10px 0 0;
   @include black-section();
-  padding: 45px;
+  padding: 45px 0;
 
   &>* {
     color: $white;
 
-    h1 {
-      font: 500 4rem "Chakra Petch";
-      text-transform: uppercase;
+  }
+
+  h1:nth-child(1) {
+    font: 400 4rem "Chakra Petch";
+    text-transform: uppercase;
+    color: $white;
+    padding-left: 100px;
+    padding-bottom: 50px;
+
+    span {
+      font: 300 4rem "fk";
+      // transition: all .2s ease;
+      margin: -10px;
+      // padding-left: 10px;
+
+      span:nth-child(1) {
+        animation: glitch 3s infinite 1s;
+      }
+
+      span:nth-child(2) {
+        animation: glitch 2.6s infinite .8s;
+      }
+
+      span:nth-child(3) {
+        animation: glitch 3.2s infinite 1s;
+      }
+
+      span:nth-child(4) {
+        animation: glitch 2.2s infinite 1.6s;
+      }
+
+      span:nth-child(5) {
+        animation: glitch 2s infinite 2s;
+      }
+
+      span:nth-child(6) {
+        animation: glitch 1.2s infinite 1s;
+      }
+
+      span:nth-child(7) {
+        animation: glitch 2s infinite 3s;
+      }
+
+      span:nth-child(8) {
+        animation: glitch 2.3s infinite 1.2s;
+      }
+
+      span:nth-child(9) {
+        animation: glitch 1.2s infinite 4s;
+      }
+
+      span:nth-child(10) {
+        animation: glitch 1s infinite 2s;
+      }
     }
   }
 
-  .ts_main-content h4 {
+  // @keyframes clitch {
+
+  //   0%,
+  //   100% {
+  //     opacity: 1;
+  //   }
+
+  //   80% {
+  //     opacity: 0.2;
+  //   }
+  // }
+  @keyframes glitch {
+
+    0%,
+    20%,
+    40%,
+    100% {
+      opacity: 1;
+    }
+
+    21%,
+    22%,
+    39%,
+    50%,
+    99% {
+      opacity: 0.2;
+    }
+  }
+
+
+  h1:nth-child(2) {
+    font: 300 2.8rem "Chakra Petch";
     text-transform: uppercase;
-    opacity: 0.6;
+    background-color: $white;
+    color: $black;
+    display: inline;
+    padding: 10px 50px;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    // top: 40px;
+
+    svg:nth-child(2) {
+      position: absolute;
+      top: -12px;
+      left: -0.4px;
+      transform: rotate(180deg);
+    }
+
+    svg:nth-child(3) {
+      position: absolute;
+      bottom: -12.2px;
+      left: 0px;
+      transform: rotate(-90deg);
+    }
+  }
+
+
+  .ts_main-content {
+
+    transition: all .3s ease;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 4.6rem;
+      font-weight: 400;
+
+    }
+
+    p {
+      display: none;
+      color: $gray;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+      // font-size: 5rem;
+      padding: 10px 30px;
+      border-radius: 10px 0 0 10px;
+
+      p {
+        display: inline;
+        transition: all .3s ease;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .third-section_left{
+    // margin: 20px;
+
+    border-radius: 10px !important;
+    padding: 10px;
+    background-color: $white;
+
+    img{
+      width: 100%;
+      aspect-ratio: 1/1;
+
+      border-radius: 10px !important;
+      // overflow: hidden;
+      // padding: 10px;
+    }
+
+    p{
+      color: $black;
+      font-size: 1.6rem
+    }
   }
 }
 

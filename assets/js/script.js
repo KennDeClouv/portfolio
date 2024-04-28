@@ -144,44 +144,44 @@ sections.forEach((section) => {
 // Calculate the amount to scroll horizontally
 let amountToScroll = contentWidth - window.innerWidth;
 
-if (window.innerWidth > 768) {
-  const tween = gsap.to(content, {
-    x: -amountToScroll - 400,
-    duration: 1,
-    ease: "none",
-  });
+// if (window.innerWidth > 768) {
+//   const tween = gsap.to(content, {
+//     x: -amountToScroll - 400,
+//     duration: 1,
+//     ease: "none",
+//   });
 
-  ScrollTrigger.create({
-    trigger: ".second-section",
-    start: "top",
-    end: "+=" + amountToScroll,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-    // markers : true
-  });
-}
+//   ScrollTrigger.create({
+//     trigger: ".second-section",
+//     start: "top",
+//     end: "+=" + amountToScroll,
+//     pin: true,
+//     animation: tween,
+//     scrub: 1,
+//     // markers : true
+//   });
+// }
 
-const secondSectionsL = gsap.utils.toArray(".third-section_left");
-const secondSectionsR = gsap.utils.toArray(".third-section_right");
+// const secondSectionsL = gsap.utils.toArray(".third-section_left");
+// const secondSectionsR = gsap.utils.toArray(".third-section_right");
 
-if (window.innerWidth > 768) {
-  const tween = gsap.to(secondSectionsR, {
-    x: window.innerWidth / 2,
-    duration: 5,
-    ease: "none",
-  });
+// if (window.innerWidth > 768) {
+//   const tween = gsap.to(secondSectionsR, {
+//     x: window.innerWidth / 2,
+//     duration: 5,
+//     ease: "none",
+//   });
 
-  ScrollTrigger.create({
-    trigger: ".third-section",
-    start: "-8px top",
-    end: "+=" + window.innerWidth / 2,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-    // markers : true
-  });
-}
+//   ScrollTrigger.create({
+//     trigger: ".third-section",
+//     start: "-8px top",
+//     end: "+=" + window.innerWidth / 2,
+//     pin: true,
+//     animation: tween,
+//     scrub: 1,
+//     // markers : true
+//   });
+// }
 
 
 
@@ -224,11 +224,12 @@ ScrollTrigger.normalizeScroll(true)
 let smoother = ScrollSmoother.create({
   wrapper: '#smooth-wrapper',
   content: '#smooth-content',
-  smooth:2,
+  smooth: 2,
   normalizeScroll: true,
   effects: true,
   smoothTouch: 0.1,
 });
+
 
 
 // document.querySelector('#scroll-container').addEventListener('scroll', () => {

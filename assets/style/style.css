@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css");
-@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css");
-@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css");
-@import url("https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css");
 @font-face {
   font-display: swap;
   font-family: fk;
   font-style: normal;
   font-weight: 400;
   src: url(/assets/font/fk.woff2) format("woff2"), url(/assets/font/fk.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Monorama;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/font/monorama.woff2) format("woff2"), url(/assets/font/monorama.woff) format("woff");
 }
 
 *,
@@ -175,8 +179,8 @@ html {
   position: fixed;
   top: -100px;
   left: -100px;
-  -webkit-transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s,width .2s ease-in .2s,height .2s ease-in .2s;
-  transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s,width .2s ease-in .2s,height .2s ease-in .2s;
+  -webkit-transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s, width .2s ease-in .2s, height .2s ease-in .2s;
+  transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s, width .2s ease-in .2s, height .2s ease-in .2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,12 +335,88 @@ html {
 .top .burger-body ul li a {
   font-size: 1.5rem;
   color: #121212;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .top .burger-body.active {
   -webkit-transform: translate(0%);
           transform: translate(0%);
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(2.6);
+            transform: scaleY(2.6);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(2.6);
+            transform: scaleY(2.6);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+.top .sound-bar-wrapper {
+  background-color: #fefefe;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 8px;
+  bottom: 30px;
+  border-radius: 10px 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top .sound-bar-wrapper div {
+  background-color: #121212;
+  width: 3.2px;
+  height: 5px;
+}
+
+.top .sound-bar-wrapper.active div:nth-child(1) {
+  -webkit-animation: wave 1.5s linear infinite;
+          animation: wave 1.5s linear infinite;
+}
+
+.top .sound-bar-wrapper.active div:nth-child(2) {
+  -webkit-animation: wave 1.5s linear infinite .4s;
+          animation: wave 1.5s linear infinite .4s;
+}
+
+.top .sound-bar-wrapper.active div:nth-child(3) {
+  -webkit-animation: wave 1.5s linear infinite .8s;
+          animation: wave 1.5s linear infinite .8s;
+}
+
+.top .sound-bar-wrapper.active div:nth-child(4) {
+  -webkit-animation: wave 1.5s linear infinite 1.2s;
+          animation: wave 1.5s linear infinite 1.2s;
 }
 
 .main-section {
@@ -486,21 +566,180 @@ html {
   color: #fefefe;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 45px;
+  padding: 45px 0;
 }
 
 .third-section > * {
   color: #fefefe;
 }
 
-.third-section > * h1 {
-  font: 500 4rem "Chakra Petch";
+.third-section h1:nth-child(1) {
+  font: 400 4rem "Chakra Petch";
   text-transform: uppercase;
+  color: #fefefe;
+  padding-left: 100px;
+  padding-bottom: 50px;
 }
 
-.third-section .ts_main-content h4 {
+.third-section h1:nth-child(1) span {
+  font: 300 4rem "fk";
+  margin: -10px;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(1) {
+  -webkit-animation: glitch 3s infinite 1s;
+          animation: glitch 3s infinite 1s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(2) {
+  -webkit-animation: glitch 2.6s infinite .8s;
+          animation: glitch 2.6s infinite .8s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(3) {
+  -webkit-animation: glitch 3.2s infinite 1s;
+          animation: glitch 3.2s infinite 1s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(4) {
+  -webkit-animation: glitch 2.2s infinite 1.6s;
+          animation: glitch 2.2s infinite 1.6s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(5) {
+  -webkit-animation: glitch 2s infinite 2s;
+          animation: glitch 2s infinite 2s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(6) {
+  -webkit-animation: glitch 1.2s infinite 1s;
+          animation: glitch 1.2s infinite 1s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(7) {
+  -webkit-animation: glitch 2s infinite 3s;
+          animation: glitch 2s infinite 3s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(8) {
+  -webkit-animation: glitch 2.3s infinite 1.2s;
+          animation: glitch 2.3s infinite 1.2s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(9) {
+  -webkit-animation: glitch 1.2s infinite 4s;
+          animation: glitch 1.2s infinite 4s;
+}
+
+.third-section h1:nth-child(1) span span:nth-child(10) {
+  -webkit-animation: glitch 1s infinite 2s;
+          animation: glitch 1s infinite 2s;
+}
+
+@-webkit-keyframes glitch {
+  0%,
+  20%,
+  40%,
+  100% {
+    opacity: 1;
+  }
+  21%,
+  22%,
+  39%,
+  50%,
+  99% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes glitch {
+  0%,
+  20%,
+  40%,
+  100% {
+    opacity: 1;
+  }
+  21%,
+  22%,
+  39%,
+  50%,
+  99% {
+    opacity: 0.2;
+  }
+}
+
+.third-section h1:nth-child(2) {
+  font: 300 2.8rem "Chakra Petch";
   text-transform: uppercase;
-  opacity: 0.6;
+  background-color: #fefefe;
+  color: #121212;
+  display: inline;
+  padding: 10px 50px;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+}
+
+.third-section h1:nth-child(2) svg:nth-child(2) {
+  position: absolute;
+  top: -12px;
+  left: -0.4px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.third-section h1:nth-child(2) svg:nth-child(3) {
+  position: absolute;
+  bottom: -12.2px;
+  left: 0px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.third-section .ts_main-content {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.third-section .ts_main-content h2 {
+  text-transform: uppercase;
+  font-size: 4.6rem;
+  font-weight: 400;
+}
+
+.third-section .ts_main-content p {
+  display: none;
+  color: #c0c0c0;
+}
+
+.third-section .ts_main-content:hover {
+  background-color: #fefefe;
+  color: #121212;
+  padding: 10px 30px;
+  border-radius: 10px 0 0 10px;
+}
+
+.third-section .ts_main-content:hover p {
+  display: inline;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font-size: 1rem;
+}
+
+.third-section .third-section_left {
+  border-radius: 10px !important;
+  padding: 10px;
+  background-color: #fefefe;
+}
+
+.third-section .third-section_left img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 10px !important;
+}
+
+.third-section .third-section_left p {
+  color: #121212;
+  font-size: 1.6rem;
 }
 
 .fourth-section {
