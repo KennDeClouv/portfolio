@@ -20,7 +20,7 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   font-family: fk;
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/font/fk.woff2) format("woff2"), url(/assets/font/fk.woff) format("woff")
+  src: url(./assets/font/fk.woff2) format("woff2"), url(./assets/font/fk.woff) format("woff")
 }
 
 @font-face {
@@ -28,7 +28,7 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   font-family: Monorama;
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/font/monorama.woff2) format("woff2"), url(/assets/font/monorama.woff) format("woff")
+  src: url(./assets/font/monorama.woff2) format("woff2"), url(./assets/font/monorama.woff) format("woff")
 }
 
 // ==============================================
@@ -491,7 +491,7 @@ html {
 // ==============================================
 .second-section {
   color: $black;
-  background: center / cover url("/assets/img/second-back.png");
+  background: center / cover url("./assets/img/second-back.png");
   min-height: 100vh;
   overflow: hidden;
   padding: 45px;
