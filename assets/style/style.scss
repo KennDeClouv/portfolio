@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 // ==============================================
 // VARIABLE
 // ==============================================
 
 $black: #121212;
-$gray: #c0c0c0;
+$gray: #9b9b9b;
 $white: #fefefe;
 $title-font: 600 7rem "Chakra Petch", sans-serif;
 $main-section-font: 600 12rem "Chakra Petch", sans-serif;
@@ -20,7 +20,8 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   font-family: fk;
   font-style: normal;
   font-weight: 400;
-  src: url(./assets/font/fk.woff2) format("woff2"), url(./assets/font/fk.woff) format("woff")
+  src: url(https://izzulaverroes.github.io/font/fk.woff2) format("woff2"),
+    url(https://izzulaverroes.github.io/font/fk.woff) format("woff");
 }
 
 @font-face {
@@ -28,7 +29,8 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   font-family: Monorama;
   font-style: normal;
   font-weight: 400;
-  src: url(./assets/font/monorama.woff2) format("woff2"), url(./assets/font/monorama.woff) format("woff")
+  src: url(https://izzulaverroes.github.io/font/monorama.woff2) format("woff2"),
+    url(https://izzulaverroes.github.io/font/monorama.woff) format("woff");
 }
 
 // ==============================================
@@ -54,6 +56,71 @@ html {
 ::-webkit-scrollbar {
   appearance: none;
   display: none;
+}
+
+// ==============================================
+// GLOBAL MIXIN
+// ==============================================
+@mixin black-section {
+  width: 99vw;
+  background: $black;
+  color: $white;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+@mixin title($color: $white, $pl: 100px, $pb: 50px) {
+  font: 400 4rem "Chakra Petch";
+  text-transform: uppercase;
+  color: $color;
+  padding-left: $pl;
+  padding-bottom: $pb;
+
+  span {
+    font: 300 4rem "fk";
+    margin: -10px;
+    // padding-left: 10px;
+
+    span:nth-child(1) {
+      animation: glitch 3s infinite 1s;
+    }
+
+    span:nth-child(2) {
+      animation: glitch 2.6s infinite 0.8s;
+    }
+
+    span:nth-child(3) {
+      animation: glitch 3.2s infinite 1s;
+    }
+
+    span:nth-child(4) {
+      animation: glitch 2.2s infinite 1.6s;
+    }
+
+    span:nth-child(5) {
+      animation: glitch 2s infinite 2s;
+    }
+
+    span:nth-child(6) {
+      animation: glitch 1.2s infinite 1s;
+    }
+
+    span:nth-child(7) {
+      animation: glitch 2s infinite 3s;
+    }
+
+    span:nth-child(8) {
+      animation: glitch 2.3s infinite 1.2s;
+    }
+
+    span:nth-child(9) {
+      animation: glitch 1.2s infinite 4s;
+    }
+
+    span:nth-child(10) {
+      animation: glitch 1s infinite 2s;
+    }
+  }
 }
 
 // ==============================================
@@ -108,7 +175,6 @@ html {
 // ==============================================
 .top {
   z-index: 10000000000000;
-
 
   //   position: fixed;
   nav {
@@ -200,7 +266,8 @@ html {
       position: fixed;
       top: -100px;
       left: -100px;
-      transition: top .2s ease-in-out .2s, left .2s ease-in-out .2s, width .2s ease-in .2s, height .2s ease-in .2s;
+      transition: top 0.2s ease-in-out 0.2s, left 0.2s ease-in-out 0.2s,
+        width 0.2s ease-in 0.2s, height 0.2s ease-in 0.2s;
       display: flex;
 
       & svg:nth-child(3) {
@@ -245,7 +312,6 @@ html {
     }
   }
 
-
   .burger {
     /* z-index: 1000; */
     width: 75px;
@@ -284,9 +350,7 @@ html {
       // animation: bounce-nav .8s ease-in-out;
     }
 
-
     @keyframes bounce-nav {
-
       0%,
       20%,
       50%,
@@ -309,7 +373,6 @@ html {
         width: 115%;
       }
     }
-
   }
 
   .burger-body {
@@ -368,7 +431,7 @@ html {
     }
   }
 
-  .sound-bar-wrapper{
+  .sound-bar-wrapper {
     background-color: $white;
     width: 35px;
     height: 35px;
@@ -381,21 +444,21 @@ html {
     align-items: center;
     justify-content: center;
 
-    div{
+    div {
       background-color: $black;
       width: 3.2px;
       height: 5px;
     }
-    &.active div:nth-child(1){
+    &.active div:nth-child(1) {
       animation: wave 1.5s linear infinite;
     }
-    &.active div:nth-child(2){
-      animation: wave 1.5s linear infinite .4s;
+    &.active div:nth-child(2) {
+      animation: wave 1.5s linear infinite 0.4s;
     }
-    &.active div:nth-child(3){
-      animation: wave 1.5s linear infinite .8s;
+    &.active div:nth-child(3) {
+      animation: wave 1.5s linear infinite 0.8s;
     }
-    &.active div:nth-child(4){
+    &.active div:nth-child(4) {
       animation: wave 1.5s linear infinite 1.2s;
     }
   }
@@ -467,7 +530,6 @@ html {
   }
 
   @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -491,7 +553,7 @@ html {
 // ==============================================
 .second-section {
   color: $black;
-  background: center / cover url("./assets/img/second-back.png");
+  background: center / cover url("/assets/img/second-back.png");
   min-height: 100vh;
   overflow: hidden;
   padding: 45px;
@@ -507,93 +569,21 @@ html {
 // ==============================================
 // THIRD SECTION
 // ==============================================
-@mixin black-section {
-  width: 99vw;
-  background: $black;
-  color: $white;
-  min-height: 100vh;
-  margin: 0 auto;
-
-}
 
 .third-section {
   border-radius: 10px 10px 0 0;
   @include black-section();
   padding: 45px 0;
 
-  &>* {
+  & > * {
     color: $white;
-
   }
 
   h1:nth-child(1) {
-    font: 400 4rem "Chakra Petch";
-    text-transform: uppercase;
-    color: $white;
-    padding-left: 100px;
-    padding-bottom: 50px;
+    @include title();
 
-    span {
-      font: 300 4rem "fk";
-      // transition: all .2s ease;
-      margin: -10px;
-      // padding-left: 10px;
-
-      span:nth-child(1) {
-        animation: glitch 3s infinite 1s;
-      }
-
-      span:nth-child(2) {
-        animation: glitch 2.6s infinite .8s;
-      }
-
-      span:nth-child(3) {
-        animation: glitch 3.2s infinite 1s;
-      }
-
-      span:nth-child(4) {
-        animation: glitch 2.2s infinite 1.6s;
-      }
-
-      span:nth-child(5) {
-        animation: glitch 2s infinite 2s;
-      }
-
-      span:nth-child(6) {
-        animation: glitch 1.2s infinite 1s;
-      }
-
-      span:nth-child(7) {
-        animation: glitch 2s infinite 3s;
-      }
-
-      span:nth-child(8) {
-        animation: glitch 2.3s infinite 1.2s;
-      }
-
-      span:nth-child(9) {
-        animation: glitch 1.2s infinite 4s;
-      }
-
-      span:nth-child(10) {
-        animation: glitch 1s infinite 2s;
-      }
-    }
   }
-
-  // @keyframes clitch {
-
-  //   0%,
-  //   100% {
-  //     opacity: 1;
-  //   }
-
-  //   80% {
-  //     opacity: 0.2;
-  //   }
-  // }
   @keyframes glitch {
-
     0%,
     20%,
     40%,
@@ -609,7 +599,6 @@ html {
       opacity: 0.2;
     }
   }
-
 
   h1:nth-child(2) {
     font: 300 2.8rem "Chakra Petch";
@@ -637,16 +626,14 @@ html {
     }
   }
 
-
   .ts_main-content {
-
-    transition: all .3s ease;
+    transition: all 0.3s ease;
+    padding: 0 50px;
 
     h2 {
       text-transform: uppercase;
-      font-size: 4.6rem;
+      font-size: calc(3rem + 1.895vw);
       font-weight: 400;
-
     }
 
     p {
@@ -658,36 +645,49 @@ html {
       background-color: $white;
       color: $black;
       // font-size: 5rem;
-      padding: 10px 30px;
-      border-radius: 10px 0 0 10px;
+      padding: 10px 70px;
+      // border-radius: 10px 0 0 10px;
 
       p {
         display: inline;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         font-size: 1rem;
       }
     }
   }
 
-  .third-section_left{
-    // margin: 20px;
+  // .third-section_left{
+  //   // margin: 20px;
 
-    border-radius: 10px !important;
-    padding: 10px;
-    background-color: $white;
+  //   border-radius: 10px !important;
+  //   padding: 10px;
+  //   background-color: $white;
 
-    img{
-      width: 100%;
-      aspect-ratio: 1/1;
+  //   img{
+  //     width: 100%;
+  //     aspect-ratio: 1/1;
 
-      border-radius: 10px !important;
-      // overflow: hidden;
-      // padding: 10px;
-    }
+  //     border-radius: 10px !important;
+  //     // overflow: hidden;
+  //     // padding: 10px;
+  //   }
 
-    p{
-      color: $black;
-      font-size: 1.6rem
+  //   p{
+  //     color: $black;
+  //     font-size: 1.6rem
+  //   }
+  // }
+
+  .plus-play {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    svg {
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        transform: rotate(0.25turn);
+      }
     }
   }
 }
@@ -702,7 +702,6 @@ html {
   h1 {
     font: $title-font;
     text-transform: uppercase;
-
   }
 }
 
@@ -726,23 +725,23 @@ html {
   position: relative;
 
   h1 {
-    font: 600 5rem "Chakra Petch";
-    padding: 0 50px;
-    background-color: $white;
-    color: $black;
-    display: inline-block;
-    border-radius: 0 10px 10px 0;
+    // font: 600 5rem "Chakra Petch";
+    // padding: 0 50px;
+    // background-color: $white;
+    // color: $black;
+    // display: inline-block;
+    // border-radius: 0 10px 10px 0;
+    @include title();
   }
 
   .container {
-
     .work-hover {
       background-color: $black;
       opacity: 0;
       // z-index: 1;
       width: 100%;
       height: 100%;
-      transition: opacity .3s ease-in .2s;
+      transition: opacity 0.3s ease-in 0.2s;
 
       &:hover {
         opacity: 1;
@@ -766,7 +765,7 @@ html {
       width: 100%;
       aspect-ratio: 16/9;
       border-radius: 2rem;
-
+      border: 8px solid $white;
       img {
         width: 100%;
         height: 100%;
@@ -790,7 +789,6 @@ html {
       width: 100%;
       display: flex !important;
 
-
       // justify-content: center;
       // align-items: center;
       // height: 100%
@@ -806,14 +804,12 @@ html {
       p {
         font: 500 1.8rem "Chakra Petch", sans-serif;
         color: $white !important;
-
       }
     }
 
     .side-work {
       @include work-hover();
       aspect-ratio: 16/9;
-
 
       .work-hover-wrapper {
         @include work-hover-wrapper();
@@ -873,7 +869,7 @@ html {
 
 .sixth-section {
   $skillcolor1: #222831;
-  $skillcolor2: #6B9A9C;
+  $skillcolor2: #6b9a9c;
   $skillcolor3: #dcdcdc;
   background-color: $white;
 
@@ -929,6 +925,4 @@ html {
       @include skill-global($skillcolor3, $black);
     }
   }
-
-
 }
