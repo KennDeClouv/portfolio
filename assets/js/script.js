@@ -1,3 +1,6 @@
+let gsapOn = false;
+let loaderOn = false;
+
 // BURGER TOGGLE
 const a = document.querySelector(".burger");
 const b = document.querySelector(".burger-body");
@@ -64,7 +67,7 @@ window.addEventListener("mouseup", () => {
 // SMOOTH SCROLL
 // Scrollbar.init(document.querySelector('#my-scrollbar'))
 
-// LOADER
+//LOADER
 // document.addEventListener("DOMContentLoaded", () => {
 //   function calculatePercentage() {
 //     const totalElements = document.getElementsByTagName("*").length; // Total number of elements
@@ -143,24 +146,26 @@ sections.forEach((section) => {
 
 // Calculate the amount to scroll horizontally
 let amountToScroll = contentWidth - window.innerWidth;
+let secondSectionOn = false;
 
-// if (window.innerWidth > 768) {
-//   const tween = gsap.to(content, {
-//     x: -amountToScroll - 400,
-//     duration: 1,
-//     ease: "none",
-//   });
 
-//   ScrollTrigger.create({
-//     trigger: ".second-section",
-//     start: "top",
-//     end: "+=" + amountToScroll,
-//     pin: true,
-//     animation: tween,
-//     scrub: 1,
-//     // markers : true
-//   });
-// }
+if (gsapOn == true && window.innerWidth > 768) {
+  const tween = gsap.to(content, {
+    x: -amountToScroll - 400,
+    duration: 1,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: ".second-section",
+    start: "top",
+    end: "+=" + amountToScroll,
+    pin: true,
+    animation: tween,
+    scrub: 1,
+    // markers : true
+  });
+}
 
 // const secondSectionsL = gsap.utils.toArray(".third-section_left");
 // const secondSectionsR = gsap.utils.toArray(".third-section_right");
@@ -198,7 +203,7 @@ sections2.forEach((section2) => {
 // Calculate the amount to scroll horizontally
 let amountToScroll2 = contentWidth2 - window.innerWidth;
 
-if (window.innerWidth > 768) {
+if (gsapOn == true && window.innerWidth > 768) {
   const tween = gsap.to(content2, {
     x: -amountToScroll2 - 400,
     duration: 1,

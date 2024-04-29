@@ -63,7 +63,6 @@ html {
 // ==============================================
 @mixin black-section {
   width: 99vw;
-  background: $black;
   color: $white;
   min-height: 100vh;
   margin: 0 auto;
@@ -169,6 +168,125 @@ html {
 .hoverO-link {
   display: none;
 }
+
+// ==============================================
+// LOADER
+// ==============================================
+
+// .transition {
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: $black;
+//   position: fixed;
+//   z-index: 10000000000000;
+// }
+
+// .loaded-finish.transition {
+//   z-index: -1000;
+// }
+
+// .transition div {
+//   width: 100vw;
+//   height: calc(100vh / 7);
+//   background-color: $white;
+//   /* border: #121212 1px solid; */
+//   /* transition: all 1s ease-in-out; */
+//   transform: translateX(-100%);
+// }
+
+// .transition.loaded div:nth-child(1) {
+//   animation: loaderOut 0.9s ease-in-out 1 both,
+//       loaderIn 0.9s ease-in-out 4s both;
+// }
+
+// .transition.loaded div:nth-child(2) {
+//   animation: loaderOut 0.9s ease-in-out 0.2s 1 both,
+//       loaderIn 0.9s ease-in-out 4.2s both;
+// }
+
+// .transition.loaded div:nth-child(3) {
+//   animation: loaderOut 0.9s ease-in-out 0.4s 1 both,
+//       loaderIn 0.9s ease-in-out 4.4s both;
+// }
+
+// .transition.loaded div:nth-child(4) {
+//   animation: loaderOut 0.9s ease-in-out 0.6s 1 both,
+//       loaderIn 0.9s ease-in-out 4.6s both;
+//   /* display: flex; */
+//   text-align: center;
+
+// }
+
+// .transition.loaded div:nth-child(4) h1 {
+//   animation: fade 3s ease-in-out 1.6s 1 both;
+// }
+
+// .transition.loaded div:nth-child(5) {
+//   animation: loaderOut 0.9s ease-in-out 0.8s 1 both,
+//       loaderIn 0.9s ease-in-out 4.8s both;
+// }
+
+// .transition.loaded div:nth-child(6) {
+//   animation: loaderOut 0.9s ease-in-out 1s 1 both,
+//       loaderIn 0.9s ease-in-out 5s both;
+// }
+
+// .transition.loaded div:nth-child(7) {
+//   animation: loaderOut 0.9s ease-in-out 1.2s 1 both,
+//       loaderIn 0.9s ease-in-out 5.2s both;
+// }
+
+// @keyframes loaderIn {
+//   to {
+//       transform: translateX(100%);
+//   }
+// }
+
+// @keyframes loaderOut {
+//   to {
+//       transform: translateX(0);
+//   }
+// }
+
+// @keyframes fade {
+
+//   0%,
+//   100% {
+//       opacity: 0;
+//   }
+
+//   50% {
+//       opacity: 1;
+//   }
+// }
+
+// .loader {
+//   position: fixed;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: $black;
+//   z-index: 100000;
+//   padding: 25px;
+//   color: $white;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .loader-bar {
+//   margin-top: auto;
+//   width: 100%;
+//   height: 10vh;
+//   background-color: #ffffff63;
+//   border-radius: 20px;
+//   overflow: hidden;
+// }
+
+// .loader-bar div {
+//   height: 100%;
+//   /* width: 50%; */
+//   border-radius: 20px;
+//   background-color: $white;
+// }
 
 // ==============================================
 // NAV
@@ -351,6 +469,7 @@ html {
     }
 
     @keyframes bounce-nav {
+
       0%,
       20%,
       50%,
@@ -449,15 +568,19 @@ html {
       width: 3.2px;
       height: 5px;
     }
+
     &.active div:nth-child(1) {
       animation: wave 1.5s linear infinite;
     }
+
     &.active div:nth-child(2) {
       animation: wave 1.5s linear infinite 0.4s;
     }
+
     &.active div:nth-child(3) {
       animation: wave 1.5s linear infinite 0.8s;
     }
+
     &.active div:nth-child(4) {
       animation: wave 1.5s linear infinite 1.2s;
     }
@@ -530,6 +653,7 @@ html {
   }
 
   @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -567,15 +691,25 @@ html {
 }
 
 // ==============================================
+// BLACK SECTION
+// ==============================================
+.black-section {
+  background-color: $black;
+  border-radius: 10px !important;
+  overflow: hidden;
+  margin: 0 8px;
+}
+
+
+// ==============================================
 // THIRD SECTION
 // ==============================================
 
 .third-section {
-  border-radius: 10px 10px 0 0;
   @include black-section();
   padding: 45px 0;
 
-  & > * {
+  &>* {
     color: $white;
   }
 
@@ -583,7 +717,9 @@ html {
     @include title();
 
   }
+
   @keyframes glitch {
+
     0%,
     20%,
     40%,
@@ -614,7 +750,7 @@ html {
     svg:nth-child(2) {
       position: absolute;
       top: -12px;
-      left: -0.4px;
+      left: -0.8px;
       transform: rotate(180deg);
     }
 
@@ -623,6 +759,21 @@ html {
       bottom: -12.2px;
       left: 0px;
       transform: rotate(-90deg);
+    }
+
+    transition: all .2s ease;
+
+    svg:nth-child(1) {
+      transition: all .2s ease;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      padding: 10px 60px;
+
+      svg:nth-child(1) {
+        transform: rotate(45deg);
+      }
     }
   }
 
@@ -656,38 +807,26 @@ html {
     }
   }
 
-  // .third-section_left{
-  //   // margin: 20px;
-
-  //   border-radius: 10px !important;
-  //   padding: 10px;
-  //   background-color: $white;
-
-  //   img{
-  //     width: 100%;
-  //     aspect-ratio: 1/1;
-
-  //     border-radius: 10px !important;
-  //     // overflow: hidden;
-  //     // padding: 10px;
-  //   }
-
-  //   p{
-  //     color: $black;
-  //     font-size: 1.6rem
-  //   }
-  // }
-
   .plus-play {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
 
     svg {
-      transition: all 0.4s ease-in-out;
+      transition: all 0.28s ease;
+
       &:hover {
         transform: rotate(0.25turn);
       }
+    }
+  }
+
+  .swiper-slide {
+    img {
+      max-width: 30vw;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+      border: 8px solid $white
     }
   }
 }
@@ -766,6 +905,7 @@ html {
       aspect-ratio: 16/9;
       border-radius: 2rem;
       border: 8px solid $white;
+
       img {
         width: 100%;
         height: 100%;
