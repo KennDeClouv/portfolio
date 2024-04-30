@@ -469,7 +469,6 @@ html {
     }
 
     @keyframes bounce-nav {
-
       0%,
       20%,
       50%,
@@ -584,6 +583,18 @@ html {
     &.active div:nth-child(4) {
       animation: wave 1.5s linear infinite 1.2s;
     }
+
+    svg:nth-child(5) {
+      position: absolute;
+      top: -12.2px;
+      right: 0;
+      transform: rotate(90deg);
+    }
+    svg:nth-child(6) {
+      position: absolute;
+      bottom: -12.2px;
+      right: 0;
+    }
   }
 }
 
@@ -653,7 +664,6 @@ html {
   }
 
   @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -676,8 +686,9 @@ html {
 // SECOND SECTION
 // ==============================================
 .second-section {
+  // position: relative;
   color: $black;
-  background: center / cover url("/assets/img/second-back.png");
+  // background: center / cover url("/assets/img/second-back.png");
   min-height: 100vh;
   overflow: hidden;
   padding: 45px;
@@ -687,6 +698,7 @@ html {
   h1 {
     font: $second-section-font;
     white-space: nowrap;
+    // position: absolute;
   }
 }
 
@@ -700,7 +712,6 @@ html {
   margin: 0 8px;
 }
 
-
 // ==============================================
 // THIRD SECTION
 // ==============================================
@@ -709,17 +720,15 @@ html {
   @include black-section();
   padding: 45px 0;
 
-  &>* {
+  & > * {
     color: $white;
   }
 
   h1:nth-child(1) {
     @include title();
-
   }
 
   @keyframes glitch {
-
     0%,
     20%,
     40%,
@@ -761,10 +770,10 @@ html {
       transform: rotate(-90deg);
     }
 
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 
     svg:nth-child(1) {
-      transition: all .2s ease;
+      transition: all 0.2s ease;
       margin-left: 10px;
     }
 
@@ -807,26 +816,25 @@ html {
     }
   }
 
-  .plus-play {
-    // display: grid;
-    // grid-template-columns: repeat(5, 1fr);
-    // grid-template-rows: repeat(3, 1fr);
-
-    svg {
-      transition: all 0.28s ease;
-
-      &:hover {
-        transform: rotate(0.25turn);
-      }
-    }
-  }
-
   .swiper-slide {
     img {
       max-width: 30vw;
       aspect-ratio: 1/1;
       border-radius: 10px;
-      border: 8px solid $white
+      border: 8px solid $white;
+    }
+  }
+}
+.plus-play {
+  // display: grid;
+  // grid-template-columns: repeat(5, 1fr);
+  // grid-template-rows: repeat(3, 1fr);
+
+  svg {
+    transition: all 0.28s ease;
+
+    &:hover {
+      transform: rotate(0.25turn);
     }
   }
 }
@@ -836,11 +844,51 @@ html {
 // ==============================================
 .fourth-section {
   @include black-section();
-  text-align: center;
+  // text-align: center;
 
-  h1 {
-    font: $title-font;
-    text-transform: uppercase;
+  // h1 {
+  //   color: $black;
+  //   background-color: $white;
+  // }
+
+  .fs_title {
+    color: $black;
+    background-color: $white;
+    font-size: calc(3rem + 5vw);
+    // display: inline;
+    position: relative;
+    text-align: center;
+    padding: 20px 0px;
+
+    // @mixin fs-title($l: 0, $r: 0, $rotate: 0deg) {
+    @mixin fs-title($rotate: 0deg, $p: b, $rl: l) {
+      position: absolute;
+      transform: rotate($rotate);
+      @if $p == t {
+        top: -12px;
+      } @else {
+        bottom: -12px;
+      }
+      @if $rl == r {
+        right: 2px;
+      } @else {
+        left: 0;
+      }
+    }
+
+    svg:nth-child(1) {
+      @include fs-title(90deg, t, r);
+    }
+    svg:nth-child(2) {
+      @include fs-title(0deg, b, r);
+    }
+
+    svg:nth-child(3) {
+      @include fs-title(180deg, t);
+    }
+    svg:nth-child(4) {
+      @include fs-title(-90deg);
+    }
   }
 }
 

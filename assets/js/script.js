@@ -56,7 +56,29 @@ window.addEventListener("mouseup", () => {
   cursorO.classList.remove("hoverO");
 });
 
-// 
+// SOUND
+
+let sound = new Audio("assets/audio/sound.mp3");
+sound.loop = true;
+const soundButton = document.querySelector(".sound-bar-wrapper");
+soundButton.addEventListener("click", () => {
+  soundButton.classList.toggle("active");
+  // sound.toggle();
+  
+});
+
+
+soundButton.addEventListener("click", () => {
+  if (isPlaying) {
+    sound.pause();
+    // playPauseButton.textContent = "Play";
+  } else {
+    sound.play();
+    // playPauseButton.textContent = "Pause";
+  }
+  isPlaying = !isPlaying;
+});
+//
 // const bodySmooth = document.querySelector("body");
 // gsap.to(bodySmooth, {
 //   scrollTop: 1, // Example scroll position
@@ -148,7 +170,6 @@ sections.forEach((section) => {
 let amountToScroll = contentWidth - window.innerWidth;
 let secondSectionOn = false;
 
-
 if (gsapOn == true && window.innerWidth > 768) {
   const tween = gsap.to(content, {
     x: -amountToScroll - 400,
@@ -188,8 +209,6 @@ if (gsapOn == true && window.innerWidth > 768) {
 //   });
 // }
 
-
-
 const container2 = document.querySelector(".slider-container");
 const sections2 = gsap.utils.toArray(".skill-slider");
 const content2 = document.querySelector(".skill-slider");
@@ -221,21 +240,18 @@ if (gsapOn == true && window.innerWidth > 768) {
   });
 }
 
-
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-ScrollTrigger.normalizeScroll(true)
+ScrollTrigger.normalizeScroll(true);
 
 let smoother = ScrollSmoother.create({
-  wrapper: '#smooth-wrapper',
-  content: '#smooth-content',
+  wrapper: "#smooth-wrapper",
+  content: "#smooth-content",
   smooth: 2,
   normalizeScroll: true,
   effects: true,
   smoothTouch: 0.1,
 });
-
-
 
 // document.querySelector('#scroll-container').addEventListener('scroll', () => {
 //   smoothScroll(this);
@@ -262,20 +278,19 @@ let smoother = ScrollSmoother.create({
 
 let lastScrollTop = 0;
 
-window.addEventListener('scroll', function () {
+window.addEventListener("scroll", function () {
   let currentScroll = window.scrollY || document.documentElement.scrollTop;
 
   if (currentScroll > lastScrollTop) {
     // Scrolling down
-    document.querySelector(".logo").classList.remove("logo-active")
+    document.querySelector(".logo").classList.remove("logo-active");
   } else {
     // Scrolling up
-    document.querySelector(".logo").classList.add("logo-active")
+    document.querySelector(".logo").classList.add("logo-active");
   }
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
-
 
 // const body = document.body,
 //   scrollWrap = document.querySelector("#my-scrollbar")
@@ -299,4 +314,3 @@ window.addEventListener('scroll', function () {
 // }
 
 // smoothScroll();
-

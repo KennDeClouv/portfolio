@@ -6,7 +6,6 @@
   font-weight: 400;
   src: url(https://izzulaverroes.github.io/font/fk.woff2) format("woff2"), url(https://izzulaverroes.github.io/font/fk.woff) format("woff");
 }
-
 @font-face {
   font-display: swap;
   font-family: Monorama;
@@ -14,12 +13,10 @@
   font-weight: 400;
   src: url(https://izzulaverroes.github.io/font/monorama.woff2) format("woff2"), url(https://izzulaverroes.github.io/font/monorama.woff) format("woff");
 }
-
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Chakra Petch", sans-serif;
@@ -42,13 +39,11 @@ html {
   z-index: 1000000000000000;
   pointer-events: none;
   position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   mix-blend-mode: difference;
   width: 35px;
   height: 35px;
   background-color: #fefefe;
-  -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
@@ -57,13 +52,11 @@ html {
   z-index: 1000000000000000;
   pointer-events: none;
   position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   mix-blend-mode: difference;
   width: 45px;
   height: 45px;
   border: #fefefe 3px solid;
-  -webkit-transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
   transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
@@ -89,7 +82,6 @@ html {
 .top {
   z-index: 10000000000000;
 }
-
 .top nav {
   background-color: #fefefe;
   padding: 20px 40px 20px 100px;
@@ -98,43 +90,34 @@ html {
   right: 0px;
   border-radius: 0 0 0 10px;
 }
-
 .top nav svg:nth-child(1) {
   position: absolute;
   top: 8px;
   left: -13px;
 }
-
 .top nav svg:nth-child(2) {
   position: absolute;
   bottom: -13px;
   right: 8px;
 }
-
 .top nav .frame-svg {
   position: fixed;
   left: 8px;
   top: 7.4px;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  transform: rotate(270deg);
 }
-
 .top nav .frame-svg-r {
   position: fixed;
   right: 8px;
   bottom: 7.4px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-
 .top nav .frame-svg-b {
   position: fixed;
   left: 7.4px;
   bottom: 8px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 .top nav .frame {
   width: 100vw;
   height: 8px;
@@ -143,7 +126,6 @@ html {
   top: 0;
   left: 0;
 }
-
 .top nav .frame-r {
   width: 8px;
   height: 100vh;
@@ -152,7 +134,6 @@ html {
   top: 0;
   right: 0;
 }
-
 .top nav .frame-b {
   width: 100vw;
   height: 8px;
@@ -161,7 +142,6 @@ html {
   bottom: 0;
   left: 0;
 }
-
 .top nav .frame-l {
   width: 8px;
   height: 100vh;
@@ -170,7 +150,6 @@ html {
   top: 0;
   left: 0;
 }
-
 .top nav .logo {
   width: 100px;
   height: 100px;
@@ -179,39 +158,29 @@ html {
   position: fixed;
   top: -100px;
   left: -100px;
-  -webkit-transition: top 0.2s ease-in-out 0.2s, left 0.2s ease-in-out 0.2s, width 0.2s ease-in 0.2s, height 0.2s ease-in 0.2s;
-  transition: top 0.2s ease-in-out 0.2s, left 0.2s ease-in-out 0.2s, width 0.2s ease-in 0.2s, height 0.2s ease-in 0.2s;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transition: top 0.2s ease-in-out 0.2s, left 0.2s ease-in-out 0.2s, width 0.2s ease-in 0.2s, height 0.2s ease-in 0.2s;
   display: flex;
 }
-
 .top nav .logo svg:nth-child(3) {
   position: absolute;
   bottom: -12.2px;
   left: 8px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
-
 .top nav .logo svg:nth-child(2) {
   position: absolute;
   top: 7.4px;
   right: -13px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
-
 .top nav .logo:hover {
   width: 110px;
   height: 200px;
 }
-
 .top nav .logo-active {
   top: 0;
   left: 0;
 }
-
 .top nav .logo-zull {
   color: #121212;
   font-family: "Chakra Petch";
@@ -222,75 +191,40 @@ html {
   text-transform: uppercase;
   /* 1.99256rem */
 }
-
 .top nav .logo-zull span:nth-child(2) {
   color: #121212;
   letter-spacing: 0.21625rem;
 }
-
 .top .burger {
   /* z-index: 1000; */
   width: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transition: all 0.3s linear;
+  flex-direction: column;
   transition: all 0.3s linear;
   gap: 8px;
   cursor: pointer;
 }
-
 .top .burger:hover div {
   opacity: 0.6;
 }
-
 .top .burger div {
   background-color: #121212;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   height: 6px;
 }
-
 .top .burger div:nth-child(1) {
   width: 75%;
   margin-left: auto;
 }
-
 .top .burger div:nth-child(2) {
   width: 60%;
   margin-left: auto;
 }
-
 .top .burger:hover div {
   width: 100%;
 }
-
-@-webkit-keyframes bounce-nav {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    width: 100%;
-  }
-  40% {
-    width: 130%;
-  }
-  60% {
-    width: 115%;
-  }
-}
-
 @keyframes bounce-nav {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+  0%, 20%, 50%, 80%, 100% {
     width: 100%;
   }
   40% {
@@ -300,7 +234,6 @@ html {
     width: 115%;
   }
 }
-
 .top .burger-body {
   position: fixed;
   height: 100vh;
@@ -309,13 +242,10 @@ html {
   right: 0;
   background-color: #fefefe;
   mix-blend-mode: normal;
-  -webkit-transform: translate(100%);
-          transform: translate(100%);
-  -webkit-transition: all 0.4s ease-in-out;
+  transform: translate(100%);
   transition: all 0.4s ease-in-out;
   padding: 100px 100px 0 100px;
 }
-
 .top .burger-body ul li div {
   position: relative;
   top: -19px;
@@ -324,55 +254,30 @@ html {
   height: 20px;
   background-color: #c0c0c0;
   z-index: -1;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 .top .burger-body ul li:hover div {
   width: 50px;
 }
-
 .top .burger-body ul li a {
   font-size: 1.5rem;
   color: #121212;
   font-weight: 600;
 }
-
 .top .burger-body.active {
-  -webkit-transform: translate(0%);
-          transform: translate(0%);
+  transform: translate(0%);
 }
-
-@-webkit-keyframes wave {
-  0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  50% {
-    -webkit-transform: scaleY(2.6);
-            transform: scaleY(2.6);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-
 @keyframes wave {
   0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
   50% {
-    -webkit-transform: scaleY(2.6);
-            transform: scaleY(2.6);
+    transform: scaleY(2.6);
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
-
 .top .sound-bar-wrapper {
   background-color: #fefefe;
   width: 35px;
@@ -381,42 +286,38 @@ html {
   right: 8px;
   bottom: 30px;
   border-radius: 10px 0 0 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 3px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .top .sound-bar-wrapper div {
   background-color: #121212;
   width: 3.2px;
   height: 5px;
 }
-
 .top .sound-bar-wrapper.active div:nth-child(1) {
-  -webkit-animation: wave 1.5s linear infinite;
-          animation: wave 1.5s linear infinite;
+  animation: wave 1.5s linear infinite;
 }
-
 .top .sound-bar-wrapper.active div:nth-child(2) {
-  -webkit-animation: wave 1.5s linear infinite 0.4s;
-          animation: wave 1.5s linear infinite 0.4s;
+  animation: wave 1.5s linear infinite 0.4s;
 }
-
 .top .sound-bar-wrapper.active div:nth-child(3) {
-  -webkit-animation: wave 1.5s linear infinite 0.8s;
-          animation: wave 1.5s linear infinite 0.8s;
+  animation: wave 1.5s linear infinite 0.8s;
 }
-
 .top .sound-bar-wrapper.active div:nth-child(4) {
-  -webkit-animation: wave 1.5s linear infinite 1.2s;
-          animation: wave 1.5s linear infinite 1.2s;
+  animation: wave 1.5s linear infinite 1.2s;
+}
+.top .sound-bar-wrapper svg:nth-child(5) {
+  position: absolute;
+  top: -12.2px;
+  right: 0;
+  transform: rotate(90deg);
+}
+.top .sound-bar-wrapper svg:nth-child(6) {
+  position: absolute;
+  bottom: -12.2px;
+  right: 0;
 }
 
 .main-section {
@@ -426,134 +327,72 @@ html {
   padding: 45px;
   border-radius: 10px;
 }
-
 .main-section .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   /* width: auto; */
   height: 100%;
   margin: 0;
   padding: 0;
 }
-
 .main-section .main-content {
   margin: auto;
 }
-
 .main-section .main-content h1 {
   color: #fefefe;
   font: 600 12rem "Chakra Petch", sans-serif;
 }
-
 .main-section .bottom-content {
   color: #fefefe;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   row-gap: 0.4rem;
   margin-top: auto;
   position: absolute;
   bottom: 0;
 }
-
 .main-section .zull_svg {
-  -webkit-animation: 10s ease-in-out infinite alternate rotate;
-          animation: 10s ease-in-out infinite alternate rotate;
+  animation: 10s ease-in-out infinite alternate rotate;
   /* margin-bottom : 70px; */
 }
-
 @media screen and (max-width: 768px) {
   .main-section .zull_svg {
     display: none;
   }
 }
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg);
-  }
-}
-
 @keyframes rotate {
   0% {
-    -webkit-transform: rotate(720deg);
-            transform: rotate(720deg);
+    transform: rotate(720deg);
   }
 }
-
 .main-section .scroll-navigation {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   font-size: larger;
-  -webkit-animation: bounce 2s ease infinite;
-          animation: bounce 2s ease infinite;
+  animation: bounce 2s ease infinite;
   margin: 30px 0;
   color: #fefefe;
 }
-
-@-webkit-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
-  }
-}
-
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
   40% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    transform: translateY(-30px);
   }
   60% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    transform: translateY(-15px);
   }
 }
 
 .second-section {
   color: #121212;
-  background: center/cover url("/assets/img/second-back.png");
   min-height: 100vh;
   overflow: hidden;
   padding: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .second-section h1 {
   font: 600 10rem "Chakra Petch", sans-serif;
   white-space: nowrap;
@@ -573,11 +412,9 @@ html {
   margin: 0 auto;
   padding: 45px 0;
 }
-
 .third-section > * {
   color: #fefefe;
 }
-
 .third-section h1:nth-child(1) {
   font: 400 4rem "Chakra Petch";
   text-transform: uppercase;
@@ -585,94 +422,48 @@ html {
   padding-left: 100px;
   padding-bottom: 50px;
 }
-
 .third-section h1:nth-child(1) span {
   font: 300 4rem "fk";
   margin: -10px;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(1) {
-  -webkit-animation: glitch 3s infinite 1s;
-          animation: glitch 3s infinite 1s;
+  animation: glitch 3s infinite 1s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(2) {
-  -webkit-animation: glitch 2.6s infinite 0.8s;
-          animation: glitch 2.6s infinite 0.8s;
+  animation: glitch 2.6s infinite 0.8s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(3) {
-  -webkit-animation: glitch 3.2s infinite 1s;
-          animation: glitch 3.2s infinite 1s;
+  animation: glitch 3.2s infinite 1s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(4) {
-  -webkit-animation: glitch 2.2s infinite 1.6s;
-          animation: glitch 2.2s infinite 1.6s;
+  animation: glitch 2.2s infinite 1.6s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(5) {
-  -webkit-animation: glitch 2s infinite 2s;
-          animation: glitch 2s infinite 2s;
+  animation: glitch 2s infinite 2s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(6) {
-  -webkit-animation: glitch 1.2s infinite 1s;
-          animation: glitch 1.2s infinite 1s;
+  animation: glitch 1.2s infinite 1s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(7) {
-  -webkit-animation: glitch 2s infinite 3s;
-          animation: glitch 2s infinite 3s;
+  animation: glitch 2s infinite 3s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(8) {
-  -webkit-animation: glitch 2.3s infinite 1.2s;
-          animation: glitch 2.3s infinite 1.2s;
+  animation: glitch 2.3s infinite 1.2s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(9) {
-  -webkit-animation: glitch 1.2s infinite 4s;
-          animation: glitch 1.2s infinite 4s;
+  animation: glitch 1.2s infinite 4s;
 }
-
 .third-section h1:nth-child(1) span span:nth-child(10) {
-  -webkit-animation: glitch 1s infinite 2s;
-          animation: glitch 1s infinite 2s;
+  animation: glitch 1s infinite 2s;
 }
-
-@-webkit-keyframes glitch {
-  0%,
-  20%,
-  40%,
-  100% {
-    opacity: 1;
-  }
-  21%,
-  22%,
-  39%,
-  50%,
-  99% {
-    opacity: 0.2;
-  }
-}
-
 @keyframes glitch {
-  0%,
-  20%,
-  40%,
-  100% {
+  0%, 20%, 40%, 100% {
     opacity: 1;
   }
-  21%,
-  22%,
-  39%,
-  50%,
-  99% {
+  21%, 22%, 39%, 50%, 99% {
     opacity: 0.2;
   }
 }
-
 .third-section h1:nth-child(2) {
   font: 300 2.8rem "Chakra Petch";
   text-transform: uppercase;
@@ -682,81 +473,53 @@ html {
   padding: 10px 50px;
   border-radius: 0 10px 10px 0;
   position: relative;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
-
 .third-section h1:nth-child(2) svg:nth-child(2) {
   position: absolute;
   top: -12px;
   left: -0.8px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 .third-section h1:nth-child(2) svg:nth-child(3) {
   position: absolute;
   bottom: -12.2px;
   left: 0px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
-
 .third-section h1:nth-child(2) svg:nth-child(1) {
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   margin-left: 10px;
 }
-
 .third-section h1:nth-child(2):hover {
   padding: 10px 60px;
 }
-
 .third-section h1:nth-child(2):hover svg:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 .third-section .ts_main-content {
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   padding: 0 50px;
 }
-
 .third-section .ts_main-content h2 {
   text-transform: uppercase;
   font-size: calc(3rem + 1.895vw);
   font-weight: 400;
 }
-
 .third-section .ts_main-content p {
   display: none;
   color: #9b9b9b;
 }
-
 .third-section .ts_main-content:hover {
   background-color: #fefefe;
   color: #121212;
   padding: 10px 70px;
 }
-
 .third-section .ts_main-content:hover p {
   display: inline;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-size: 1rem;
 }
-
-.third-section .plus-play svg {
-  -webkit-transition: all 0.28s ease;
-  transition: all 0.28s ease;
-}
-
-.third-section .plus-play svg:hover {
-  -webkit-transform: rotate(0.25turn);
-          transform: rotate(0.25turn);
-}
-
 .third-section .swiper-slide img {
   max-width: 30vw;
   aspect-ratio: 1/1;
@@ -764,25 +527,56 @@ html {
   border: 8px solid #fefefe;
 }
 
+.plus-play svg {
+  transition: all 0.28s ease;
+}
+.plus-play svg:hover {
+  transform: rotate(0.25turn);
+}
+
 .fourth-section {
   width: 99vw;
   color: #fefefe;
   min-height: 100vh;
   margin: 0 auto;
-  text-align: center;
 }
-
-.fourth-section h1 {
-  font: 600 7rem "Chakra Petch", sans-serif;
-  text-transform: uppercase;
+.fourth-section .fs_title {
+  color: #121212;
+  background-color: #fefefe;
+  font-size: calc(3rem + 5vw);
+  position: relative;
+  text-align: center;
+  padding: 20px 0px;
+}
+.fourth-section .fs_title svg:nth-child(1) {
+  position: absolute;
+  transform: rotate(90deg);
+  top: -12px;
+  right: 2px;
+}
+.fourth-section .fs_title svg:nth-child(2) {
+  position: absolute;
+  transform: rotate(0deg);
+  bottom: -12px;
+  right: 2px;
+}
+.fourth-section .fs_title svg:nth-child(3) {
+  position: absolute;
+  transform: rotate(180deg);
+  top: -12px;
+  left: 0;
+}
+.fourth-section .fs_title svg:nth-child(4) {
+  position: absolute;
+  transform: rotate(-90deg);
+  bottom: -12px;
+  left: 0;
 }
 
 .fs_main-content {
   opacity: 0.2;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 .fs_main-content:hover {
   opacity: 1;
 }
@@ -796,7 +590,6 @@ html {
   border-radius: 0 0 10px 10px;
   position: relative;
 }
-
 .fifth-section h1 {
   font: 400 4rem "Chakra Petch";
   text-transform: uppercase;
@@ -804,77 +597,51 @@ html {
   padding-left: 100px;
   padding-bottom: 50px;
 }
-
 .fifth-section h1 span {
   font: 300 4rem "fk";
   margin: -10px;
 }
-
 .fifth-section h1 span span:nth-child(1) {
-  -webkit-animation: glitch 3s infinite 1s;
-          animation: glitch 3s infinite 1s;
+  animation: glitch 3s infinite 1s;
 }
-
 .fifth-section h1 span span:nth-child(2) {
-  -webkit-animation: glitch 2.6s infinite 0.8s;
-          animation: glitch 2.6s infinite 0.8s;
+  animation: glitch 2.6s infinite 0.8s;
 }
-
 .fifth-section h1 span span:nth-child(3) {
-  -webkit-animation: glitch 3.2s infinite 1s;
-          animation: glitch 3.2s infinite 1s;
+  animation: glitch 3.2s infinite 1s;
 }
-
 .fifth-section h1 span span:nth-child(4) {
-  -webkit-animation: glitch 2.2s infinite 1.6s;
-          animation: glitch 2.2s infinite 1.6s;
+  animation: glitch 2.2s infinite 1.6s;
 }
-
 .fifth-section h1 span span:nth-child(5) {
-  -webkit-animation: glitch 2s infinite 2s;
-          animation: glitch 2s infinite 2s;
+  animation: glitch 2s infinite 2s;
 }
-
 .fifth-section h1 span span:nth-child(6) {
-  -webkit-animation: glitch 1.2s infinite 1s;
-          animation: glitch 1.2s infinite 1s;
+  animation: glitch 1.2s infinite 1s;
 }
-
 .fifth-section h1 span span:nth-child(7) {
-  -webkit-animation: glitch 2s infinite 3s;
-          animation: glitch 2s infinite 3s;
+  animation: glitch 2s infinite 3s;
 }
-
 .fifth-section h1 span span:nth-child(8) {
-  -webkit-animation: glitch 2.3s infinite 1.2s;
-          animation: glitch 2.3s infinite 1.2s;
+  animation: glitch 2.3s infinite 1.2s;
 }
-
 .fifth-section h1 span span:nth-child(9) {
-  -webkit-animation: glitch 1.2s infinite 4s;
-          animation: glitch 1.2s infinite 4s;
+  animation: glitch 1.2s infinite 4s;
 }
-
 .fifth-section h1 span span:nth-child(10) {
-  -webkit-animation: glitch 1s infinite 2s;
-          animation: glitch 1s infinite 2s;
+  animation: glitch 1s infinite 2s;
 }
-
 .fifth-section .container .work-hover {
   background-color: #121212;
   opacity: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: opacity 0.3s ease-in 0.2s;
   transition: opacity 0.3s ease-in 0.2s;
 }
-
 .fifth-section .container .work-hover:hover {
   opacity: 1;
-  -webkit-transition: opacity 0s;
   transition: opacity 0s;
 }
-
 .fifth-section .container .main-work {
   display: block;
   overflow: hidden;
@@ -885,52 +652,36 @@ html {
   border: 8px solid #fefefe;
   aspect-ratio: 16/8;
 }
-
 .fifth-section .container .main-work img {
   width: 100%;
   height: 100%;
 }
-
 .fifth-section .container .main-work .work-hover-wrapper {
   width: 101%;
   height: 101%;
   z-index: 10;
   position: absolute;
-  display: -ms-grid;
   display: grid;
   z-index: 0;
-  -ms-grid-columns: (1fr)[17];
-      grid-template-columns: repeat(17, 1fr);
-  -ms-grid-rows: (1fr)[8];
-      grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(17, 1fr);
+  grid-template-rows: repeat(8, 1fr);
 }
-
 .fifth-section .container .more-work {
-  border: #ffffff62 1.1px solid;
+  border: rgba(255, 255, 255, 0.3843137255) 1.1px solid;
   width: 100%;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
-
 .fifth-section .container .more-work svg {
-  -webkit-transition: -webkit-transform 1.4s ease-in-out;
-  transition: -webkit-transform 1.4s ease-in-out;
   transition: transform 1.4s ease-in-out;
-  transition: transform 1.4s ease-in-out, -webkit-transform 1.4s ease-in-out;
   margin: auto !important;
 }
-
 .fifth-section .container .more-work svg:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
-
 .fifth-section .container .more-work p {
   font: 500 1.8rem "Chakra Petch", sans-serif;
   color: #fefefe !important;
 }
-
 .fifth-section .container .side-work {
   display: block;
   overflow: hidden;
@@ -941,36 +692,27 @@ html {
   border: 8px solid #fefefe;
   aspect-ratio: 16/9;
 }
-
 .fifth-section .container .side-work img {
   width: 100%;
   height: 100%;
 }
-
 .fifth-section .container .side-work .work-hover-wrapper {
   width: 101%;
   height: 101%;
   z-index: 10;
   position: absolute;
-  display: -ms-grid;
   display: grid;
   z-index: 0;
-  -ms-grid-columns: (1fr)[9];
-      grid-template-columns: repeat(9, 1fr);
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
-
 .fifth-section .container .work-des:hover a span {
   width: 100%;
 }
-
 .fifth-section .container .work-des a {
   color: #fefefe;
 }
-
 .fifth-section .container .work-des a span {
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   display: block;
   background-color: #fefefe;
@@ -978,7 +720,6 @@ html {
   height: 2px;
   border-radius: 2px;
 }
-
 .fifth-section .fifth-transition {
   background-color: #fefefe;
   width: 40vw;
@@ -988,60 +729,45 @@ html {
   right: 0;
   border-radius: 10px 0 0 0;
 }
-
 .fifth-section .fifth-transition svg:nth-child(1) {
   position: absolute;
   bottom: -1px;
   left: -13px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-
 .fifth-section .fifth-transition svg:nth-child(2) {
   position: absolute;
   top: -12.4px;
   right: 0px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .sixth-section {
   background-color: #fefefe;
 }
-
 .sixth-section h1 {
   font: 600 7rem "Chakra Petch", sans-serif;
 }
-
 .sixth-section .skill-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   position: relative;
   width: 300%;
   gap: 2rem;
 }
-
 .sixth-section .skill-slider .skill img {
   max-width: 250px;
   aspect-ratio: 1/1;
   border-radius: 100%;
 }
-
 .sixth-section .skill-slider .skill p {
   font: 400 2.4rem "Chakra Petch", sans-serif;
   text-transform: uppercase;
 }
-
 .sixth-section .skill-slider .skill h2 {
   font-size: 4rem;
   margin: 0;
 }
-
 .sixth-section .skill-slider .skill:nth-child(2) {
   background-color: #222831;
   color: #fefefe;
@@ -1050,7 +776,6 @@ html {
   overflow: hidden;
   border-radius: 3.5rem;
 }
-
 .sixth-section .skill-slider .skill:nth-child(3) {
   background-color: #6b9a9c;
   color: #fefefe;
@@ -1059,7 +784,6 @@ html {
   overflow: hidden;
   border-radius: 3.5rem;
 }
-
 .sixth-section .skill-slider .skill:nth-child(4) {
   background-color: #dcdcdc;
   color: #121212;
@@ -1067,5 +791,4 @@ html {
   padding: 2.3rem 2.3rem 1.5rem 2.3rem;
   overflow: hidden;
   border-radius: 3.5rem;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
