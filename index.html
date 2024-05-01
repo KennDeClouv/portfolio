@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- STYLE -->
 
-  <!-- <link rel="stylesheet" href="https://izzulaverroes.github.io/ave/avecdn.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://izzulaverroes.github.io/ave/avecdn.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" /> -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
   <link rel="stylesheet" href="assets/style/style.css" />
@@ -28,12 +28,11 @@
       <h1 style="font-size: 6rem; margin-top: auto;">ZULL</h1>
     </div>
     <div class="loader-bar">
-      <div></div>
+      <div class="loader-bar-inner"></div>
     </div>
-  </div> -->
-  <!-- LOADER END -->
-  <!-- TRANSITION -->
-  <!-- <div class="transition">
+  </div>
+
+  <div class="transition">
     <div></div>
     <div></div>
     <div></div>
@@ -51,14 +50,13 @@
       <main class="main">
         <!-- HERO BANNER -->
         <section class="main-section">
-          <div class="container">
+          <div class="container-">
             <div class="main-content">
               <h1>
                 ZU<br class="d-block d-md-none" />LL
-                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none"
-                  class="zull_svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M0 43.1934L6.743 36.1323H29.1349L35.8779 29.3893V6.743L42.9389 0H57.0611L64.1221 6.743V29.3893L70.8651 36.1323H93.257L100 43.1934V57.3155L93.1934 64.3766H70.6743L63.8677 71.1196V93.257L56.8702 100H42.8753L35.8779 93.257V71.1196L29.1349 64.3766H6.743L0 57.3155V43.1934ZM58.7786 67.6845L67.43 59.0331V41.7303L58.7786 33.0789L41.4758 33.0789L32.8244 41.7303L32.8244 59.0331L41.4758 67.6845H58.7786Z"
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <path
+                    d="M0 5.0505C0 2.26138 2.26089 0 5.0505 0H28.2828C31.0724 0 33.3333 2.26138 33.3333 5.0505V18.1818C33.3333 28.2868 37.3737 33.3333 48.4848 33.3333H51.5151C61.6201 33.3333 66.6667 29.2929 66.6667 18.1818V5.0505C66.6667 2.26138 68.9276 0 71.7172 0H94.9495C97.7391 0 100 2.26138 100 5.0505V28.2828C100 31.0719 97.7391 33.3333 94.9495 33.3333H81.8182C71.7132 33.3333 66.6667 37.3737 66.6667 48.4848V51.5151C66.6667 61.6201 70.7071 66.6667 81.8182 66.6667H94.9495C97.7391 66.6667 100 68.928 100 71.7172V94.9495C100 97.7386 97.7391 100 94.9495 100H71.7172C68.9276 100 66.6667 97.7386 66.6667 94.9495V81.8182C66.6667 71.7132 62.6263 66.6667 51.5151 66.6667H48.4848C38.3799 66.6667 33.3333 70.7071 33.3333 81.8182V94.9495C33.3333 97.7386 31.0724 100 28.2828 100H5.0505C2.26089 100 0 97.7386 0 94.9495V71.7172C0 68.928 2.26089 66.6667 5.0505 66.6667H18.1818C28.2868 66.6667 33.3333 62.6263 33.3333 51.5151V48.4848C33.3333 38.3799 29.2929 33.3333 18.1818 33.3333H5.0505C2.26089 33.3333 0 31.0719 0 28.2828V5.0505Z"
                     fill="white" />
                 </svg>
               </h1>
@@ -77,8 +75,10 @@
           <div class="w-100 position-absolute z-3">
             <div class="row text-center plus-play">
               <div class="col-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-                  <path d="M14.5 1V27M1 14H28" stroke="#33333350" stroke-linecap="round" stroke-linejoin="round" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                  <path
+                    d="M0 2C0 0.89541 0.895313 0 2 0H7C8.10469 0 9 0.89541 9 2V6C9.00078 8.09824 9.80078 8.99756 12 8.99756L11.9023 8.99814L11.8035 9H16C17.1047 9 18 9.89541 18 11V15C18.0008 17.0982 18.8008 17.9976 21 17.9976C20.9332 17.9976 20.868 17.9983 20.8035 18H24.1945C24.1309 17.9983 24.066 17.9976 24 17.9976C26.0992 17.9976 26.9992 17.1981 27 15V11C27 9.89541 27.8953 9 29 9H33C35.1 9 36 8.2 36 6V2C36 0.89541 36.8953 0 38 0H43C44.1047 0 45 0.89541 45 2V7C45 8.10459 44.1047 9 43 9H39C36.9 9 36 9.8 36 12V16C36 17.1046 35.1047 18 34 18H29.8035C27.8438 18.0498 27 18.8675 27 20.9976V24C27.0008 26.0982 27.8008 26.9976 30 26.9976L29.9258 26.9979L29.8035 27H34C35.1047 27 36 27.8954 36 29V33C36.0008 35.0982 36.8008 35.9976 39 35.9976C38.9332 35.9976 38.868 35.9983 38.8035 36H43C44.1047 36 45 36.8954 45 38V43C45 44.1046 44.1047 45 43 45H38C36.8953 45 36 44.1046 36 43V38.9976C36 36.9606 35.2477 36.0526 33.1945 36H29C27.8953 36 27 35.1046 27 34V29.9976C27 27.9606 26.2477 27.0526 24.1945 27H20.8035C18.8438 27.0498 18 27.8675 18 29.9976V34C18 35.1046 17.1047 36 16 36H11.8035C9.84375 36.0498 9 36.8675 9 38.9976V43C9 44.1046 8.10469 45 7 45H2C0.895313 45 0 44.1046 0 43V38C0 36.8954 0.895313 36 2 36H6.19453C6.13086 35.9983 6.06602 35.9976 6 35.9976C8.09922 35.9976 8.99922 35.1981 9 33V29C9 27.8954 9.89531 27 11 27H15.1945C15.1309 26.9983 15.066 26.9976 15 26.9976C17.0992 26.9976 17.9992 26.1981 18 24V20.9976C18 18.9606 17.2477 18.0526 15.1945 18H11C9.89531 18 9 17.1046 9 16V11.9976C9 9.96064 8.24766 9.05264 6.19453 9H2C0.895313 9 0 8.10459 0 7V2Z"
+                    fill="black" />
                 </svg>
               </div>
               <div class="col-3">
@@ -210,8 +210,10 @@
               <!-- <p>lorem20</p> -->
               <div class="row text-center">
                 <div class="col-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-                    <path d="M14.5 1V27M1 14H28" stroke="#ffffff50" stroke-linecap="round" stroke-linejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="72" height="50" viewBox="0 0 72 50" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M41.625 0.648487C39.8179 0.224273 37.9349 0 36 0C34.0651 0 32.1821 0.224273 30.375 0.648487C28.5679 0.224273 26.6849 0 24.75 0C11.081 0 0 11.1929 0 25C0 38.8071 11.081 50 24.75 50C26.6849 50 28.5679 49.7757 30.375 49.3515C32.1821 49.7757 34.0651 50 36 50C37.9349 50 39.8179 49.7757 41.625 49.3515C43.4321 49.7757 45.3151 50 47.25 50C60.9191 50 72 38.8071 72 25C72 11.1929 60.9191 0 47.25 0C45.3151 0 43.4321 0.224273 41.625 0.648487ZM36 47.274C35.7075 47.4251 35.4116 47.5704 35.1125 47.7099C35.4069 47.7215 35.7028 47.7273 36 47.7273C36.2972 47.7273 36.5931 47.7215 36.8875 47.7099C36.5884 47.5704 36.2925 47.4251 36 47.274ZM38.3598 45.8843C39.4093 46.3407 40.5001 46.7188 41.625 47.0113C51.3294 44.4883 58.5 35.59 58.5 25C58.5 14.41 51.3294 5.51171 41.625 2.98874C40.5001 3.28118 39.4093 3.65928 38.3598 4.11574C45.0713 8.58731 49.5 16.2712 49.5 25C49.5 33.7288 45.0713 41.4127 38.3598 45.8843ZM36 2.72595C35.7075 2.57491 35.4116 2.42957 35.1125 2.29008C35.4069 2.27855 35.7028 2.27273 36 2.27273C36.2972 2.27273 36.5931 2.27855 36.8875 2.29008C36.5884 2.42957 36.2925 2.57491 36 2.72595ZM46.3625 2.29008C54.8559 6.2509 60.75 14.9302 60.75 25C60.75 35.0698 54.8559 43.7491 46.3625 47.7099C46.6569 47.7215 46.9528 47.7273 47.25 47.7273C59.6764 47.7273 69.75 37.5519 69.75 25C69.75 12.4481 59.6764 2.27273 47.25 2.27273C46.9528 2.27273 46.6569 2.27855 46.3625 2.29008ZM33.6402 4.11574C32.5907 3.65928 31.4999 3.28118 30.375 2.98874C20.6706 5.51171 13.5 14.41 13.5 25C13.5 35.59 20.6706 44.4883 30.375 47.0113C31.4999 46.7188 32.5907 46.3407 33.6402 45.8843C26.9287 41.4127 22.5 33.7288 22.5 25C22.5 16.2712 26.9287 8.58731 33.6402 4.11574ZM36 5.31323C29.2747 9.24289 24.75 16.5877 24.75 25C24.75 33.4123 29.2747 40.7571 36 44.6868C42.7253 40.7571 47.25 33.4123 47.25 25C47.25 16.5877 42.7253 9.24289 36 5.31323ZM24.75 47.7273C25.0472 47.7273 25.3431 47.7215 25.6375 47.7099C17.1441 43.7491 11.25 35.0698 11.25 25C11.25 14.9302 17.1441 6.2509 25.6375 2.29008C25.3431 2.27855 25.0472 2.27273 24.75 2.27273C12.3236 2.27273 2.25 12.4481 2.25 25C2.25 37.5519 12.3236 47.7273 24.75 47.7273Z"
+                      fill="white" />
                   </svg>
                 </div>
                 <div class="col-3">
@@ -290,34 +292,189 @@
               </svg>
             </h1>
 
+            <!-- <div class="fs-main px-4 pt-4">
+              <div class="row">
+                <div class="col-3 d-none d-md-flex px-3 fs-main-hover" id="fs-main-gsap">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="217" height="79" viewBox="0 0 217 79" fill="none"
+                    class="m-auto">
+                    <path
+                      d="M31.1383 0L73.1751 6.91808L75.603 24.7504L100.271 0L142.307 6.91808L144.735 24.7504L169.403 0L211.44 6.91808L217 47.7571L185.862 79L144.047 74.5367L141.345 54.3022L116.729 79L74.9151 74.5367L72.2123 54.3022L47.5972 79L5.78283 74.5367L0 31.2429L31.1383 0Z"
+                      fill="white" />
+                  </svg>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-12 col-md-8" id="fs-main-hover">
+                  <h1>KINDERGARTEN</h1>
+                  <div class="hr"></div>
+                  <div class="row mt-4">
+                    <div class="col-2 ms-2">
+                      <h5>
+                        TK DHARMA WANITA
+                      </h5>
+                    </div>
+                    <div class="col-3">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae possimus laborum minus,
+                        soluta
+                        quo eveniet autem labore deleniti itaque.</p>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                      <h5>SURABAYA</h5>
+                    </div>
+                    <div class="col-2">
+                      <p>-7.297413078581294, 112.7447796321977</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            <div class="mx-auto" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-              <div class="d-flex mt-5 fs_main-content">
-                <h1>KINDERGARTEN</h1>
-                <h6 class="text-start mt-4">
-                  TK Dharma Wanita,<br />
-                  Surabaya
-                </h6>
-              </div>
             </div>
-            <div class="mx-auto" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-              <div class="d-flex mt-1 fs_main-content">
-                <h6 class="text-end mt-4">SDN Percobaan 2, <br />Malang</h6>
-                <h1>elementary</h1>
+            <div class="fs-main px-4 pt-4">
+              <div class="row">
+                <div class="col-4 d-none d-md-block"></div>
+                <div class="col-12 col-md-8">
+                  <h1>ELEMENTARY</h1>
+                  <div class="hr"></div>
+                  <div class="row mt-4">
+                    <div class="col-2 ms-2">
+                      <h5>
+                        SDN PERCOBAAN
+                      </h5>
+                    </div>
+                    <div class="col-3">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae possimus laborum minus,
+                        soluta
+                        quo eveniet autem labore deleniti itaque.</p>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                      <h5>MALANG</h5>
+                    </div>
+                    <div class="col-2">
+                      <p>-7.300847, 112.757703</p>
+                    </div>
+                  </div>
+
+                </div>
               </div>
+
             </div>
-            <div class="mx-auto" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-              <div class="d-flex mt-1 fs_main-content">
-                <h1>Junior high</h1>
-                <h6 class="text-start mt-4">Ibnu abbas, <br />Malang</h6>
+            <div class="fs-main px-4 pt-4">
+              <div class="row">
+                <div class="col-4 d-none d-md-block"></div>
+                <div class="col-12 col-md-8">
+                  <h1>JUNIOR HIGH</h1>
+                  <div class="hr"></div>
+                  <div class="row mt-4">
+                    <div class="col-2 ms-2">
+                      <h5>
+                        OVERVIEW
+                      </h5>
+                    </div>
+                    <div class="col-3">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae possimus laborum minus,
+                        soluta
+                        quo eveniet autem labore deleniti itaque.</p>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                      <h5>Coordinates</h5>
+                    </div>
+                    <div class="col-2">
+                      <p>-7.300847, 112.757703</p>
+                    </div>
+                  </div>
+
+                </div>
               </div>
-            </div>
-            <div class="mx-auto" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-              <div class="d-flex mt-1 fs_main-content">
-                <h6 class="text-end mt-4">
-                  Averroes Digital School, <br />Malang
-                </h6>
-                <h1>high school</h1>
+
+            </div> -->
+
+            <div class="fs-main">
+              <div class="row px-4 pt-2" id="pin-scrub">
+                  <div class="col-3 d-none d-md-flex px-3 fs-main-hover" id="fs-main-gsap">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="217" height="79" viewBox="0 0 217 79" fill="none" id="fs-main-svg"
+                      class="m-auto">
+                      <path
+                        d="M31.1383 0L73.1751 6.91808L75.603 24.7504L100.271 0L142.307 6.91808L144.735 24.7504L169.403 0L211.44 6.91808L217 47.7571L185.862 79L144.047 74.5367L141.345 54.3022L116.729 79L74.9151 74.5367L72.2123 54.3022L47.5972 79L5.78283 74.5367L0 31.2429L31.1383 0Z"
+                        fill="white" />
+                    </svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="170" height="118" viewBox="0 0 170 118" fill="none" id="fs-main-svg" class="m-auto">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M98.2812 1.53043C94.0145 0.529284 89.5685 0 85 0C80.4315 0 75.9855 0.529284 71.7188 1.53043C67.452 0.529284 63.006 0 58.4375 0C26.1634 0 0 26.4152 0 59C0 91.5848 26.1634 118 58.4375 118C63.006 118 67.452 117.471 71.7188 116.47C75.9855 117.471 80.4315 118 85 118C89.5685 118 94.0145 117.471 98.2812 116.47C102.548 117.471 106.994 118 111.562 118C143.837 118 170 91.5848 170 59C170 26.4152 143.837 0 111.562 0C106.994 0 102.548 0.529284 98.2812 1.53043ZM85 111.567C84.3093 111.923 83.6107 112.266 82.9045 112.595C83.5996 112.623 84.2982 112.636 85 112.636C85.7018 112.636 86.4004 112.623 87.0955 112.595C86.3893 112.266 85.6907 111.923 85 111.567ZM90.5717 108.287C93.0498 109.364 95.6253 110.256 98.2812 110.947C121.194 104.992 138.125 83.9924 138.125 59C138.125 34.0076 121.194 13.0076 98.2812 7.05342C95.6253 7.74358 93.0498 8.6359 90.5717 9.71315C106.418 20.2661 116.875 38.4001 116.875 59C116.875 79.5999 106.418 97.734 90.5717 108.287ZM85 6.43325C84.3093 6.07678 83.6107 5.73379 82.9045 5.4046C83.5996 5.37737 84.2982 5.36364 85 5.36364C85.7018 5.36364 86.4004 5.37737 87.0955 5.4046C86.3893 5.73379 85.6907 6.07678 85 6.43325ZM109.467 5.4046C129.521 14.7521 143.438 35.2352 143.438 59C143.438 82.7648 129.521 103.248 109.467 112.595C110.162 112.623 110.861 112.636 111.562 112.636C140.903 112.636 164.688 88.6225 164.688 59C164.688 29.3775 140.903 5.36364 111.562 5.36364C110.861 5.36364 110.162 5.37737 109.467 5.4046ZM79.4283 9.71315C76.9502 8.6359 74.3747 7.74358 71.7188 7.05342C48.8056 13.0076 31.875 34.0076 31.875 59C31.875 83.9924 48.8056 104.992 71.7188 110.947C74.3747 110.256 76.9502 109.364 79.4283 108.287C63.5816 97.734 53.125 79.5999 53.125 59C53.125 38.4001 63.5816 20.2661 79.4283 9.71315ZM85 12.5392C69.1209 21.8132 58.4375 39.147 58.4375 59C58.4375 78.853 69.1209 96.1868 85 105.461C100.879 96.1868 111.562 78.853 111.562 59C111.562 39.147 100.879 21.8132 85 12.5392ZM58.4375 112.636C59.1393 112.636 59.8379 112.623 60.533 112.595C40.479 103.248 26.5625 82.7648 26.5625 59C26.5625 35.2352 40.479 14.7521 60.533 5.4046C59.8379 5.37737 59.1393 5.36364 58.4375 5.36364C29.0974 5.36364 5.3125 29.3775 5.3125 59C5.3125 88.6225 29.0974 112.636 58.4375 112.636Z" fill="white"/>
+                    </svg>
+                  </div>
+                <div class="col-1"></div>
+                <div class="col-12 col-md-8">
+                  <div class="fs-main-content">
+                    <h1>KINDERGARTEN</h1>
+                    <div class="hr"></div>
+                    <div class="row mt-4">
+                      <div class="col-2 ms-2">
+                        <h5>
+                          TK DHARMA WANITA
+                        </h5>
+                      </div>
+                      <div class="col-3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae possimus laborum minus,
+                          soluta
+                          quo eveniet autem labore deleniti itaque.</p>
+                      </div>
+                      <div class="col-1"></div>
+                      <div class="col-2">
+                        <h5>SURABAYA</h5>
+                      </div>
+                      <div class="col-2">
+                        <p>-7.297413078581294, 112.7447796321977</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fs-main-content">
+                    <h1>KINDERGARTEN</h1>
+                    <div class="hr"></div>
+                    <div class="row mt-4">
+                      <div class="col-2 ms-2">
+                        <h5>
+                          TK DHARMA WANITA
+                        </h5>
+                      </div>
+                      <div class="col-3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae possimus laborum minus,
+                          soluta
+                          quo eveniet autem labore deleniti itaque.</p>
+                      </div>
+                      <div class="col-1"></div>
+                      <div class="col-2">
+                        <h5>SURABAYA</h5>
+                      </div>
+                      <div class="col-2">
+                        <p>-7.297413078581294, 112.7447796321977</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fs-main-content">
+                    <h1>KINDERGARTEN</h1>
+                    <div class="hr"></div>
+                    <div class="row mt-4">
+                      <div class="col-2 ms-2">
+                        <h5>
+                          TK DHARMA WANITA
+                        </h5>
+                      </div>
+                      <div class="col-3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae possimus laborum minus,
+                          soluta
+                          quo eveniet autem labore deleniti itaque.</p>
+                      </div>
+                      <div class="col-1"></div>
+                      <div class="col-2">
+                        <h5>SURABAYA</h5>
+                      </div>
+                      <div class="col-2">
+                        <p>-7.297413078581294, 112.7447796321977</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -727,6 +884,12 @@
   <!-- NAVBAR -->
   <div class="top">
     <div class="burger-body">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
+      </svg>
       <ul>
         <li>
           <a href="#">Home</a>
@@ -742,7 +905,8 @@
         </li>
       </ul>
     </div>
-    <nav>
+
+    <nav id="nav">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
         <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
       </svg>
@@ -785,37 +949,30 @@
           <span>zu</span><br /><span>ll</span>
         </a>
       </div>
+      <!-- <a href="#" class="back-top"></a> -->
     </nav>
 
-    <div class="sound-bar-wrapper">
+    <div class="sound-bar-wrapper active off">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
-      <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
-    </svg>
+        <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
+      </svg>
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
-      <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
-    </svg>
+        <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
+      </svg>
+      <p id="soundOnText">On</p>
+      <p id="soundOffText">Off</p>
     </div>
   </div>
   <!-- NAV END -->
 
   <!-- GSAP CDN -->
-  <!-- <script src="assets/gsap.js"></script> -->
-  <!-- <script src="assets/scrollTrigger.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/gsap.js"></script>
+  <script src="assets/scrollTrigger.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"
-    integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- SMOOTH SCROLL CDN -->
   <script src="assets/scrollSmoother.js"></script>
   <script src="assets/scrambleGsap.js">
@@ -829,109 +986,9 @@
     });
   </script>
   <script src="assets/js/script.js"></script>
-  <!-- <script src="assets/js/app.js"></script> -->
-  <!-- <script src="node_modules/smooth-scrollbar/dist/smooth-scrollbar.js">
-    // <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar">
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //   var scrollbar = document.querySelector('#scroll-container');
-    //   SmoothScrollbar.init(scrollbar);
-    // });
-
-    // SmoothScrollbar.init(scrollbar, {
-    //   damping: 0.01,
-    //   thumbMinSize: 10,
-    //   renderByPixels: true,
-    //   continuousScrolling: true
-    // });
-
-    
-    var Scrollbar = window.Scrollbar;
-
-    Scrollbar.init(document.querySelector('#scroll-container'));
-  </script> -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
-
-  <!-- ScrollToPlugin -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js">
-    gsap.registerPlugin(ScrollToPlugin);
-
-    const body = document.querySelector('body');
-
-    ScrollToPlugin.scrollbar = body;
-
-    gsap.to(body, {
-      scrollTo: {
-        y: 1000, // Example scroll position
-        autoKill: false
-      },
-      duration: 200, // Duration of the animation
-      ease: 'power4.inOut' // Easing function for smooth scrolling
-    });
-
-    let smoother = ScrollSmoother.create({
-      smooth: 2,
-      effects: true,
-      normalizeScroll: true
-    });
-  </script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/10.1.1/smooth-scrollbar.min.js">
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollbar = SmoothScrollbar.init(document.querySelector('#scroll-container'), {
-        damping: 0.01, // Adjust damping for smoother scrolling
-        renderByPixels: true,
-        continuousScrolling: true,
-        alwaysShowTracks: false
-      });
-    });
-
-  </script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.js"
-    integrity="sha512-3f8C6NAQZv0YfwHFnjF231IIVcfZPnzL8EcHhNlzcoSRoEvC/iKDbtC+oYvL+0fRmEUMUYSvrZSE08TcRZYpgA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-
-      var Scrollbar = window.Scrollbar;
-
-      Scrollbar.init(document.querySelector('#my-scrollbar'),{
-        damping: 0.01, // Adjust damping for smoother scrolling
-        renderByPixels: true,
-        continuousScrolling: false,
-        alwaysShowTracks: false
-      });
-
-    </script> -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1100: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1120: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-      },
-    });
   </script>
 </body>
 

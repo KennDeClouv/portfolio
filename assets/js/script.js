@@ -2,7 +2,7 @@ let gsapOn = false;
 let loaderOn = false;
 
 // BURGER TOGGLE
-const a = document.querySelector(".burger");
+const a = document.querySelector("#nav");
 const b = document.querySelector(".burger-body");
 
 a.addEventListener("click", () => {
@@ -61,98 +61,61 @@ window.addEventListener("mouseup", () => {
 let sound = new Audio("assets/audio/sound.mp3");
 sound.loop = true;
 const soundButton = document.querySelector(".sound-bar-wrapper");
-soundButton.addEventListener("click", () => {
-  soundButton.classList.toggle("active");
-  // sound.toggle();
-  
-});
-
 
 soundButton.addEventListener("click", () => {
-  if (isPlaying) {
+  if (soundButton.classList.contains("on")) {
+    soundButton.classList.remove("on");
+    soundButton.classList.add("off");
     sound.pause();
-    // playPauseButton.textContent = "Play";
   } else {
+    soundButton.classList.add("on");
+    soundButton.classList.remove("off");
     sound.play();
-    // playPauseButton.textContent = "Pause";
   }
-  isPlaying = !isPlaying;
 });
-//
-// const bodySmooth = document.querySelector("body");
-// gsap.to(bodySmooth, {
-//   scrollTop: 1, // Example scroll position
-//   duration: 2, // Duration of the animation
-//   ease: "power4.inOut" // Easing function for smooth scrolling
-// });
 
-// SMOOTH SCROLL
-// Scrollbar.init(document.querySelector('#my-scrollbar'))
 
 //LOADER
-// document.addEventListener("DOMContentLoaded", () => {
-//   function calculatePercentage() {
-//     const totalElements = document.getElementsByTagName("*").length; // Total number of elements
-//     const loadedElements = document.querySelectorAll(
-//       "*"
-//     ).length; // Number of loaded elements
+if (loaderOn == true) {
+  document.addEventListener("DOMContentLoaded", () => {
+    function calculatePercentage() {
+      const totalElements = document.getElementsByTagName("*").length; // Total number of elements
+      const loadedElements = document.querySelectorAll(
+        "*"
+      ).length; // Number of loaded elements
 
-//     return Math.floor((loadedElements / totalElements) * 100); // Calculate percentage
-//   }
+      return Math.floor((loadedElements / totalElements) * 100); // Calculate percentage
+    }
 
-//   // Update the <h1> element with the loading percentage
-//   function updatePercentage() {
-//     const percentage = calculatePercentage();
-//     document.querySelector("#DOM").textContent = `${percentage}%`;
-//     document.querySelector(".loader-bar div").style = `width:${percentage}%`
-//   }
+    // Update the <h1> element with the loading percentage
+    function updatePercentage() {
+      const percentage = calculatePercentage();
+      document.querySelector("#DOM").textContent = `${percentage}%`;
+      document.querySelector(".loader-bar-inner").style = `width:${percentage}%`;
+      // document.querySelector(".loader-bar div").style = ``
+      console.log(percentage)
+    }
 
-//   // Call the updatePercentage function initially and attach it to the window's load event
-//   updatePercentage();
-//   window.addEventListener("load", updatePercentage);
-//   setTimeout(() => {
-//     document.querySelector(".transition").classList.add("loaded");
-//     setTimeout(() => {
-//       document.body.removeChild(document.querySelector(".loader"));
+    // Call the updatePercentage function initially and attach it to the window's load event
+    updatePercentage();
+    window.addEventListener("load", updatePercentage);
 
-//     }, 2000)
-//     setTimeout(() => {
-//       document.body.removeChild(document.querySelector(".transition"));
-//     }, 6000);
-//   }, 1000);
-// });
+    setTimeout(() => {
+      document.querySelector(".transition").classList.add("loaded");
 
-// const container = document.querySelector(".second-section");
-// const sections = gsap.utils.toArray(".second-content");
-// const content = document.querySelector(".second-content");
-// gsap.registerPlugin(ScrollTrigger);
+      setTimeout(() => {
+        document.body.removeChild(document.querySelector(".loader"));
 
-// let contentWidth = 0;
-// // Iterate over each section to calculate the total width
-// // sections.forEach((section) => {
-//   contentWidth += sections.offsetWidth;
-// // });
+      }, 2500)
 
-// // Calculate the amount to scroll horizontally
-// let amountToScroll = contentWidth - window.innerWidth;
+      setTimeout(() => {
+        document.body.removeChild(document.querySelector(".transition"));
+      }, 6000);
 
-// if (window.innerWidth > 768) {
-//   const tween = gsap.to(content, {
-//     x: -amountToScroll - 400,
-//     duration: 3,
-//     ease: "none",
-//   });
+    }, 1000);
+  });
 
-//   ScrollTrigger.create({
-//     trigger: ".second-section",
-//     start: "top",
-//     end: "+=" + amountToScroll,
-//     pin: true,
-//     animation: tween,
-//     scrub: 1,
-//     // markers : true
-//   });
-// }
+}
 
 const container = document.querySelector(".second-section");
 const sections = gsap.utils.toArray("#ss_main-content");
@@ -187,27 +150,6 @@ if (gsapOn == true && window.innerWidth > 768) {
     // markers : true
   });
 }
-
-// const secondSectionsL = gsap.utils.toArray(".third-section_left");
-// const secondSectionsR = gsap.utils.toArray(".third-section_right");
-
-// if (window.innerWidth > 768) {
-//   const tween = gsap.to(secondSectionsR, {
-//     x: window.innerWidth / 2,
-//     duration: 5,
-//     ease: "none",
-//   });
-
-//   ScrollTrigger.create({
-//     trigger: ".third-section",
-//     start: "-8px top",
-//     end: "+=" + window.innerWidth / 2,
-//     pin: true,
-//     animation: tween,
-//     scrub: 1,
-//     // markers : true
-//   });
-// }
 
 const container2 = document.querySelector(".slider-container");
 const sections2 = gsap.utils.toArray(".skill-slider");
@@ -253,29 +195,6 @@ let smoother = ScrollSmoother.create({
   smoothTouch: 0.1,
 });
 
-// document.querySelector('#scroll-container').addEventListener('scroll', () => {
-//   smoothScroll(this);
-// });
-
-// function smoothScroll(element) {
-//   let targetY = 0; // Target Y position (scroll position)
-//   const scrollSpeed = 0.1; // Scroll speed
-//   const easeAmount = 0.01; // Ease amount (lower value for smoother scrolling)
-
-//   // Calculate the distance to scroll
-//   const distance = targetY - element.scrollTop;
-
-//   // Apply easing to the scroll position
-//   element.scrollTop += distance * easeAmount;
-
-//   // Request another frame until target position is reached
-//   if (Math.abs(distance) > 1) {
-//     requestAnimationFrame(function() {
-//       smoothScroll(element);
-//     });
-//   }
-// }
-
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function () {
@@ -284,33 +203,40 @@ window.addEventListener("scroll", function () {
   if (currentScroll > lastScrollTop) {
     // Scrolling down
     document.querySelector(".logo").classList.remove("logo-active");
+    soundButton.classList.remove("active")
   } else {
     // Scrolling up
     document.querySelector(".logo").classList.add("logo-active");
+    soundButton.classList.add("active")
   }
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
-// const body = document.body,
-//   scrollWrap = document.querySelector("#my-scrollbar")
 
-// height = scrollWrap.getBoundingClientRect().height - 1,
-//   speed = 0.01;
+// const fsMainHover = document.querySelector("#fs-main-hover")
 
-// var offset = 0;
+// fsMainHover.addEventListener("mouseover", () => {
+// document.querySelector(".fs-main-hover").style.opacity = "1";
+// })
+// fsMainHover.addEventListener("mouseleave", () => {
+// document.querySelector(".fs-main-hover").style.opacity = "0";
+// })
 
-// body.style.height = Math.floor(height) + "px";
 
-// function smoothScroll() {
 
-//   offset += (window.scrollY - offset) * speed;
+const tl = gsap.timeline({
+  scrollTrigger: {
+    scrub: 1,
+    pin: true,
+    trigger: "#fs-main-gsap",
+    start: "50% 50%",
+    endTrigger: "#pin-scrub",
+    end: "bottom 75%",
+    // markers:true
+  },
+});
 
-//   var scroll = "translateY(-" + offset + "px) translateZ(0)";
-
-//   scrollWrap.style.transform = scroll;
-
-//   callScroll = requestAnimationFrame(smoothScroll);
-// }
-
-// smoothScroll();
+tl.to("#fs-main-svg", {
+  rotateZ: 720,
+})
