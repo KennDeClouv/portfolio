@@ -36,6 +36,14 @@ window.addEventListener("mousemove", (e) => {
     { duration: 1000, fill: "forwards" }
   );
 
+  cursor.animate(
+    {
+      left: `${posX}px`,
+      top: `${posY}px`,
+    },
+    { duration: 100, fill: "forwards" }
+  );
+
   links.forEach((link) => {
     link.addEventListener("mouseenter", () => {
       cursor.classList.add("hover-link");
@@ -83,12 +91,15 @@ soundButton.addEventListener("click", () => {
     soundButton.classList.remove("on");
     soundButton.classList.add("off");
     sound.pause();
+    document.querySelector(".main-content").classList.remove("d-none")
   } else {
     soundButton.classList.add("on");
     soundButton.classList.remove("off");
     sound.play();
+    document.querySelector(".main-content").classList.add("d-none")
   }
 });
+
 
 //LOADER
 if (loaderOn == true) {
@@ -244,13 +255,50 @@ tl.to("#fs-main-svg", {
 
 
 const msHoverDiv = document.querySelectorAll(".ms-hoverable div")
+msHoverDiv.forEach(div => {
+  div.addEventListener("mousedown", () => {
 
-msHoverDiv.forEach(e => {
-  e.addEventListener("click", () => {
-    if (e.classList.contains("opacity-100")) {
-      e.classList.remove("opacity-100");
-    } else {
-      e.classList.add("opacity-100");
+    div.classList.toggle("opacity-100");
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const textElement = document.getElementById('scramble');
+  const originalText = textElement.innerText;
+  const characters = originalText.split('');
+  
+  let scrambleInterval;
+  const scrambleFrequency = 50; // Scramble text every 50ms
+
+  // Function to scramble text
+  function scrambleText() {
+    let newText = '';
+    for (let i = 0; i < characters.length; i++) {
+      if (characters[i] === ' ') {
+        newText += ' ';
+      } else {
+        newText += String.fromCharCode(Math.random() * (126 - 33) + 33);
+      }
     }
-  })
+    textElement.innerText = newText;
+  }
+
+  // Start scrambling text when scrolling
+  window.addEventListener('scroll', function() {
+    if (!scrambleInterval) {
+      scrambleInterval = setInterval(scrambleText, scrambleFrequency);
+    }
+  });
+
+  // Stop scrambling and clear interval when scrolling stops
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function() {
+      clearInterval(scrambleInterval);
+      scrambleInterval = null;
+      textElement.innerText = originalText; // Reset to original text
+    }, 1000);
+  });
 });

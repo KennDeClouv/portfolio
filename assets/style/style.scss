@@ -49,7 +49,7 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
 
 html {
   scroll-behavior: smooth;
-  // cursor: none;
+  cursor: none;
   // transition: scroll 11s ease-in-out 1s;
 }
 
@@ -999,8 +999,8 @@ html {
         // margin: 0 10px;
         transition: opacity .3s ease;
         // opacity: 0;
-        width: calc(100% / 12 *3);
-        height: calc(100% / 12 *3);
+        width: calc(100% / 12 * 2.5);
+        height: calc(100% / 12 * 2.5);
         // height: calc();
         aspect-ratio: 1/1;
       }

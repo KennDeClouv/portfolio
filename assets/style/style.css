@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 ::-webkit-scrollbar {
@@ -1038,8 +1039,8 @@ html {
      border-image: url("../img/frame1.png") 150/89px;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
-  width: calc(100% / 12 *3);
-  height: calc(100% / 12 *3);
+  width: calc(100% / 12 * 2.5);
+  height: calc(100% / 12 * 2.5);
   aspect-ratio: 1/1;
 }
 
