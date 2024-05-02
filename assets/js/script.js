@@ -233,6 +233,7 @@ const tl = gsap.timeline({
     start: "50% 50%",
     endTrigger: "#pin-scrub",
     end: "bottom 75%",
+    ease: "power2.inOut",
     // markers:true
   },
 });

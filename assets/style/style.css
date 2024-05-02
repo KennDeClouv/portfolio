@@ -1027,8 +1027,8 @@ html {
 }
 
 .fourth-section .fs-main .row .fs-main-hover {
-  -o-border-image: url("/assets/img/frame1.png") 150/89px;
-     border-image: url("/assets/img/frame1.png") 150/89px;
+  -o-border-image: url("../img/frame1.png") 150/89px;
+     border-image: url("../img/frame1.png") 150/89px;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
   width: calc(100% / 12 *3);
@@ -1038,13 +1038,13 @@ html {
 
 .fourth-section .fs-main .row .fs-main-content {
   padding: 20px 40px;
-  -o-border-image: url("/assets/img/frame1.png") 150/89px;
-     border-image: url("/assets/img/frame1.png") 150/89px;
+  -o-border-image: url("../img/frame1.png") 150/89px;
+     border-image: url("../img/frame1.png") 150/89px;
 }
 
 .fourth-section .fs-main .row .fs-main-content h1 {
   font-size: calc(4rem + 3vw);
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .fourth-section .fs-main .row .fs-main-content div.hr {
@@ -1052,6 +1052,11 @@ html {
   height: 3px;
   background-color: #fefefe;
   margin: 10px;
+}
+
+.fourth-section .fs-main .row .fs-main-content p,
+.fourth-section .fs-main .row .fs-main-content h5 {
+  font-weight: 200;
 }
 
 .fifth-section {

@@ -982,7 +982,7 @@ html {
 
     .row {
       .fs-main-hover {
-        border-image: url("/assets/img/frame1.png") 150 / 89px;
+        border-image: url("../img/frame1.png") 150 / 89px;
         // margin: 0 10px;
         transition: opacity .3s ease;
         // opacity: 0;
@@ -994,11 +994,11 @@ html {
 
       .fs-main-content {
         padding: 20px 40px;
-        border-image: url("/assets/img/frame1.png") 150 / 89px;
+        border-image: url("../img/frame1.png") 150 / 89px;
 
         h1 {
           font-size: calc(4rem + 3vw);
-          font-weight: 600
+          font-weight: 900
         }
 
         div.hr {
@@ -1006,6 +1006,11 @@ html {
           height: 3px;
           background-color: $white;
           margin: 10px;
+        }
+
+        p,
+        h5 {
+          font-weight: 200;
         }
       }
 
