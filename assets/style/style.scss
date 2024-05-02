@@ -9,7 +9,7 @@ $gray: #9b9b9b;
 $white: #fefefe;
 $title-font: 600 7rem "Chakra Petch", sans-serif;
 $main-section-font: 600 12rem "Chakra Petch", sans-serif;
-$second-section-font: 600 10rem "Chakra Petch", sans-serif;
+$second-section-font: 300 10rem "Chakra Petch", sans-serif;
 $third-section-font: 600 3rem "Chakra Petch", sans-serif;
 
 // ==============================================
@@ -163,6 +163,11 @@ html {
 .hover-link {
   width: 75px;
   height: 75px;
+}
+
+.hover-text{
+  width: 105px;
+  height: 105px;
 }
 
 .hoverO-link {
@@ -997,7 +1002,7 @@ html {
         border-image: url("../img/frame1.png") 150 / 89px;
 
         h1 {
-          font-size: calc(4rem + 3vw);
+          font-size: calc(4rem + 2.5vw);
           font-weight: 900
         }
 
@@ -1028,9 +1033,11 @@ html {
 
 .fifth-section {
   @include black-section();
-  padding-top: 100px;
+  padding-top: 60vh;
+  padding-bottom: 10vh;
   border-radius: 0 0 10px 10px;
   position: relative;
+
 
   h1 {
     // font: 600 5rem "Chakra Petch";
@@ -1152,7 +1159,7 @@ html {
     width: 40vw;
     height: 100px;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     right: 0;
     border-radius: 10px 0 0 0;
 
@@ -1170,6 +1177,15 @@ html {
       transform: rotate(90deg);
     }
   }
+}
+
+.fs-marquee{
+  background-color: $black;
+  border-radius: 10px !important;
+  overflow: hidden;
+  padding: 20px ;
+  margin: 10px 8px;
+  color: $white;
 }
 
 // ==============================================

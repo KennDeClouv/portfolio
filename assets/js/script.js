@@ -1,4 +1,4 @@
-let gsapOn = false;
+let gsapOn = true;
 let loaderOn = false;
 
 // BURGER TOGGLE
@@ -17,6 +17,7 @@ document.addEventListener("click", function (e) {
 
 //CURSOR
 let links = document.querySelectorAll("a");
+let texts = document.querySelectorAll("p,h1,h2,h3,h4,h5,h6");
 let cursor = document.querySelector(".cursor");
 let cursorO = document.querySelector(".cursor-outline");
 
@@ -47,6 +48,21 @@ window.addEventListener("mousemove", (e) => {
   });
 });
 
+function addHoverListeners(elements, cursor, cursorO) {
+  elements.forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      cursor.classList.add("hover-text");
+      cursorO.classList.add("hoverO-link");
+    });
+    element.addEventListener("mouseleave", () => {
+      cursor.classList.remove("hover-text");
+      cursorO.classList.remove("hoverO-link");
+    });
+  });
+}
+
+addHoverListeners(texts, cursor, cursorO);
+
 window.addEventListener("mousedown", () => {
   cursor.classList.add("hover");
   cursorO.classList.add("hoverO");
@@ -74,15 +90,12 @@ soundButton.addEventListener("click", () => {
   }
 });
 
-
 //LOADER
 if (loaderOn == true) {
   document.addEventListener("DOMContentLoaded", () => {
     function calculatePercentage() {
       const totalElements = document.getElementsByTagName("*").length; // Total number of elements
-      const loadedElements = document.querySelectorAll(
-        "*"
-      ).length; // Number of loaded elements
+      const loadedElements = document.querySelectorAll("*").length; // Number of loaded elements
 
       return Math.floor((loadedElements / totalElements) * 100); // Calculate percentage
     }
@@ -91,9 +104,11 @@ if (loaderOn == true) {
     function updatePercentage() {
       const percentage = calculatePercentage();
       document.querySelector("#DOM").textContent = `${percentage}%`;
-      document.querySelector(".loader-bar-inner").style = `width:${percentage}%`;
+      document.querySelector(
+        ".loader-bar-inner"
+      ).style = `width:${percentage}%`;
       // document.querySelector(".loader-bar div").style = ``
-      console.log(percentage)
+      console.log(percentage);
     }
 
     // Call the updatePercentage function initially and attach it to the window's load event
@@ -105,16 +120,13 @@ if (loaderOn == true) {
 
       setTimeout(() => {
         document.body.removeChild(document.querySelector(".loader"));
-
-      }, 2500)
+      }, 2500);
 
       setTimeout(() => {
         document.body.removeChild(document.querySelector(".transition"));
       }, 6000);
-
     }, 1000);
   });
-
 }
 
 const container = document.querySelector(".second-section");
@@ -203,27 +215,15 @@ window.addEventListener("scroll", function () {
   if (currentScroll > lastScrollTop) {
     // Scrolling down
     document.querySelector(".logo").classList.remove("logo-active");
-    soundButton.classList.remove("active")
+    soundButton.classList.remove("active");
   } else {
     // Scrolling up
     document.querySelector(".logo").classList.add("logo-active");
-    soundButton.classList.add("active")
+    soundButton.classList.add("active");
   }
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
-
-
-// const fsMainHover = document.querySelector("#fs-main-hover")
-
-// fsMainHover.addEventListener("mouseover", () => {
-// document.querySelector(".fs-main-hover").style.opacity = "1";
-// })
-// fsMainHover.addEventListener("mouseleave", () => {
-// document.querySelector(".fs-main-hover").style.opacity = "0";
-// })
-
-
 
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -232,12 +232,12 @@ const tl = gsap.timeline({
     trigger: "#fs-main-gsap",
     start: "50% 50%",
     endTrigger: "#pin-scrub",
-    end: "bottom 75%",
-    ease: "power2.inOut",
+    end: "100% 72%",
+    // ease: "power2.inOut",
     // markers:true
   },
 });
 
 tl.to("#fs-main-svg", {
   rotateZ: 720,
-})
+});
