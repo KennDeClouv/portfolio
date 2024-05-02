@@ -241,3 +241,16 @@ const tl = gsap.timeline({
 tl.to("#fs-main-svg", {
   rotateZ: 720,
 });
+
+
+const msHoverDiv = document.querySelectorAll(".ms-hoverable div")
+
+msHoverDiv.forEach(e => {
+  e.addEventListener("click", () => {
+    if (e.classList.contains("opacity-100")) {
+      e.classList.remove("opacity-100");
+    } else {
+      e.classList.add("opacity-100");
+    }
+  })
+});
