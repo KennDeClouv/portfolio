@@ -41,17 +41,19 @@ window.addEventListener("mousemove", (e) => {
       left: `${posX}px`,
       top: `${posY}px`,
     },
-    { duration: 100, fill: "forwards" }
+    { duration: 500, fill: "forwards" }
   );
 
   links.forEach((link) => {
     link.addEventListener("mouseenter", () => {
       cursor.classList.add("hover-link");
       cursorO.classList.add("hoverO-link");
+      document.querySelector("#link-click").classList.remove("opacity-0")
     });
     link.addEventListener("mouseleave", () => {
       cursor.classList.remove("hover-link");
       cursorO.classList.remove("hoverO-link");
+      document.querySelector("#link-click").classList.add("opacity-0")
     });
   });
 });
@@ -61,6 +63,13 @@ function addHoverListeners(elements, cursor, cursorO) {
     element.addEventListener("mouseenter", () => {
       cursor.classList.add("hover-text");
       cursorO.classList.add("hoverO-link");
+      // cursor.animate(
+      //   {
+      //     left: `${posX}px`,
+      //     top: `${posY}px`,
+      //   },
+      //   { duration: 60000, fill: "forwards" }
+      // );
     });
     element.addEventListener("mouseleave", () => {
       cursor.classList.remove("hover-text");
