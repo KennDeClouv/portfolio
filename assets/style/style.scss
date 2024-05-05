@@ -754,15 +754,15 @@ html {
     left: 0;
     // z-index: -100;
     // background-color: #3e3e3e;
-    grid-template-columns: repeat(38,1fr);
-    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(38, 1fr);
+    grid-template-rows: repeat(18, 1fr);
 
-    div{
+    div {
       background-color: $white;
       opacity: 0;
       transition: opacity .8s ease .4s;
 
-      &:hover{
+      &:hover {
         opacity: 1;
         transition: opacity 0s;
       }
@@ -1088,7 +1088,7 @@ html {
       width: 100%;
       aspect-ratio: 16/9;
       border-radius: 2rem;
-      border: 8px solid $white;
+      // border: 8px solid $white;
 
       img {
         width: 100%;
@@ -1191,9 +1191,10 @@ html {
   background-color: $black;
   border-radius: 10px !important;
   overflow: hidden;
-  padding: 20px;
+  padding: 50px 0;
   margin: 10px 8px;
   color: $white;
+  white-space: nowrap;
 }
 
 // ==============================================
@@ -1257,5 +1258,59 @@ html {
     .skill:nth-child(4) {
       @include skill-global($skillcolor3, $black);
     }
+  }
+}
+
+// ==============================================
+// SEVENTH SECTION
+// ==============================================
+
+.seventh-section {
+  background-color: $black;
+  border-radius: 10px;
+  margin: 8px;
+  padding: 10vh 0;
+
+  h1 {
+    color: $white;
+    font-size: calc(2rem + 3vw);
+    text-transform: uppercase;
+  }
+
+  .contact-box {
+    padding: 20px;
+    color: $white;
+    border-radius: 20px;
+    border: 1px $white solid;
+
+    input,
+    textarea {
+      background-color: $black;
+      color: $white;
+      opacity: 0.4;
+
+      &:focus,
+      &:focus ~ label {
+        opacity: 1;
+      }
+    }
+    
+    label {
+      color: $white !important;
+      opacity: .4;
+    }
+
+    // .interest-radio{
+
+    // }
+
+    .custom-radio {
+      display: inline-block;
+      position: relative;
+      padding-left: 30px;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
   }
 }

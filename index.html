@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- STYLE -->
 
-  <link rel="stylesheet" href="https://izzulaverroes.github.io/ave/avecdn.css">
+  <!-- <link rel="stylesheet" href="https://izzulaverroes.github.io/ave/avecdn.css"> -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" /> -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="assets/base.css">
   <link rel="stylesheet" href="assets/style/style.css" />
 
   <!-- <link rel="stylesheet" href="assets/base.css"> -->
   <title>Zull</title>
+
 </head>
 
 <body class="overflow-x-hidden">
@@ -1094,7 +1096,16 @@
               </div>
             </div>
             <div style="margin-top: 15vh;">
-              <h3 style="text-transform: uppercase;"><span style="background-color: #fff;color: #212121;border-radius: 10px;padding: 4px 10px;margin-left: 30px;">10 Years</span>&nbsp;education &nbsp;<span style="border-radius: 10px;padding: 4px 10px;background-color: #c9c9c9;color: #212121;">20+</span>&nbsp; <span style="border-radius: 10px;border: 1px #fff solid;padding: 4px 10px;position: relative;">achievment <span style="border-radius: 100%;background-color: #fff;position: absolute;top: -15px;right: -15px;color: #212121; font-size: 1rem;width: 30px;height: 30px;display: flex; justify-content: center;align-items: center;">31+</span></span></h3>
+              <h3 style="text-transform: uppercase;"><span
+                  style="background-color: #fff;color: #212121;border-radius: 10px;padding: 4px 10px;margin-left: 30px;">10
+                  Years</span></span>
+                &nbsp;education &nbsp;<span
+                  style="border-radius: 10px;padding: 4px 10px;background-color: #c9c9c9;color: #212121;">20+</span>&nbsp;
+                <span
+                  style="border-radius: 10px;border: 1px #fff solid;padding: 4px 10px;position: relative;">achievment
+                  <span
+                    style="border-radius: 100%;background-color: #fff;position: absolute;top: -15px;right: -15px;color: #212121; font-size: 1rem;width: 30px;height: 30px;display: flex; justify-content: center;align-items: center;">31+</span></span>
+              </h3>
             </div>
           </section>
           <!-- FOURTH SECTION END-->
@@ -1400,8 +1411,9 @@
                 </div>
                 <div class="col-12 col-md-6 mt-1">
                   <div class="side-work more-work">
-                    <div class="m-auto">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91" fill="none">
+                    <div class="m-auto d-flex flex-column">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91" fill="none"
+                        class="m-auto">
                         <path d="M45.5 4V87M4 45.5H87" stroke="#ffffff" stroke-width="8" stroke-linecap="round"
                           stroke-linejoin="round" />
                       </svg>
@@ -1428,10 +1440,8 @@
         </div>
         <!-- FIFTH SECTION MARQUEE -->
         <div class="fs-marquee">
-          <marquee behavior="" direction="">
-            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quod saepe earum excepturi voluptatum
-              pariatur commodi nobis incidunt dolore quibusdam.</h1>
-          </marquee>
+          <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quod saepe earum excepturi voluptatum
+            pariatur commodi nobis incidunt dolore quibusdam.</h1>
         </div>
         <!-- FIFTH SECTION MARQUEE END-->
         <!-- SIXTH SECTION -->
@@ -1502,7 +1512,43 @@
         <!-- SIXTH SECTION END -->
         <!-- SEVENTH SECTION -->
         <section class="seventh-section">
-          <div class="container"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h1>Lets start <br>&emsp;&emsp;to being <br>a friend</h1>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="contact-box">
+                  <h3>Your data</h3>
+                  <form action="" class="mt-4">
+                    <div class="form-floating">
+                      <input type="name" class="form-control" id="floatingName" placeholder="Name">
+                      <label for="floatingName">Name*</label>
+                    </div>
+                    <div class="form-floating mt-3">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address*</label>
+                    </div>
+                    <div class="mt-4">
+                      You're interests in
+                      <div class="mt-3 interests-radio">
+                        <label class="custom-radio"> <!-- First radio button -->
+                          <input type="radio" name="radio" >
+                          <!-- <span class="radio-text">Technologies</span> -->
+                        </label>
+                      </div>
+                      <div class="mt-4">
+                        <div class="form-floating">
+                          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                          <label for="floatingTextarea2">Comments</label>
+                        </div>  
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- SEVENTH SECTION END-->
       </main>
@@ -1599,6 +1645,7 @@
   <!-- GSAP CDN -->
   <script src="assets/gsap.js"></script>
   <script src="assets/scrollTrigger.js"></script>
+  <script src="https://izzulaverroes.github.io/ave/avecdn.js"></script>
 
   <!-- SMOOTH SCROLL CDN -->
   <script src="assets/scrollSmoother.js"></script>

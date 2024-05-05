@@ -1,4 +1,4 @@
-let gsapOn = true;
+let gsapOn = false;
 let loaderOn = false;
 
 // BURGER TOGGLE
@@ -149,70 +149,110 @@ if (loaderOn == true) {
   });
 }
 
-const container = document.querySelector(".second-section");
-const sections = gsap.utils.toArray("#ss_main-content");
-const content = document.querySelector("#ss_main-content");
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-gsap.registerPlugin(ScrollTrigger);
+// const container = document.querySelector(".second-section");
+// const sections = gsap.utils.toArray("#ss_main-content");
+// const content = document.querySelector("#ss_main-content");
+// // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// gsap.registerPlugin(ScrollTrigger);
 
-let contentWidth = 0;
-// Iterate over each section to calculate the total width
-sections.forEach((section) => {
-  contentWidth += section.offsetWidth;
-});
+// let contentWidth = 0;
+// // Iterate over each section to calculate the total width
+// sections.forEach((section) => {
+//   contentWidth += section.offsetWidth;
+// });
 
-// Calculate the amount to scroll horizontally
-let amountToScroll = contentWidth - window.innerWidth;
-let secondSectionOn = false;
+// // Calculate the amount to scroll horizontally
+// let amountToScroll = contentWidth - window.innerWidth;
+// let secondSectionOn = false;
 
-if (gsapOn == true && window.innerWidth > 768) {
-  const tween = gsap.to(content, {
-    x: -amountToScroll - 400,
-    duration: 1,
-    ease: "none",
+// if (gsapOn == true && window.innerWidth > 768) {
+//   const tween = gsap.to(content, {
+//     x: -amountToScroll - 400,
+//     duration: 1,
+//     ease: "none",
+//   });
+
+//   ScrollTrigger.create({
+//     trigger: ".second-section",
+//     start: "top",
+//     end: "+=" + amountToScroll,
+//     pin: true,
+//     animation: tween,
+//     scrub: 1,
+//     // markers : true
+//   });
+// }
+
+// const container2 = document.querySelector(".slider-container");
+// const sections2 = gsap.utils.toArray(".skill-slider");
+// const content2 = document.querySelector(".skill-slider");
+
+// let contentWidth2 = 0;
+// // Iterate over each section to calculate the total width
+// sections2.forEach((section2) => {
+//   contentWidth2 += section2.offsetWidth;
+// });
+
+// // Calculate the amount to scroll horizontally
+// let amountToScroll2 = contentWidth2 - window.innerWidth;
+
+// if (gsapOn == true && window.innerWidth > 768) {
+//   const tween = gsap.to(content2, {
+//     x: -amountToScroll2 - 400,
+//     duration: 1,
+//     ease: "none",
+//   });
+
+//   ScrollTrigger.create({
+//     trigger: ".slider-container",
+//     start: "top",
+//     end: "+=" + amountToScroll2,
+//     pin: true,
+//     animation: tween,
+//     scrub: 1,
+//     // markers : true
+//   });
+// }
+
+// Define a function to handle horizontal scrolling with ScrollTrigger
+function handleHorizontalScroll(containerSelector, sectionSelector, offset) {
+  const container = document.querySelector(containerSelector);
+  const sections = gsap.utils.toArray(sectionSelector);
+  const content = document.querySelector(sectionSelector);
+
+  let contentWidth = 0;
+  // Iterate over each section to calculate the total width
+  sections.forEach((section) => {
+    contentWidth += section.offsetWidth;
   });
 
-  ScrollTrigger.create({
-    trigger: ".second-section",
-    start: "top",
-    end: "+=" + amountToScroll,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-    // markers : true
-  });
+  // Calculate the amount to scroll horizontally
+  let amountToScroll = contentWidth - window.innerWidth;
+
+  if (gsapOn && window.innerWidth > 768) {
+    const tween = gsap.to(content, {
+      x: -amountToScroll - offset,
+      duration: 1,
+      ease: "none",
+    });
+
+    ScrollTrigger.create({
+      trigger: containerSelector,
+      start: "top",
+      end: `+=${amountToScroll}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+    });
+  }
 }
 
-const container2 = document.querySelector(".slider-container");
-const sections2 = gsap.utils.toArray(".skill-slider");
-const content2 = document.querySelector(".skill-slider");
+// Call the function for the first section
+handleHorizontalScroll(".second-section", "#ss_main-content", "400");
 
-let contentWidth2 = 0;
-// Iterate over each section to calculate the total width
-sections2.forEach((section2) => {
-  contentWidth2 += section2.offsetWidth;
-});
-
-// Calculate the amount to scroll horizontally
-let amountToScroll2 = contentWidth2 - window.innerWidth;
-
-if (gsapOn == true && window.innerWidth > 768) {
-  const tween = gsap.to(content2, {
-    x: -amountToScroll2 - 400,
-    duration: 1,
-    ease: "none",
-  });
-
-  ScrollTrigger.create({
-    trigger: ".slider-container",
-    start: "top",
-    end: "+=" + amountToScroll2,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-    // markers : true
-  });
-}
+// Call the function for the second section
+handleHorizontalScroll(".slider-container", ".skill-slider", "400");
+// handleHorizontalScroll(".fs-marquee", ".fs-marquee h1","400");
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -272,11 +312,11 @@ msHoverDiv.forEach(div => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const textElement = document.getElementById('scramble');
   const originalText = textElement.innerText;
   const characters = originalText.split('');
-  
+
   let scrambleInterval;
   const scrambleFrequency = 50; // Scramble text every 50ms
 
@@ -294,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Start scrambling text when scrolling
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     if (!scrambleInterval) {
       scrambleInterval = setInterval(scrambleText, scrambleFrequency);
     }
@@ -302,12 +342,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Stop scrambling and clear interval when scrolling stops
   let scrollTimeout;
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(function() {
+    scrollTimeout = setTimeout(function () {
       clearInterval(scrambleInterval);
       scrambleInterval = null;
       textElement.innerText = originalText; // Reset to original text
     }, 1000);
   });
+});
+
+const inputField = document.querySelectorAll("input, textarea, label")
+
+inputField.forEach(e => {
+  e.addEventListener("input", function () {
+    // Check if the input field has text
+    if (e.value.length > 0) {
+      e.classList.add("opacity-100"); // Add class if there is text
+    } else {
+      e.classList.remove("opacity-100"); // Remove class if there is no text
+    }
+  });
+  
 });
