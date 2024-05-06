@@ -48,12 +48,12 @@ window.addEventListener("mousemove", (e) => {
     link.addEventListener("mouseenter", () => {
       cursor.classList.add("hover-link");
       cursorO.classList.add("hoverO-link");
-      document.querySelector("#link-click").classList.remove("opacity-0")
+      document.querySelector("#link-click").classList.remove("opacity-0");
     });
     link.addEventListener("mouseleave", () => {
       cursor.classList.remove("hover-link");
       cursorO.classList.remove("hoverO-link");
-      document.querySelector("#link-click").classList.add("opacity-0")
+      document.querySelector("#link-click").classList.add("opacity-0");
     });
   });
 });
@@ -63,13 +63,6 @@ function addHoverListeners(elements, cursor, cursorO) {
     element.addEventListener("mouseenter", () => {
       cursor.classList.add("hover-text");
       cursorO.classList.add("hoverO-link");
-      // cursor.animate(
-      //   {
-      //     left: `${posX}px`,
-      //     top: `${posY}px`,
-      //   },
-      //   { duration: 60000, fill: "forwards" }
-      // );
     });
     element.addEventListener("mouseleave", () => {
       cursor.classList.remove("hover-text");
@@ -100,38 +93,36 @@ soundButton.addEventListener("click", () => {
     soundButton.classList.remove("on");
     soundButton.classList.add("off");
     sound.pause();
-    document.querySelector(".main-content").classList.remove("d-none")
+    document.querySelector(".main-content").classList.remove("d-none");
   } else {
     soundButton.classList.add("on");
     soundButton.classList.remove("off");
     sound.play();
-    document.querySelector(".main-content").classList.add("d-none")
+    document.querySelector(".main-content").classList.add("d-none");
   }
 });
-
 
 //LOADER
 if (loaderOn == true) {
   document.addEventListener("DOMContentLoaded", () => {
     function calculatePercentage() {
-      const totalElements = document.getElementsByTagName("*").length; // Total number of elements
-      const loadedElements = document.querySelectorAll("*").length; // Number of loaded elements
+      const totalElements = document.getElementsByTagName("*").length;
+      const loadedElements = document.querySelectorAll("*").length; 
 
-      return Math.floor((loadedElements / totalElements) * 100); // Calculate percentage
+      return Math.floor((loadedElements / totalElements) * 100); 
     }
 
-    // Update the <h1> element with the loading percentage
+
     function updatePercentage() {
       const percentage = calculatePercentage();
       document.querySelector("#DOM").textContent = `${percentage}%`;
       document.querySelector(
         ".loader-bar-inner"
       ).style = `width:${percentage}%`;
-      // document.querySelector(".loader-bar div").style = ``
+
       console.log(percentage);
     }
 
-    // Call the updatePercentage function initially and attach it to the window's load event
     updatePercentage();
     window.addEventListener("load", updatePercentage);
 
@@ -149,70 +140,6 @@ if (loaderOn == true) {
   });
 }
 
-// const container = document.querySelector(".second-section");
-// const sections = gsap.utils.toArray("#ss_main-content");
-// const content = document.querySelector("#ss_main-content");
-// // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-// gsap.registerPlugin(ScrollTrigger);
-
-// let contentWidth = 0;
-// // Iterate over each section to calculate the total width
-// sections.forEach((section) => {
-//   contentWidth += section.offsetWidth;
-// });
-
-// // Calculate the amount to scroll horizontally
-// let amountToScroll = contentWidth - window.innerWidth;
-// let secondSectionOn = false;
-
-// if (gsapOn == true && window.innerWidth > 768) {
-//   const tween = gsap.to(content, {
-//     x: -amountToScroll - 400,
-//     duration: 1,
-//     ease: "none",
-//   });
-
-//   ScrollTrigger.create({
-//     trigger: ".second-section",
-//     start: "top",
-//     end: "+=" + amountToScroll,
-//     pin: true,
-//     animation: tween,
-//     scrub: 1,
-//     // markers : true
-//   });
-// }
-
-// const container2 = document.querySelector(".slider-container");
-// const sections2 = gsap.utils.toArray(".skill-slider");
-// const content2 = document.querySelector(".skill-slider");
-
-// let contentWidth2 = 0;
-// // Iterate over each section to calculate the total width
-// sections2.forEach((section2) => {
-//   contentWidth2 += section2.offsetWidth;
-// });
-
-// // Calculate the amount to scroll horizontally
-// let amountToScroll2 = contentWidth2 - window.innerWidth;
-
-// if (gsapOn == true && window.innerWidth > 768) {
-//   const tween = gsap.to(content2, {
-//     x: -amountToScroll2 - 400,
-//     duration: 1,
-//     ease: "none",
-//   });
-
-//   ScrollTrigger.create({
-//     trigger: ".slider-container",
-//     start: "top",
-//     end: "+=" + amountToScroll2,
-//     pin: true,
-//     animation: tween,
-//     scrub: 1,
-//     // markers : true
-//   });
-// }
 
 // Define a function to handle horizontal scrolling with ScrollTrigger
 function handleHorizontalScroll(containerSelector, sectionSelector, offset) {
@@ -302,30 +229,27 @@ tl.to("#fs-main-svg", {
   rotateZ: 720,
 });
 
-
-const msHoverDiv = document.querySelectorAll(".ms-hoverable div")
-msHoverDiv.forEach(div => {
+const msHoverDiv = document.querySelectorAll(".ms-hoverable div");
+msHoverDiv.forEach((div) => {
   div.addEventListener("mousedown", () => {
-
     div.classList.toggle("opacity-100");
   });
 });
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  const textElement = document.getElementById('scramble');
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("scramble");
   const originalText = textElement.innerText;
-  const characters = originalText.split('');
+  const characters = originalText.split("");
 
   let scrambleInterval;
   const scrambleFrequency = 50; // Scramble text every 50ms
 
   // Function to scramble text
   function scrambleText() {
-    let newText = '';
+    let newText = "";
     for (let i = 0; i < characters.length; i++) {
-      if (characters[i] === ' ') {
-        newText += ' ';
+      if (characters[i] === " ") {
+        newText += " ";
       } else {
         newText += String.fromCharCode(Math.random() * (126 - 33) + 33);
       }
@@ -334,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Start scrambling text when scrolling
-  window.addEventListener('scroll', function () {
+  window.addEventListener("scroll", function () {
     if (!scrambleInterval) {
       scrambleInterval = setInterval(scrambleText, scrambleFrequency);
     }
@@ -342,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Stop scrambling and clear interval when scrolling stops
   let scrollTimeout;
-  window.addEventListener('scroll', function () {
+  window.addEventListener("scroll", function () {
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(function () {
       clearInterval(scrambleInterval);
@@ -352,16 +276,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-const inputField = document.querySelectorAll("input, textarea, label")
+const inputField = document.querySelectorAll("input, textarea");
 
-inputField.forEach(e => {
-  e.addEventListener("input", function () {
-    // Check if the input field has text
+inputField.forEach((e) => {
+  e.addEventListener("input", () => {
     if (e.value.length > 0) {
-      e.classList.add("opacity-100"); // Add class if there is text
+      e.parentElement.classList.remove("opacity-50");
     } else {
-      e.classList.remove("opacity-100"); // Remove class if there is no text
+      e.parentElement.classList.add("opacity-50");
+      
     }
   });
-  
 });

@@ -42,6 +42,9 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+* {
   font-family: "Chakra Petch", sans-serif;
   list-style: none;
   text-decoration: none !important;
@@ -221,7 +224,6 @@ html {
     loaderIn 0.9s ease-in-out 4.6s both;
   /* display: flex; */
   text-align: center;
-
 }
 
 .transition.loaded div:nth-child(4) h1 {
@@ -256,7 +258,6 @@ html {
 }
 
 @keyframes fade {
-
   0%,
   100% {
     opacity: 0;
@@ -295,7 +296,6 @@ html {
   }
 }
 
-
 // ==============================================
 // NAV
 // ==============================================
@@ -308,7 +308,7 @@ html {
     // width: 100px;
     // height: 40px;
     padding: 20px 40px 20px 100px;
-    transition: padding .4s ease;
+    transition: padding 0.4s ease;
 
     &:hover {
       padding: 20px 40px 20px 120px;
@@ -482,9 +482,7 @@ html {
       height: 6px;
     }
 
-
     @keyframes bounce-nav {
-
       0%,
       20%,
       50%,
@@ -627,7 +625,7 @@ html {
     }
 
     transform: translateX(110%);
-    transition: transform .4s ease;
+    transition: transform 0.4s ease;
 
     &.active {
       transform: translateX(0%);
@@ -650,7 +648,7 @@ html {
     #soundOnText,
     #soundOffText {
       // transition: all .2s ease;
-      transition: all .2s ease;
+      transition: all 0.2s ease;
       // display: none;
       opacity: 0;
       position: absolute;
@@ -672,8 +670,6 @@ html {
   // padding: 20px;
   // width: 40px;
   // height: 40px;
-
-
 }
 
 // ==============================================
@@ -708,10 +704,8 @@ html {
     svg {
       margin-bottom: 1rem;
       animation: 10s ease-in-out infinite alternate rotate;
-
     }
   }
-
 
   @media screen and (max-width: 768px) {
     .zull_svg {
@@ -725,9 +719,7 @@ html {
     }
   }
 
-
   @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -760,7 +752,7 @@ html {
     div {
       background-color: $white;
       opacity: 0;
-      transition: opacity .8s ease .4s;
+      transition: opacity 0.8s ease 0.4s;
 
       &:hover {
         opacity: 1;
@@ -769,6 +761,9 @@ html {
     }
   }
 
+  @media screen and (max-width:768px){
+    $main-section-font: 600 2rem "Chakra Petch", sans-serif;
+  }
 }
 
 // ==============================================
@@ -809,7 +804,7 @@ html {
   @include black-section();
   padding: 45px 0;
 
-  &>* {
+  & > * {
     color: $white;
   }
 
@@ -818,7 +813,6 @@ html {
   }
 
   @keyframes glitch {
-
     0%,
     20%,
     40%,
@@ -958,17 +952,13 @@ html {
 
       @if $p ==t {
         top: -12px;
-      }
-
-      @else {
+      } @else {
         bottom: -12px;
       }
 
       @if $rl ==r {
         right: 0;
-      }
-
-      @else {
+      } @else {
         left: -0.8px;
       }
     }
@@ -997,7 +987,7 @@ html {
       .fs-main-hover {
         border-image: url("../img/frame1.png") 150 / 89px;
         // margin: 0 10px;
-        transition: opacity .3s ease;
+        transition: opacity 0.3s ease;
         // opacity: 0;
         width: calc(100% / 12 * 2.5);
         height: calc(100% / 12 * 2.5);
@@ -1011,7 +1001,7 @@ html {
 
         h1 {
           font-size: calc(3rem + 3vw);
-          font-weight: 900
+          font-weight: 900;
         }
 
         div.hr {
@@ -1026,7 +1016,6 @@ html {
           font-weight: 200;
         }
       }
-
     }
   }
 }
@@ -1045,7 +1034,6 @@ html {
   padding-bottom: 10vh;
   border-radius: 0 0 10px 10px;
   position: relative;
-
 
   h1 {
     // font: 600 5rem "Chakra Petch";
@@ -1287,17 +1275,17 @@ html {
     textarea {
       background-color: $black;
       color: $white;
-      opacity: 0.4;
+      // opacity: 0.4;
 
-      &:focus,
-      &:focus ~ label {
-        opacity: 1;
-      }
+      // &:focus,
+      // &:focus ~ label {
+      //   opacity: 1;
+      // }
     }
-    
+
     label {
       color: $white !important;
-      opacity: .4;
+      // opacity: .4;
     }
 
     // .interest-radio{
@@ -1311,6 +1299,32 @@ html {
       margin-right: 15px;
       cursor: pointer;
     }
+  }
+}
 
+// ==============================================
+// FOOTER SECTION
+// ==============================================
+footer {
+  background-color: $gray;
+  color: $black;
+  margin: 0 8px;
+  border-radius: 10px;
+  padding: 40px 0;
+}
+
+// ==============================================
+// RESPONSIVE
+// ==============================================
+
+@media screen and (max-width: 768px) {
+  // html{
+  //   font-size: 50% !important;
+  // }
+  html{
+    .main-section{
+      font-size: 50% !important;
+
+    }
   }
 }
