@@ -9,42 +9,40 @@ if (navOn == true) {
   a.addEventListener("click", () => {
     b.classList.toggle("active");
   });
-  
+
   document.addEventListener("click", function (e) {
     if (!a.contains(e.target) && !b.contains(e.target)) {
       b.classList.remove("active");
     }
   });
-  
 
-// SOUND
+  // SOUND
 
-let sound = new Audio("assets/audio/sound.mp3");
-sound.loop = true;
-const soundButton = document.querySelector(".sound-bar-wrapper");
+  let sound = new Audio("assets/audio/sound.mp3");
+  sound.loop = true;
+  const soundButton = document.querySelector(".sound-bar-wrapper");
 
-soundButton.addEventListener("click", () => {
-  if (soundButton.classList.contains("on")) {
-    soundButton.classList.remove("on");
-    soundButton.classList.add("off");
-    sound.pause();
-    document.querySelector(".main-content").classList.remove("d-none");
-  } else {
-    soundButton.classList.add("on");
-    soundButton.classList.remove("off");
-    sound.play();
-    document.querySelector(".main-content").classList.add("d-none");
-  }
-});
-
+  soundButton.addEventListener("click", () => {
+    if (soundButton.classList.contains("on")) {
+      soundButton.classList.remove("on");
+      soundButton.classList.add("off");
+      sound.pause();
+      document.querySelector(".main-content").classList.remove("d-none");
+    } else {
+      soundButton.classList.add("on");
+      soundButton.classList.remove("off");
+      sound.play();
+      document.querySelector(".main-content").classList.add("d-none");
+    }
+  });
 }
-  
+
 //CURSOR
 let links = document.querySelectorAll("a");
 let texts = document.querySelectorAll("p,h1,h2,h3,h4,h5,h6");
 let cursor = document.querySelector(".cursor");
 let cursorO = document.querySelector(".cursor-outline");
-let linkClick = document.querySelectorAll("#link-click-hover")
+let linkClick = document.querySelectorAll("#link-click-hover");
 
 window.addEventListener("mousemove", (e) => {
   const posX = e.clientX;
@@ -60,7 +58,6 @@ window.addEventListener("mousemove", (e) => {
     },
     { duration: 1000, fill: "forwards" }
   );
-
 
   linkClick.forEach((link) => {
     link.addEventListener("mouseenter", () => {
@@ -106,11 +103,10 @@ if (loaderOn == true) {
   document.addEventListener("DOMContentLoaded", () => {
     function calculatePercentage() {
       const totalElements = document.getElementsByTagName("*").length;
-      const loadedElements = document.querySelectorAll("*").length; 
+      const loadedElements = document.querySelectorAll("*").length;
 
-      return Math.floor((loadedElements / totalElements) * 100); 
+      return Math.floor((loadedElements / totalElements) * 100);
     }
-
 
     function updatePercentage() {
       const percentage = calculatePercentage();
@@ -138,7 +134,6 @@ if (loaderOn == true) {
     }, 1000);
   });
 }
-
 
 // Define a function to handle horizontal scrolling with ScrollTrigger
 function handleHorizontalScroll(containerSelector, sectionSelector, offset) {
@@ -173,7 +168,6 @@ function handleHorizontalScroll(containerSelector, sectionSelector, offset) {
   }
 }
 
-
 handleHorizontalScroll(".second-section", "#ss_main-content", "400");
 handleHorizontalScroll(".slider-container", ".skill-slider", "400");
 
@@ -189,7 +183,6 @@ let smoother = ScrollSmoother.create({
   effects: true,
   smoothTouch: 0.1,
 });
-
 
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -263,7 +256,6 @@ inputField.forEach((e) => {
       e.parentElement.classList.remove("opacity-50");
     } else {
       e.parentElement.classList.add("opacity-50");
-      
     }
   });
 });
@@ -273,14 +265,35 @@ const home = document.querySelector("#toHome");
 const edu = document.querySelector("#toEdu");
 const contact = document.querySelector("#toCont");
 
-function navigation(e,f) {
-  e.addEventListener("click",() =>{
+function navigation(e, f) {
+  e.addEventListener("click", () => {
     smoother.scrollTo(f, true, "top top");
-  })
+  });
 }
 
-navigation(home,".main-section");
-navigation(edu,"#education-section");
-navigation(contact,"#contact-section");
+navigation(home, ".main-section");
+navigation(edu, "#education-section");
+navigation(contact, "#contact-section");
 
-ScrollTrigger.refresh()
+ScrollTrigger.refresh();
+
+
+let lastScrollTop = 0;
+
+
+window.addEventListener("scroll", function () {
+  let currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+  // if (currentScroll > lastScrollTop) {
+  if (document.querySelector(".sound-bar-wrapper").classList.contains("on") == false && currentScroll > lastScrollTop) {
+    // Scrolling down
+    document.querySelector(".logo").classList.remove("logo-active")
+    document.querySelector(".sound-bar-wrapper").classList.remove("active");
+  } else {
+    // Scrolling up
+    document.querySelector(".logo").classList.add("logo-active");
+    document.querySelector(".sound-bar-wrapper").classList.add("active");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
