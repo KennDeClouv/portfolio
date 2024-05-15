@@ -1,86 +1,21 @@
-let gsapOn = false;
+let gsapOn = true;
 let loaderOn = false;
+let navOn = true;
 
 // BURGER TOGGLE
 const a = document.querySelector("#nav");
 const b = document.querySelector(".burger-body");
-
-a.addEventListener("click", () => {
-  b.classList.toggle("active");
-});
-
-document.addEventListener("click", function (e) {
-  if (!a.contains(e.target) && !b.contains(e.target)) {
-    b.classList.remove("active");
-  }
-});
-
-//CURSOR
-let links = document.querySelectorAll("a");
-let texts = document.querySelectorAll("p,h1,h2,h3,h4,h5,h6");
-let cursor = document.querySelector(".cursor");
-let cursorO = document.querySelector(".cursor-outline");
-
-window.addEventListener("mousemove", (e) => {
-  const posX = e.clientX;
-  const posY = e.clientY;
-
-  cursor.style.left = `${posX}px`;
-  cursor.style.top = `${posY}px`;
-
-  cursorO.animate(
-    {
-      left: `${posX}px`,
-      top: `${posY}px`,
-    },
-    { duration: 1000, fill: "forwards" }
-  );
-
-  cursor.animate(
-    {
-      left: `${posX}px`,
-      top: `${posY}px`,
-    },
-    { duration: 500, fill: "forwards" }
-  );
-
-  links.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-      cursor.classList.add("hover-link");
-      cursorO.classList.add("hoverO-link");
-      document.querySelector("#link-click").classList.remove("opacity-0");
-    });
-    link.addEventListener("mouseleave", () => {
-      cursor.classList.remove("hover-link");
-      cursorO.classList.remove("hoverO-link");
-      document.querySelector("#link-click").classList.add("opacity-0");
-    });
+if (navOn == true) {
+  a.addEventListener("click", () => {
+    b.classList.toggle("active");
   });
-});
-
-function addHoverListeners(elements, cursor, cursorO) {
-  elements.forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-      cursor.classList.add("hover-text");
-      cursorO.classList.add("hoverO-link");
-    });
-    element.addEventListener("mouseleave", () => {
-      cursor.classList.remove("hover-text");
-      cursorO.classList.remove("hoverO-link");
-    });
+  
+  document.addEventListener("click", function (e) {
+    if (!a.contains(e.target) && !b.contains(e.target)) {
+      b.classList.remove("active");
+    }
   });
-}
-
-addHoverListeners(texts, cursor, cursorO);
-
-window.addEventListener("mousedown", () => {
-  cursor.classList.add("hover");
-  cursorO.classList.add("hoverO");
-});
-window.addEventListener("mouseup", () => {
-  cursor.classList.remove("hover");
-  cursorO.classList.remove("hoverO");
-});
+  
 
 // SOUND
 
@@ -100,6 +35,70 @@ soundButton.addEventListener("click", () => {
     sound.play();
     document.querySelector(".main-content").classList.add("d-none");
   }
+});
+
+}
+  
+//CURSOR
+let links = document.querySelectorAll("a");
+let texts = document.querySelectorAll("p,h1,h2,h3,h4,h5,h6");
+let cursor = document.querySelector(".cursor");
+let cursorO = document.querySelector(".cursor-outline");
+let linkClick = document.querySelectorAll("#link-click-hover")
+
+window.addEventListener("mousemove", (e) => {
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  cursor.style.left = `${posX}px`;
+  cursor.style.top = `${posY}px`;
+
+  cursorO.animate(
+    {
+      left: `${posX}px`,
+      top: `${posY}px`,
+    },
+    { duration: 1000, fill: "forwards" }
+  );
+
+
+  linkClick.forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      cursor.classList.add("hover-link");
+      cursorO.classList.add("hoverO-link");
+      document.querySelector("#link-click").classList.remove("opacity-0");
+    });
+    link.addEventListener("mouseleave", () => {
+      cursor.classList.remove("hover-link");
+      cursorO.classList.remove("hoverO-link");
+      document.querySelector("#link-click").classList.add("opacity-0");
+    });
+  });
+});
+
+function addHoverListeners(elements, ccursor, ccursorO) {
+  elements.forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      cursor.classList.add(ccursor);
+      cursorO.classList.add(ccursorO);
+    });
+    element.addEventListener("mouseleave", () => {
+      cursor.classList.remove(ccursor);
+      cursorO.classList.remove(ccursorO);
+    });
+  });
+}
+
+addHoverListeners(links, "hover-link", "hoverO-link");
+addHoverListeners(texts, "hover-text", "hoverO-link");
+
+window.addEventListener("mousedown", () => {
+  cursor.classList.add("hover");
+  cursorO.classList.add("hoverO");
+});
+window.addEventListener("mouseup", () => {
+  cursor.classList.remove("hover");
+  cursorO.classList.remove("hoverO");
 });
 
 //LOADER
@@ -174,12 +173,9 @@ function handleHorizontalScroll(containerSelector, sectionSelector, offset) {
   }
 }
 
-// Call the function for the first section
-handleHorizontalScroll(".second-section", "#ss_main-content", "400");
 
-// Call the function for the second section
+handleHorizontalScroll(".second-section", "#ss_main-content", "400");
 handleHorizontalScroll(".slider-container", ".skill-slider", "400");
-// handleHorizontalScroll(".fs-marquee", ".fs-marquee h1","400");
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -194,23 +190,6 @@ let smoother = ScrollSmoother.create({
   smoothTouch: 0.1,
 });
 
-let lastScrollTop = 0;
-
-window.addEventListener("scroll", function () {
-  let currentScroll = window.scrollY || document.documentElement.scrollTop;
-
-  if (currentScroll > lastScrollTop) {
-    // Scrolling down
-    document.querySelector(".logo").classList.remove("logo-active");
-    soundButton.classList.remove("active");
-  } else {
-    // Scrolling up
-    document.querySelector(".logo").classList.add("logo-active");
-    soundButton.classList.add("active");
-  }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
 
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -288,3 +267,20 @@ inputField.forEach((e) => {
     }
   });
 });
+
+// LINK TO NAVIGATE
+const home = document.querySelector("#toHome");
+const edu = document.querySelector("#toEdu");
+const contact = document.querySelector("#toCont");
+
+function navigation(e,f) {
+  e.addEventListener("click",() =>{
+    smoother.scrollTo(f, true, "top top");
+  })
+}
+
+navigation(home,".main-section");
+navigation(edu,"#education-section");
+navigation(contact,"#contact-section");
+
+ScrollTrigger.refresh()

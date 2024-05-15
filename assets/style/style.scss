@@ -4,6 +4,10 @@
 // VARIABLE
 // ==============================================
 
+:root{
+  --focus-ring : 254, 254, 254;
+}
+
 $black: #121212;
 $gray: #9b9b9b;
 $white: #fefefe;
@@ -20,8 +24,8 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   font-family: fk;
   font-style: normal;
   font-weight: 400;
-  src: url(https://izzulaverroes.github.io/font/fk.woff2) format("woff2"),
-    url(https://izzulaverroes.github.io/font/fk.woff) format("woff");
+  src: url(https://zulldevv.github.io/font/fk.woff2) format("woff2"),
+    url(https://zulldevv.github.io/font/fk.woff) format("woff");
 }
 
 @font-face {
@@ -29,8 +33,8 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   font-family: Monorama;
   font-style: normal;
   font-weight: 400;
-  src: url(https://izzulaverroes.github.io/font/monorama.woff2) format("woff2"),
-    url(https://izzulaverroes.github.io/font/monorama.woff) format("woff");
+  src: url(https://zulldevv.github.io/font/monorama.woff2) format("woff2"),
+    url(https://zulldevv.github.io/font/monorama.woff) format("woff");
 }
 
 // ==============================================
@@ -521,7 +525,7 @@ html {
 
     ul li div {
       position: relative;
-      top: -19px;
+      top: -35px;
       left: -7px;
       width: 0px;
       height: 20px;
@@ -531,10 +535,10 @@ html {
     }
 
     & ul li:hover div {
-      width: 50px;
+      width: 50%;
     }
 
-    ul li a {
+    ul li p {
       font-size: 1.5rem;
       color: $black;
       font-weight: 600;
@@ -699,6 +703,7 @@ html {
     h1 {
       color: $white;
       font: $main-section-font;
+      font-size: clamp(2rem ,calc(4rem + 10vw), 12rem);
     }
 
     svg {
@@ -761,10 +766,8 @@ html {
     }
   }
 
-  @media screen and (max-width:768px){
-    $main-section-font: 600 2rem "Chakra Petch", sans-serif;
-  }
 }
+
 
 // ==============================================
 // SECOND SECTION
@@ -781,10 +784,13 @@ html {
 
   h1 {
     font: $second-section-font;
-    white-space: nowrap;
+    font-size: clamp(2rem, 14vw, 10rem);
+    // white-space: nowrap;
     // position: absolute;
   }
 }
+
+
 
 // ==============================================
 // BLACK SECTION
@@ -1201,10 +1207,12 @@ html {
 
   .skill-slider {
     display: flex;
-    flex-direction: row;
-    position: relative;
-    width: 300%;
-    gap: 2rem;
+    // white-space: nowrap;
+    // flex-direction: row;
+    // position: relative;
+    width: 350%;
+
+    column-gap: 5rem;
     // padding: 0 4rem 0 0;
     // white-space: no-wrap;
 
@@ -1219,7 +1227,7 @@ html {
 
     .skill {
       img {
-        max-width: 250px;
+        max-width: 300px;
         aspect-ratio: 1/1;
         border-radius: 100%;
       }
@@ -1317,14 +1325,4 @@ footer {
 // RESPONSIVE
 // ==============================================
 
-@media screen and (max-width: 768px) {
-  // html{
-  //   font-size: 50% !important;
-  // }
-  html{
-    .main-section{
-      font-size: 50% !important;
 
-    }
-  }
-}
