@@ -4,8 +4,8 @@
 // VARIABLE
 // ==============================================
 
-:root{
-  --focus-ring : 254, 254, 254;
+:root {
+  --focus-ring: 254, 254, 254;
 }
 
 $black: #121212;
@@ -75,16 +75,16 @@ html {
   margin: 0 auto;
 }
 
-@mixin title($color: $white, $pl: 100px, $pb: 50px) {
+@mixin title($color: $white, $spanm: -1vw) {
   font: 400 4rem "Chakra Petch";
+  font-size: clamp(2.5rem, 5vw, 9rem);
   text-transform: uppercase;
   color: $color;
-  padding-left: $pl;
-  padding-bottom: $pb;
 
   span {
     font: 300 4rem "fk";
-    margin: -10px;
+    font-size: clamp(2.5rem, 5vw, 9rem);
+    margin: $spanm;
     // padding-left: 10px;
 
     span:nth-child(1) {
@@ -134,7 +134,7 @@ html {
 // ==============================================
 @mixin cursor-global {
   border-radius: 100%;
-  z-index: 1000000000000000;
+  z-index: 1000000000000000000000;
   pointer-events: none;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -192,7 +192,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000000000000;
+  z-index: 1000000000;
 }
 
 .loaded-finish.transition {
@@ -262,6 +262,7 @@ html {
 }
 
 @keyframes fade {
+
   0%,
   100% {
     opacity: 0;
@@ -293,6 +294,7 @@ html {
   overflow: hidden;
 
   div {
+    transition: all 1.5s ease;
     height: 100%;
     width: 0%;
     border-radius: 20px;
@@ -487,6 +489,7 @@ html {
     }
 
     @keyframes bounce-nav {
+
       0%,
       20%,
       50%,
@@ -703,7 +706,7 @@ html {
     h1 {
       color: $white;
       font: $main-section-font;
-      font-size: clamp(2rem ,calc(4rem + 10vw), 12rem);
+      font-size: clamp(2rem, calc(4rem + 10vw), 12rem);
     }
 
     svg {
@@ -725,6 +728,7 @@ html {
   }
 
   @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -810,15 +814,21 @@ html {
   @include black-section();
   padding: 45px 0;
 
-  & > * {
+  &>* {
     color: $white;
   }
 
   h1:nth-child(1) {
-    @include title();
+    @include title($white, -1vw);
+    font-size: clamp(2.5rem, 5vw, 9rem);
+
+    span {
+      font-size: clamp(2.5rem, 5vw, 9rem);
+    }
   }
 
   @keyframes glitch {
+
     0%,
     20%,
     40%,
@@ -878,11 +888,12 @@ html {
 
   .ts_main-content {
     transition: all 0.3s ease;
-    padding: 0 50px;
+    // padding: 0 50px;
 
     h2 {
       text-transform: uppercase;
-      font-size: calc(3rem + 1.895vw);
+      // font-size: calc(3rem + 1.895vw);
+      font-size: clamp(2rem, 5vw, 5rem);
       font-weight: 400;
     }
 
@@ -896,6 +907,8 @@ html {
       color: $black;
       // font-size: 5rem;
       padding: 10px 70px;
+      // position: relative;
+      // z-index: 1;
       // border-radius: 10px 0 0 10px;
 
       p {
@@ -905,22 +918,9 @@ html {
       }
     }
   }
-
-  .swiper-slide {
-    img {
-      max-width: 30vw;
-      aspect-ratio: 1/1;
-      border-radius: 10px;
-      border: 8px solid $white;
-    }
-  }
 }
 
 .plus-play {
-  // display: grid;
-  // grid-template-columns: repeat(5, 1fr);
-  // grid-template-rows: repeat(3, 1fr);
-
   svg {
     transition: all 0.28s ease;
 
@@ -945,7 +945,8 @@ html {
   .fs_title {
     color: $black;
     background-color: $white;
-    font-size: calc(3rem + 5vw);
+    // font-size: calc(3rem + 5vw);
+    font-size: clamp(2rem, 5vw, 8rem);
     // display: inline;
     position: relative;
     text-align: center;
@@ -958,13 +959,17 @@ html {
 
       @if $p ==t {
         top: -12px;
-      } @else {
+      }
+
+      @else {
         bottom: -12px;
       }
 
       @if $rl ==r {
         right: 0;
-      } @else {
+      }
+
+      @else {
         left: -0.8px;
       }
     }
@@ -988,6 +993,7 @@ html {
 
   .fs-main {
     // padding: 0 20px;
+
 
     .row {
       .fs-main-hover {
@@ -1326,3 +1332,67 @@ footer {
 // ==============================================
 
 
+@mixin responsive($media: min-sm) {
+
+  // @if $media ==sm {
+  //   @media (max-width : 576px) {
+  //     @content;
+  //   }
+  // } 
+  @if $media ==min-sm {
+    @media (min-width : 768px) {
+      @content;
+    }
+  }
+
+  @else if $media ==max-sm {
+    @media (max-width : 768px) {
+      @content;
+    }
+  }
+
+  @else if $media ==lg {
+    @media (min-width : 998px) {
+      @content;
+    }
+  }
+
+  @else if $media ==max-lg {
+    @media (max-width : 998px) {
+      @content;
+    }
+  }
+
+  @else if $media ==xl {
+    @media (min-width : 1200px) {
+      @content;
+    }
+  }
+
+  @else if $media ==max-xl {
+    @media (max-width : 1200px) {
+      @content;
+    }
+  }
+
+  @else if $media ==xxl {
+    @media (min-width : 1400px) {
+      @content;
+    }
+  }
+
+  @else if $media ==max-xxl {
+    @media (max-width : 1400px) {
+      @content;
+    }
+  }
+}
+
+// @include responsive(sm){
+//   $main-section-font : 2rem 400 "Chakra Petch",sans-serif;
+//   .main-section{
+//     h1{
+//       font: $main-section-font;
+//     }
+//   }
+// }
