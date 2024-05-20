@@ -276,19 +276,42 @@ inputField.forEach((e) => {
 });
 
 // LINK TO NAVIGATE
-const home = document.querySelector("#toHome");
-const edu = document.querySelector("#toEdu");
-const contact = document.querySelector("#toCont");
+const edu = document.querySelectorAll("#toEdu");
+const contact = document.querySelectorAll("#toCont");
 
-function navigation(e, f) {
-  e.addEventListener("click", () => {
-    smoother.scrollTo(f, true, "top top");
+// e.addEventListener("click", () => {
+//   smoother.scrollTo(f, true, "top top");
+// });
+// function navigation(e, f) {
+//   e.forEach(ef => {
+//     ef.addEventListener("click",()=>{
+//         smoother.scrollTo(f, true, "top top");
+//     })
+//   });
+// }
+function navigation(elements, target) {
+  // Ensure that elements is an array and target is a valid DOM element
+  if (!Array.isArray(elements) || !target) {
+    console.error("Invalid arguments passed to navigation function.");
+    return;
+  }
+
+  elements.forEach(element => {
+    element.addEventListener("click", () => {
+      // Ensure that smoother is defined and has a scrollTo method
+      if (typeof smoother !== "undefined" && typeof smoother.scrollTo === "function") {
+        smoother.scrollTo(target, true, "top top");
+      } else {
+        console.error("smoother is not defined or does not have a scrollTo method.");
+      }
+    });
   });
 }
 
-navigation(home, ".main-section");
-navigation(edu, "#education-section");
-navigation(contact, "#contact-section");
+// navigation(home, ".main-section");
+// navigation(Array.from(home), "#education-section");
+navigation(Array.from(edu), "#education-section");
+navigation(Array.from(contact), "#contact-section");
 
 ScrollTrigger.refresh();
 

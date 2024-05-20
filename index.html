@@ -13,10 +13,10 @@
 
 <body class="overflow-x-hidden">
   <!-- CURSOR -->
-  <div class="cursor d-flex">
+  <div class="cursor d-none d-md-flex">
     <p class="opacity-0 m-auto" id="link-click">CLICK</p>
   </div>
-  <div class="cursor-outline"></div>
+  <div class="cursor-outline d-none d-md-block"></div>
   <!-- CURSOR END -->
   <!-- LOADER -->
   <!-- <div class="loader">
@@ -49,21 +49,13 @@
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <main class="main">
-        <!-- HERO BANNER -->
-        <section class="main-section" id="main-section">
-        </section>
-        <!-- HERO END -->
-
-        <!-- SECOND SECTION -->
-        <section class="second-section" id="second-section">
-          <!-- DESKTOP -->
-
-        </section>
-        <!-- SECOND SECTION END-->
+        <section class="main-section" id="main-section"></section>
+        <section class="second-section" id="second-section"></section>
         <!-- BLACK SECTION -->
         <div class="black-section">
           <!-- THIRD SECTION -->
-          <section class="third-section" id="scroll-container">
+          <!-- DESKTOP -->
+          <section class="third-section d-none d-md-block" id="scroll-container">
             <div class="container">
               <h1 class="ms-1 ms-md-0 pb-0 pb-md-6">
                 ABOUT <br />
@@ -189,9 +181,44 @@
               </div>
             </div>
           </section>
+          <!-- MOBILE -->
+          <section class="third-section d-md-none">
+            <div class="container">
+              <h3 class="fs-4 opacity-50">about</h3>
+              <h2 class="fs-12">BIOGRAPHY</h2>
+              <div class="mt-8 border-start border-2 border-light ps-3 border-opacity-50">
+                <p class="fs-4 m-0 opacity-50">Name</p>
+                <p class="fs-6 m-0 text-uppercase">Muhammad Ken Izzulhaq</p>
+              </div>
+              <div class="mt-3 border-start border-2 border-light ps-3 border-opacity-50">
+                <p class="fs-4 m-0 opacity-50">Age</p>
+                <p class="fs-6 m-0 text-uppercase">18 Years old</p>
+              </div>
+              <div class="mt-3 border-start border-2 border-light ps-3 border-opacity-50">
+                <p class="fs-4 m-0 opacity-50">Highest school</p>
+                <p class="fs-6 m-0 text-uppercase">High scholl</p>
+              </div>
+              <div class="mt-3 border-start border-2 border-light ps-3 border-opacity-50">
+                <p class="fs-4 m-0 opacity-50">Nationality</p>
+                <p class="fs-6 m-0 text-uppercase">Indonesian</p>
+              </div>
+              <div class="mt-3 border-start border-2 border-light ps-3 border-opacity-50">
+                <p class="fs-4 m-0 opacity-50">Speak language</p>
+                <p class="fs-6 m-0 text-uppercase">English, Bahasa, Arabic</p>
+              </div>
+              <div class="mt-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="50" viewBox="0 0 72 50" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M41.625 0.648487C39.8179 0.224273 37.9349 0 36 0C34.0651 0 32.1821 0.224273 30.375 0.648487C28.5679 0.224273 26.6849 0 24.75 0C11.081 0 0 11.1929 0 25C0 38.8071 11.081 50 24.75 50C26.6849 50 28.5679 49.7757 30.375 49.3515C32.1821 49.7757 34.0651 50 36 50C37.9349 50 39.8179 49.7757 41.625 49.3515C43.4321 49.7757 45.3151 50 47.25 50C60.9191 50 72 38.8071 72 25C72 11.1929 60.9191 0 47.25 0C45.3151 0 43.4321 0.224273 41.625 0.648487ZM36 47.274C35.7075 47.4251 35.4116 47.5704 35.1125 47.7099C35.4069 47.7215 35.7028 47.7273 36 47.7273C36.2972 47.7273 36.5931 47.7215 36.8875 47.7099C36.5884 47.5704 36.2925 47.4251 36 47.274ZM38.3598 45.8843C39.4093 46.3407 40.5001 46.7188 41.625 47.0113C51.3294 44.4883 58.5 35.59 58.5 25C58.5 14.41 51.3294 5.51171 41.625 2.98874C40.5001 3.28118 39.4093 3.65928 38.3598 4.11574C45.0713 8.58731 49.5 16.2712 49.5 25C49.5 33.7288 45.0713 41.4127 38.3598 45.8843ZM36 2.72595C35.7075 2.57491 35.4116 2.42957 35.1125 2.29008C35.4069 2.27855 35.7028 2.27273 36 2.27273C36.2972 2.27273 36.5931 2.27855 36.8875 2.29008C36.5884 2.42957 36.2925 2.57491 36 2.72595ZM46.3625 2.29008C54.8559 6.2509 60.75 14.9302 60.75 25C60.75 35.0698 54.8559 43.7491 46.3625 47.7099C46.6569 47.7215 46.9528 47.7273 47.25 47.7273C59.6764 47.7273 69.75 37.5519 69.75 25C69.75 12.4481 59.6764 2.27273 47.25 2.27273C46.9528 2.27273 46.6569 2.27855 46.3625 2.29008ZM33.6402 4.11574C32.5907 3.65928 31.4999 3.28118 30.375 2.98874C20.6706 5.51171 13.5 14.41 13.5 25C13.5 35.59 20.6706 44.4883 30.375 47.0113C31.4999 46.7188 32.5907 46.3407 33.6402 45.8843C26.9287 41.4127 22.5 33.7288 22.5 25C22.5 16.2712 26.9287 8.58731 33.6402 4.11574ZM36 5.31323C29.2747 9.24289 24.75 16.5877 24.75 25C24.75 33.4123 29.2747 40.7571 36 44.6868C42.7253 40.7571 47.25 33.4123 47.25 25C47.25 16.5877 42.7253 9.24289 36 5.31323ZM24.75 47.7273C25.0472 47.7273 25.3431 47.7215 25.6375 47.7099C17.1441 43.7491 11.25 35.0698 11.25 25C11.25 14.9302 17.1441 6.2509 25.6375 2.29008C25.3431 2.27855 25.0472 2.27273 24.75 2.27273C12.3236 2.27273 2.25 12.4481 2.25 25C2.25 37.5519 12.3236 47.7273 24.75 47.7273Z"
+                    fill="white" />
+                </svg>
+              </div>
+            </div>
+          </section>
           <!-- THIRD SECTION END-->
           <!-- FOURTH SECTION -->
-          <section class="fourth-section d-flex flex-column pb-5" id="education-section"
+          <!-- DESKTOP -->
+          <section class="fourth-section d-none d-md-flex flex-column pb-5" id="education-section"
             style="padding-top: 30vh !important">
             <h1 class="fs_title">
               EDUCATION
@@ -315,13 +342,6 @@
               </div>
             </div>
             <div style="margin-top: 15vh;">
-              <!-- <div class="position-absolute w-100 h-100 d-flex ">
-                <h1 style="font-size: 20rem; opacity: .5;" data-speed="0.9" data-lag="1">W</h1>
-                <h1 style="font-size: 20rem; opacity: .5;" data-speed="0.91" data-lag="1">O</h1>
-                <h1 style="font-size: 20rem; opacity: .5;" data-speed="0.92" data-lag="1">R</h1>
-                <h1 style="font-size: 20rem; opacity: .5;" data-speed="0.93" data-lag="1">K</h1>
-                <h1 style="font-size: 20rem; opacity: .5;" data-speed="0.94" data-lag="1">S</h1>
-              </div> -->
               <h3 style="text-transform: uppercase;"><span
                   style="background-color: #fff;color: #212121;border-radius: 10px;padding: 4px 10px;margin-left: 30px;">10
                   Years</span></span>
@@ -332,6 +352,48 @@
                   <span
                     style="border-radius: 100%;background-color: #fff;position: absolute;top: -15px;right: -15px;color: #212121; font-size: 1rem;width: 30px;height: 30px;display: flex; justify-content: center;align-items: center;">31+</span></span>
               </h3>
+            </div>
+          </section>
+          <section class="d-md-none" id="education-section">
+            <div class="container text-light">
+              <h1 class=" fs-12 mt-20">EDUCATION</h1>
+              <div class="row mt-5">
+                <div class="col-1 border-start border-3 border-light"></div>
+                <div class="col-11">
+                  <h1>KINDERGARTEN</h1>
+                  <p class="fs-3 opacity-50">TK Dharma Wanita</p>
+                  <p class="fs-3 mt-3">First time ever going to school and start learning reading and playing with my friends and
+                    teachers</p>
+                    <p class="fs-2 opacity-25 mt-5">SURABAYA <br>-7.297359999708036, 112.74471821565001</p>
+                </div>
+              </div>
+              <div class="row mt-5 text-end">
+                <div class="col-11">
+                  <h1>ELEMENTARY</h1>
+                  <p class="fs-3 opacity-50">SDN Percobaan 2</p>
+                  <p class="fs-3 mt-3">Start to learn deeper for better life and found some problem with each others.</p>
+                    <p class="fs-2 opacity-25 mt-5">MALANG <br>-7.297359999708036, 112.74471821565001</p>
+                  </div>
+                  <div class="col-1 border-3 border-end border-light"></div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-1 border-start border-3 border-light"></div>
+                <div class="col-11">
+                  <h1>JUNIOR HIGH</h1>
+                  <p class="fs-3 opacity-50">SMP Paramitha</p>
+                  <p class="fs-3 mt-3">start the stage of looking for interests and talents then deepen them.</p>
+                    <p class="fs-2 opacity-25 mt-5">MALANG <br>-7.948096470818341, 112.65804376666391</p>
+                </div>
+              </div>
+              <div class="row mt-5 text-end">
+                <div class="col-11">
+                  <h1>HIGH SCHOOL</h1>
+                  <p class="fs-3 opacity-50">SMK AVERROES</p>
+                  <p class="fs-3 mt-3">Team work and real projects started, trying to enjoy my life. and i find my soul.  </p>
+                    <p class="fs-2 opacity-25 mt-5">MALANG <br>-7.928816087913843, 112.61740935100647 </p>
+                  </div>
+                  <div class="col-1 border-3 border-end border-light"></div>
+              </div>
             </div>
           </section>
           <!-- FOURTH SECTION END-->
@@ -666,13 +728,6 @@
           </section>
           <!-- FIFTH SECTION END-->
         </div>
-        <!-- BLACK SECTION END-->
-        <!-- FIFTH SECTION MARQUEE -->
-        <div class="fs-marquee">
-          <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quod saepe earum excepturi voluptatum
-            pariatur commodi nobis incidunt dolore quibusdam.</h1>
-        </div>
-        <!-- FIFTH SECTION MARQUEE END-->
         <!-- SIXTH SECTION -->
         <section class="sixth-section py-5" style="padding-top: 30vh !important">
           <div class="container-xxl">
@@ -762,17 +817,11 @@
                       <label for="floatingInput">Email address*</label>
                     </div>
                     <div class="mt-4">
-                      You're interests in
-                      <div class="mt-3 interests-radio opacity-50" id="inputField">
-                        <label class="custom-radio"> <!-- First radio button -->
-                          <input type="radio" name="radio">
-                          <!-- <span class="radio-text">Technologies</span> -->
-                        </label>
-                      </div>
+
                       <div class="mt-4">
                         <div class="form-floating opacity-50" id="inputField">
                           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                            style="height: 100px"></textarea>
+                            style="height: 150px"></textarea>
                           <label for="floatingTextarea2">Comments</label>
                         </div>
                       </div>
@@ -789,7 +838,7 @@
           <div class="container text-light">
             <h4 class="d-inline">Follow me</h4>
             <span class="ms-4 ">
-              <a href="" class="text-light me-3"><i class="fa fa-brands fa-instagram fa-xl"></i></a>
+              <a href="" class="text-light me-3 pointer-event"><i class="fa fa-brands fa-instagram fa-xl"></i></a>
               <a href="" class="text-light me-3"><i class="fa fa-brands fa-facebook-f fa-xl"></i></a>
               <a href="" class="text-light me-3"><i class="fa fa-brands fa-twitter fa-xl"></i></a>
               <a href="" class="text-light me-3"><i class="fa fa-brands fa-github fa-xl"></i></a>
@@ -817,7 +866,7 @@
   <script src="assets/components/footer.js"></script>
   <script src="assets/js/gsap.js"></script>
   <script src="assets/js/scrollTrigger.js"></script>
-  <script src="https://izzulaverroes.github.io/ave/dist/js/ave.min.js"></script>
+  <!-- <script src="https://zulldevv.github.io/ave/dist/js/ave.js"></script> -->
   <script src="assets/js/scrollSmoother.js"></script>
   <script src="assets/js/script.js"></script>
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">

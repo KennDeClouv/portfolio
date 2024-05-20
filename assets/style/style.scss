@@ -52,12 +52,11 @@ $third-section-font: 600 3rem "Chakra Petch", sans-serif;
   font-family: "Chakra Petch", sans-serif;
   list-style: none;
   text-decoration: none !important;
+  cursor: none !important;
 }
 
 html {
   scroll-behavior: smooth;
-  cursor: none;
-  // transition: scroll 11s ease-in-out 1s;
 }
 
 ::-webkit-scrollbar {
@@ -262,7 +261,6 @@ html {
 }
 
 @keyframes fade {
-
   0%,
   100% {
     opacity: 0;
@@ -489,7 +487,6 @@ html {
     }
 
     @keyframes bounce-nav {
-
       0%,
       20%,
       50%,
@@ -541,7 +538,8 @@ html {
       width: 50%;
     }
 
-    ul li p {
+    ul li p,
+    ul li a {
       font-size: 1.5rem;
       color: $black;
       font-weight: 600;
@@ -728,7 +726,6 @@ html {
   }
 
   @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -769,9 +766,7 @@ html {
       }
     }
   }
-
 }
-
 
 // ==============================================
 // SECOND SECTION
@@ -794,8 +789,6 @@ html {
   }
 }
 
-
-
 // ==============================================
 // BLACK SECTION
 // ==============================================
@@ -814,7 +807,7 @@ html {
   @include black-section();
   padding: 45px 0;
 
-  &>* {
+  & > * {
     color: $white;
   }
 
@@ -828,7 +821,6 @@ html {
   }
 
   @keyframes glitch {
-
     0%,
     20%,
     40%,
@@ -959,17 +951,13 @@ html {
 
       @if $p ==t {
         top: -12px;
-      }
-
-      @else {
+      } @else {
         bottom: -12px;
       }
 
       @if $rl ==r {
         right: 0;
-      }
-
-      @else {
+      } @else {
         left: -0.8px;
       }
     }
@@ -993,7 +981,6 @@ html {
 
   .fs-main {
     // padding: 0 20px;
-
 
     .row {
       .fs-main-hover {
@@ -1331,58 +1318,42 @@ footer {
 // RESPONSIVE
 // ==============================================
 
-
 @mixin responsive($media: min-sm) {
-
   // @if $media ==sm {
   //   @media (max-width : 576px) {
   //     @content;
   //   }
-  // } 
+  // }
   @if $media ==min-sm {
-    @media (min-width : 768px) {
+    @media (min-width: 768px) {
       @content;
     }
-  }
-
-  @else if $media ==max-sm {
-    @media (max-width : 768px) {
+  } @else if $media ==max-sm {
+    @media (max-width: 768px) {
       @content;
     }
-  }
-
-  @else if $media ==lg {
-    @media (min-width : 998px) {
+  } @else if $media ==lg {
+    @media (min-width: 998px) {
       @content;
     }
-  }
-
-  @else if $media ==max-lg {
-    @media (max-width : 998px) {
+  } @else if $media ==max-lg {
+    @media (max-width: 998px) {
       @content;
     }
-  }
-
-  @else if $media ==xl {
-    @media (min-width : 1200px) {
+  } @else if $media ==xl {
+    @media (min-width: 1200px) {
       @content;
     }
-  }
-
-  @else if $media ==max-xl {
-    @media (max-width : 1200px) {
+  } @else if $media ==max-xl {
+    @media (max-width: 1200px) {
       @content;
     }
-  }
-
-  @else if $media ==xxl {
-    @media (min-width : 1400px) {
+  } @else if $media ==xxl {
+    @media (min-width: 1400px) {
       @content;
     }
-  }
-
-  @else if $media ==max-xxl {
-    @media (max-width : 1400px) {
+  } @else if $media ==max-xxl {
+    @media (max-width: 1400px) {
       @content;
     }
   }

@@ -8,16 +8,16 @@ nav.innerHTML = `
   <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
 </svg>
 <ul>
-  <li>
-    <p id="toHome">Home</p>
+  <li class="mb-3">
+    <a href="#" class="pointer-none" id="toHome">Home</a>
+    <div></div>
+  </li>
+  <li class="mb-3">
+    <p class="m-0" id="toEdu">Education</p>
     <div></div>
   </li>
   <li>
-    <p id="toEdu">Education</p>
-    <div></div>
-  </li>
-  <li>
-    <p id="toCont">Contact</p>
+    <p class="m-0" id="toCont">Contact</p>
     <div></div>
   </li>
 </ul>
@@ -52,7 +52,7 @@ nav.innerHTML = `
   <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
 </svg>
 
-<div class="logo logo-active">
+<div class="logo logo-active d-none d-md-flex">
   <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
     <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#999" />
   </svg>
