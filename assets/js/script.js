@@ -196,7 +196,7 @@ let smoother = ScrollSmoother.create({
   smooth: 2,
   normalizeScroll: true,
   effects: true,
-  smoothTouch: 1.1,
+  smoothTouch: 2,
 });
 
 const tl = gsap.timeline({
