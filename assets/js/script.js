@@ -2,14 +2,14 @@ let gsapOn = false;
 let loaderOn = false;
 let navOn = true;
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
   const bodyChildren = document.body.children;
-  
+
   for (let child of bodyChildren) {
-      if (child.classList.contains('loader')) {
-          loaderOn = true;
-          return; // Exit the function as we found a match
-      }
+    if (child.classList.contains('loader')) {
+      loaderOn = true;
+      return; // Exit the function as we found a match
+    }
   }
   loaderOn = false;
 
@@ -276,7 +276,7 @@ inputField.forEach((e) => {
 });
 
 // LINK TO NAVIGATE
-const edu = document.querySelectorAll("#toEdu");
+const edu = document.querySelectorAll("#education-section");
 const contact = document.querySelectorAll("#toCont");
 
 // e.addEventListener("click", () => {
@@ -289,29 +289,19 @@ const contact = document.querySelectorAll("#toCont");
 //     })
 //   });
 // }
-function navigation(elements, target) {
-  // Ensure that elements is an array and target is a valid DOM element
-  if (!Array.isArray(elements) || !target) {
-    console.error("Invalid arguments passed to navigation function.");
-    return;
-  }
 
-  elements.forEach(element => {
-    element.addEventListener("click", () => {
-      // Ensure that smoother is defined and has a scrollTo method
-      if (typeof smoother !== "undefined" && typeof smoother.scrollTo === "function") {
-        smoother.scrollTo(target, true, "top top");
-      } else {
-        console.error("smoother is not defined or does not have a scrollTo method.");
-      }
-    });
-  });
-}
+// document.querySelector("#toEdu").addEventListener("click", () => {
+//   // edu.forEach(e => {
+
+//   // });
+
+//   smoother.scrollTo(Array.from(edu), true, "top top");
+// })
+
 
 // navigation(home, ".main-section");
 // navigation(Array.from(home), "#education-section");
-navigation(Array.from(edu), "#education-section");
-navigation(Array.from(contact), "#contact-section");
+// navigation("#to-edu", Array.from(edu));
 
 ScrollTrigger.refresh();
 
