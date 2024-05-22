@@ -1,0 +1,41 @@
+@import'./mixins';
+
+.cursor {
+  @include cursor-global();
+  width: 35px;
+  height: 35px;
+  background-color: $white;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.cursor-outline {
+  @include cursor-global();
+  width: 45px;
+  height: 45px;
+  border: $white 3px solid;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.hover {
+  width: 55px;
+  height: 55px;
+}
+
+.hoverO {
+  width: 65px;
+  height: 65px;
+}
+
+.hover-link {
+  width: 75px;
+  height: 75px;
+}
+
+.hover-text {
+  width: 105px;
+  height: 105px;
+}
+
+.hoverO-link {
+  display: none;
+}

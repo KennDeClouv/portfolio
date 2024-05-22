@@ -1,0 +1,69 @@
+@mixin black-section {
+  width: 99vw;
+  color: $white;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+@mixin title($color: $white, $spanm: -1vw) {
+  font: 400 4rem "Chakra Petch";
+  font-size: clamp(2.5rem, 5vw, 9rem);
+  text-transform: uppercase;
+  color: $color;
+
+  span {
+    font: 300 4rem "fk";
+    font-size: clamp(2.5rem, 5vw, 9rem);
+    margin: $spanm;
+    // padding-left: 10px;
+
+    span:nth-child(1) {
+      animation: glitch 3s infinite 1s;
+    }
+
+    span:nth-child(2) {
+      animation: glitch 2.6s infinite 0.8s;
+    }
+
+    span:nth-child(3) {
+      animation: glitch 3.2s infinite 1s;
+    }
+
+    span:nth-child(4) {
+      animation: glitch 2.2s infinite 1.6s;
+    }
+
+    span:nth-child(5) {
+      animation: glitch 2s infinite 2s;
+    }
+
+    span:nth-child(6) {
+      animation: glitch 1.2s infinite 1s;
+    }
+
+    span:nth-child(7) {
+      animation: glitch 2s infinite 3s;
+    }
+
+    span:nth-child(8) {
+      animation: glitch 2.3s infinite 1.2s;
+    }
+
+    span:nth-child(9) {
+      animation: glitch 1.2s infinite 4s;
+    }
+
+    span:nth-child(10) {
+      animation: glitch 1s infinite 2s;
+    }
+  }
+}
+
+@mixin cursor-global {
+  border-radius: 100%;
+  z-index: 1000000000000000000000;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}

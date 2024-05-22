@@ -1,188 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-// ==============================================
-// VARIABLE
-// ==============================================
-
-:root {
-  --focus-ring: 254, 254, 254;
-}
-
-$black: #121212;
-$gray: #9b9b9b;
-$white: #fefefe;
-$title-font: 600 7rem "Chakra Petch", sans-serif;
-$main-section-font: 600 12rem "Chakra Petch", sans-serif;
-$second-section-font: 300 10rem "Chakra Petch", sans-serif;
-$third-section-font: 600 3rem "Chakra Petch", sans-serif;
-
-// ==============================================
-// CUSTOM FONT
-// ==============================================
-@font-face {
-  font-display: swap;
-  font-family: fk;
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://zulldevv.github.io/font/fk.woff2) format("woff2"),
-    url(https://zulldevv.github.io/font/fk.woff) format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: Monorama;
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://zulldevv.github.io/font/monorama.woff2) format("woff2"),
-    url(https://zulldevv.github.io/font/monorama.woff) format("woff");
-}
-
-// ==============================================
-// GLOBAL RESET
-// ==============================================
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  font-family: "Chakra Petch", sans-serif;
-  list-style: none;
-  text-decoration: none !important;
-  // cursor: none !important;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar {
-  appearance: none;
-  display: none;
-}
-
-// ==============================================
-// GLOBAL MIXIN
-// ==============================================
-@mixin black-section {
-  width: 99vw;
-  color: $white;
-  min-height: 100vh;
-  margin: 0 auto;
-}
-
-@mixin title($color: $white, $spanm: -1vw) {
-  font: 400 4rem "Chakra Petch";
-  font-size: clamp(2.5rem, 5vw, 9rem);
-  text-transform: uppercase;
-  color: $color;
-
-  span {
-    font: 300 4rem "fk";
-    font-size: clamp(2.5rem, 5vw, 9rem);
-    margin: $spanm;
-    // padding-left: 10px;
-
-    span:nth-child(1) {
-      animation: glitch 3s infinite 1s;
-    }
-
-    span:nth-child(2) {
-      animation: glitch 2.6s infinite 0.8s;
-    }
-
-    span:nth-child(3) {
-      animation: glitch 3.2s infinite 1s;
-    }
-
-    span:nth-child(4) {
-      animation: glitch 2.2s infinite 1.6s;
-    }
-
-    span:nth-child(5) {
-      animation: glitch 2s infinite 2s;
-    }
-
-    span:nth-child(6) {
-      animation: glitch 1.2s infinite 1s;
-    }
-
-    span:nth-child(7) {
-      animation: glitch 2s infinite 3s;
-    }
-
-    span:nth-child(8) {
-      animation: glitch 2.3s infinite 1.2s;
-    }
-
-    span:nth-child(9) {
-      animation: glitch 1.2s infinite 4s;
-    }
-
-    span:nth-child(10) {
-      animation: glitch 1s infinite 2s;
-    }
-  }
-}
-
-// ==============================================
-// CURSOR
-// ==============================================
-@mixin cursor-global {
-  border-radius: 100%;
-  z-index: 1000000000000000000000;
-  pointer-events: none;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
-}
-
-.cursor {
-  @include cursor-global();
-  width: 35px;
-  height: 35px;
-  background-color: $white;
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
-}
-
-.cursor-outline {
-  @include cursor-global();
-  width: 45px;
-  height: 45px;
-  border: $white 3px solid;
-  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-}
-
-.hover {
-  width: 55px;
-  height: 55px;
-}
-
-.hoverO {
-  width: 65px;
-  height: 65px;
-}
-
-.hover-link {
-  width: 75px;
-  height: 75px;
-}
-
-.hover-text {
-  width: 105px;
-  height: 105px;
-}
-
-.hoverO-link {
-  display: none;
-}
-
-// ==============================================
-// LOADER
-// ==============================================
+@import './modules/variables';
+@import './modules/typography';
+@import './modules/reset';
+@import './modules/mixins';
+@import './modules/s1';
+@import './modules/cursor';
 
 .transition {
   width: 100vw;
@@ -681,92 +502,6 @@ html {
 // MAIN SECTION
 // ==============================================
 
-.main-section {
-  margin: 8px;
-  background: $black;
-  height: 98vh;
-  // padding: 45px;
-  border-radius: 10px;
-  position: relative;
-
-  .container- {
-    display: flex;
-    // flex-direction: column;
-    width: 100vw;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .main-content {
-    margin: auto;
-
-    h1 {
-      color: $white;
-      font: $main-section-font;
-      font-size: clamp(2rem, calc(4rem + 10vw), 12rem);
-    }
-
-    svg {
-      margin-bottom: 1rem;
-      animation: 10s ease-in-out infinite alternate rotate;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .zull_svg {
-      display: none;
-    }
-  }
-
-  @keyframes rotate {
-    0% {
-      transform: rotate(720deg);
-    }
-  }
-
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-
-    40% {
-      transform: translateY(-30px);
-    }
-
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-
-  .ms-hoverable {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    position: absolute;
-    top: 0;
-    left: 0;
-    // z-index: -100;
-    // background-color: #3e3e3e;
-    grid-template-columns: repeat(38, 1fr);
-    grid-template-rows: repeat(18, 1fr);
-
-    div {
-      background-color: $white;
-      opacity: 0;
-      transition: opacity 0.8s ease 0.4s;
-
-      &:hover {
-        opacity: 1;
-        transition: opacity 0s;
-      }
-    }
-  }
-}
 
 // ==============================================
 // SECOND SECTION
@@ -792,7 +527,7 @@ html {
 // ==============================================
 // BLACK SECTION
 // ==============================================
-.black-section {
+#black-section {
   background-color: $black;
   border-radius: 10px !important;
   overflow: hidden;
@@ -926,6 +661,7 @@ html {
 // FOURTH SECTION
 // ==============================================
 .fourth-section {
+  padding-top: 30vh !important;
   @include black-section();
   // text-align: center;
 
@@ -984,7 +720,7 @@ html {
 
     .row {
       .fs-main-hover {
-        border-image: url("../img/frame1.png") 150 / 89px;
+        border-image: url("../../img/frame1.png") 150 / 89px;
         // margin: 0 10px;
         transition: opacity 0.3s ease;
         // opacity: 0;
@@ -996,7 +732,7 @@ html {
 
       .fs-main-content {
         padding: 20px 40px;
-        border-image: url("../img/frame1.png") 150 / 89px;
+        border-image: url("../../img/frame1.png") 150 / 89px;
 
         h1 {
           font-size: calc(3rem + 3vw);
@@ -1189,6 +925,7 @@ html {
 // ==============================================
 
 .sixth-section {
+  padding-top: 30vh !important;
   $skillcolor1: #222831;
   $skillcolor2: #6b9a9c;
   $skillcolor3: #dcdcdc;

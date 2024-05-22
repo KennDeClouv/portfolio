@@ -1,4 +1,5 @@
-const secondSec = document.querySelector("#second-section")
+const secondSec = document.querySelector("#second-section");
+secondSec.classList.add("second-section");
 secondSec.innerHTML = `
 <h1 class="main-content d-none d-md-inline text-nowrap" id="ss_main-content" style="z-index: 100;">
 <span style="font-weight: 900;">&emsp;Hello ..</span>
@@ -75,3 +76,78 @@ who combines <span style="text-transform: uppercase; font-weight: 700;">beauty</
 </div>
 
 </div>`
+
+function handleHorizontalScroll(containerSelector, sectionSelector, offset) {
+  const container = document.querySelector(containerSelector);
+  const sections = gsap.utils.toArray(sectionSelector);
+  const content = document.querySelector(sectionSelector);
+
+  let contentWidth = 0;
+  // Iterate over each section to calculate the total width
+  sections.forEach((section) => {
+    contentWidth += section.offsetWidth;
+  });
+
+  // Calculate the amount to scroll horizontally
+  let amountToScroll = contentWidth - window.innerWidth;
+
+  if (window.innerWidth > 768) {
+    const tween = gsap.to(content, {
+      x: -amountToScroll - offset,
+      duration: 1,
+      ease: "none",
+    });
+
+    ScrollTrigger.create({
+      trigger: containerSelector,
+      start: "top",
+      end: `+=${amountToScroll}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+    });
+  }
+}
+
+handleHorizontalScroll(".second-section", "#ss_main-content", "400");
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("scramble");
+  const originalText = textElement.innerText;
+  const characters = originalText.split("");
+
+  let scrambleInterval;
+  const scrambleFrequency = 50; // Scramble text every 50ms
+
+  // Function to scramble text
+  function scrambleText() {
+    let newText = "";
+    for (let i = 0; i < characters.length; i++) {
+      if (characters[i] === " ") {
+        newText += " ";
+      } else {
+        newText += String.fromCharCode(Math.random() * (126 - 33) + 33);
+      }
+    }
+    textElement.innerText = newText;
+  }
+
+  // Start scrambling text when scrolling
+  window.addEventListener("scroll", function () {
+    if (!scrambleInterval) {
+      scrambleInterval = setInterval(scrambleText, scrambleFrequency);
+    }
+  });
+
+  // Stop scrambling and clear interval when scrolling stops
+  let scrollTimeout;
+  window.addEventListener("scroll", function () {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function () {
+      clearInterval(scrambleInterval);
+      scrambleInterval = null;
+      textElement.innerText = originalText; // Reset to original text
+    }, 1000);
+  });
+});

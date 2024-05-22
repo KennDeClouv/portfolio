@@ -1,4 +1,5 @@
 const mainSec = document.querySelector("#main-section");
+mainSec.classList.add("main-section")
 mainSec.innerHTML = `
 <div class="container-">
 <div class="main-content">
@@ -698,3 +699,10 @@ mainSec.innerHTML = `
 <div></div>
 <div></div>
 </div>`
+
+const msHoverDiv = document.querySelectorAll(".ms-hoverable div");
+msHoverDiv.forEach((div) => {
+  div.addEventListener("mousedown", () => {
+    div.classList.toggle("opacity-100");
+  });
+});

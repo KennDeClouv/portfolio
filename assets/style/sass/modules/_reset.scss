@@ -1,0 +1,23 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Chakra Petch", sans-serif;
+  list-style: none;
+  text-decoration: none !important;
+  // cursor: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  appearance: none;
+  display: none;
+}
