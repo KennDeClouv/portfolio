@@ -1,0 +1,130 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+#black-section {
+    background-color: $black;
+    border-radius: 10px !important;
+    overflow: hidden;
+    margin: 0 8px;
+}
+
+.third-section {
+    padding-bottom: 30vh !important;
+    @include black-section();
+    padding: 45px 0;
+
+    &>* {
+        color: $white;
+    }
+
+    h1:nth-child(1) {
+        @include title($white, -1vw);
+        font-size: clamp(2.5rem, 5vw, 9rem);
+
+        span {
+            font-size: clamp(2.5rem, 5vw, 9rem);
+        }
+    }
+
+    @keyframes glitch {
+
+        0%,
+        20%,
+        40%,
+        100% {
+            opacity: 1;
+        }
+
+        21%,
+        22%,
+        39%,
+        50%,
+        99% {
+            opacity: 0.2;
+        }
+    }
+
+    h1:nth-child(2) {
+        font: 300 2.8rem "Chakra Petch";
+        text-transform: uppercase;
+        background-color: $white;
+        color: $black;
+        display: inline;
+        padding: 10px 50px;
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        // top: 40px;
+
+        svg:nth-child(2) {
+            position: absolute;
+            top: -12px;
+            left: -0.8px;
+            transform: rotate(180deg);
+        }
+
+        svg:nth-child(3) {
+            position: absolute;
+            bottom: -12.2px;
+            left: 0px;
+            transform: rotate(-90deg);
+        }
+
+        transition: all 0.2s ease;
+
+        svg:nth-child(1) {
+            transition: all 0.2s ease;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            padding: 10px 60px;
+
+            svg:nth-child(1) {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .ts_main-content {
+        transition: all 0.3s ease;
+        // padding: 0 50px;
+
+        h2 {
+            text-transform: uppercase;
+            // font-size: calc(3rem + 1.895vw);
+            font-size: clamp(2rem, 5vw, 5rem);
+            font-weight: 400;
+        }
+
+        p {
+            display: none;
+            color: $gray;
+        }
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+            // font-size: 5rem;
+            padding: 10px 70px;
+            // position: relative;
+            // z-index: 1;
+            // border-radius: 10px 0 0 10px;
+
+            p {
+                display: inline;
+                transition: all 0.3s ease;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.plus-play {
+    svg {
+        transition: all 0.28s ease;
+
+        &:hover {
+            transform: rotate(0.25turn);
+        }
+    }
+}

@@ -1,4 +1,4 @@
-const secondSec = document.querySelector("#second-section");
+const secondSec = document.querySelector("#S2");
 secondSec.classList.add("second-section");
 secondSec.innerHTML = `
 <h1 class="main-content d-none d-md-inline text-nowrap" id="ss_main-content" style="z-index: 100;">
@@ -109,7 +109,7 @@ function handleHorizontalScroll(containerSelector, sectionSelector, offset) {
   }
 }
 
-handleHorizontalScroll(".second-section", "#ss_main-content", "400");
+handleHorizontalScroll("#S2", "#ss_main-content", "400");
 
 
 document.addEventListener("DOMContentLoaded", function () {

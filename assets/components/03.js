@@ -1,4 +1,4 @@
-const thirdSec = document.querySelector("#third-section")
+const thirdSec = document.querySelector("#S3")
 thirdSec.classList.add('third-section','d-none','d-md-block')
 thirdSec.innerHTML = `
 <div class="container">
@@ -125,7 +125,7 @@ take closer
   </div>
 </div>
 </div>`
-let mobile = document.querySelector("#third-section-m")
+let mobile = document.querySelector("#S3-m")
 mobile.classList.add('third-section', 'd-md-none')
 mobile.innerHTML = `
 <div class="container">

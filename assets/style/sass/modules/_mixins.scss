@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 @mixin black-section {
   width: 99vw;
   color: $white;
@@ -66,4 +68,59 @@
   position: fixed;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
+}
+
+@mixin skill-global($bg-color: #3e3e3e, $text-color: $white) {
+  background-color: $bg-color;
+  color: $text-color;
+  width: 80%;
+  padding: 2.3rem 2.3rem 1.5rem 2.3rem;
+  overflow: hidden;
+  border-radius: 3.5rem;
+}
+
+@mixin button {
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+
+  border: 1px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    // border-radius: 1rem;
+  }
+
+  &:hover {
+    color: rgb(0, 0, 0);
+  }
+
+  &:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  &:active {
+    top: 2px;
+  }
 }

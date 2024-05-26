@@ -1,4 +1,4 @@
-const Sec = document.querySelector("#sixth-section");
+const Sec = document.querySelector("#S6");
 Sec.classList.add('sixth-section', 'py-5', 'd-none', 'd-md-block');
 Sec.innerHTML = `
 <div class="container-xxl">
@@ -64,7 +64,7 @@ Sec.innerHTML = `
 </div>
 </div>`
 
-let mobile = document.querySelector("#sixth-section-m")
+let mobile = document.querySelector("#S6-m")
 mobile.classList.add("d-md-none")
 mobile.innerHTML = `
 <div class="container mt-7" >

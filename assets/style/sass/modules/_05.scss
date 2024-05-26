@@ -1,0 +1,159 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.fifth-section {
+    @include black-section();
+    // padding-top: 60vh;
+    padding-bottom: 10vh;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+
+    h1 {
+        // font: 600 5rem "Chakra Petch";
+        // padding: 0 50px;
+        // background-color: $white;
+        // color: $black;
+        // display: inline-block;
+        // border-radius: 0 10px 10px 0;
+        @include title();
+    }
+
+    .container {
+        .work-hover {
+            background-color: $black;
+            opacity: 0;
+            // z-index: 1;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s ease-in 0.2s;
+
+            &:hover {
+                opacity: 1;
+                transition: opacity 0s;
+            }
+        }
+
+        @mixin work-hover-wrapper {
+            width: 101%;
+            height: 101%;
+            z-index: 10;
+            position: absolute;
+            display: grid;
+            z-index: 0;
+        }
+
+        @mixin work-hover {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 2rem;
+            // border: 8px solid $white;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .main-work {
+            @include work-hover();
+            aspect-ratio: 16/8;
+
+            .work-hover-wrapper {
+                @include work-hover-wrapper();
+                grid-template-columns: repeat(17, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+            }
+        }
+
+        .more-work {
+            // background-color: $gray;
+            border: #ffffff62 1.1px solid;
+            width: 100%;
+            display: flex !important;
+
+            // justify-content: center;
+            // align-items: center;
+            // height: 100%
+            svg {
+                transition: transform 1.4s ease-in-out;
+                margin: auto !important;
+            }
+
+            svg:hover {
+                transform: rotate(360deg);
+            }
+
+            p {
+                font: 500 1.8rem "Chakra Petch", sans-serif;
+                color: $white !important;
+            }
+        }
+
+        .side-work {
+            @include work-hover();
+            aspect-ratio: 16/9;
+
+            .work-hover-wrapper {
+                @include work-hover-wrapper();
+                grid-template-columns: repeat(9, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
+        }
+
+        .work-des {
+            &:hover a span {
+                width: 100%;
+            }
+
+            a {
+                color: $white;
+
+                span {
+                    transition: all 0.2s ease-in;
+                    display: block;
+                    background-color: $white;
+                    width: 0%;
+                    height: 2px;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+
+    .fifth-transition {
+        background-color: $white;
+        width: 40vw;
+        height: 100px;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        border-radius: 10px 0 0 0;
+
+        svg:nth-child(1) {
+            position: absolute;
+            bottom: -1px;
+            left: -13px;
+            transform: rotate(90deg);
+        }
+
+        svg:nth-child(2) {
+            position: absolute;
+            top: -12.4px;
+            right: 0px;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.fs-marquee {
+    background-color: $black;
+    border-radius: 10px !important;
+    overflow: hidden;
+    padding: 50px 0;
+    margin: 10px 8px;
+    color: $white;
+    white-space: nowrap;
+}

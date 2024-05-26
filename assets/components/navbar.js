@@ -8,12 +8,24 @@ nav.innerHTML = `
   <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
 </svg>
 <ul>
-  <li class="mb-3">
+  <li class="mb-2">
     <a href="#" class="pointer-none" id="toHome">Home</a>
     <div></div>
   </li>
-  <li class="mb-3">
+  <li class="mb-2">
+    <p class="m-0" id="toAbout">About</p>
+    <div></div>
+  </li>
+  <li class="mb-2">
     <p class="m-0" id="toEdu">Education</p>
+    <div></div>
+  </li>
+  <li class="mb-2">
+    <p class="m-0" id="toPro">Projects</p>
+    <div></div>
+  </li>
+  <li class="mb-2">
+    <p class="m-0" id="toSkill">Skill</p>
     <div></div>
   </li>
   <li>
@@ -100,7 +112,7 @@ let bc = document.querySelector(".burger-body");
 
   // SOUND
 
-  let sound = new Audio("assets/audio/sound.mp3");
+  let sound = new Audio("assets/audio/sound1.mp3");
   sound.loop = true;
   const soundButton = document.querySelector(".sound-bar-wrapper");
 

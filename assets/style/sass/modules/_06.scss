@@ -1,0 +1,48 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.sixth-section {
+    padding-top: 30vh !important;
+    background-color: $white;
+
+    h1 {
+        font: $title-font;
+    }
+
+    .skill-slider {
+        display: flex;
+        width: 350%;
+
+        column-gap: 5rem;
+
+        .skill {
+            img {
+                max-width: 300px;
+                aspect-ratio: 1/1;
+                border-radius: 100%;
+            }
+
+            p {
+                font: 400 2.4rem "Chakra Petch", sans-serif;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: 4rem;
+                margin: 0;
+            }
+        }
+
+        .skill:nth-child(2) {
+            @include skill-global($skillcolor1);
+        }
+
+        .skill:nth-child(3) {
+            @include skill-global($skillcolor2);
+        }
+
+        .skill:nth-child(4) {
+            @include skill-global($skillcolor3, $black);
+        }
+    }
+}

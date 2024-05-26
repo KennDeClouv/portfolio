@@ -1,5 +1,5 @@
-const eduSec = document.querySelector("#education-section")
-eduSec.classList.add('fourth-section', 'd-none', 'd-md-flex', 'flex-column', 'pb-5');
+const eduSec = document.querySelector("#S4")
+eduSec.classList.add('fourth-section', 'd-none', 'd-md-flex', 'flex-column');
 eduSec.innerHTML = `
 <h1 class="fs_title">
 EDUCATION
@@ -135,7 +135,7 @@ EDUCATION
 </h3>
 </div>`
 
-let mobile = document.querySelector("#edu-m")
+let mobile = document.querySelector("#S4-m")
 mobile.classList.add("d-md-none")
 mobile.innerHTML = `
 <div class="container text-light">
@@ -179,18 +179,6 @@ mobile.innerHTML = `
 </div>`
 
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-ScrollTrigger.normalizeScroll(true);
-
-let smoother = ScrollSmoother.create({
-  wrapper: "#smooth-wrapper",
-  content: "#smooth-content",
-  smooth: 2,
-  normalizeScroll: true,
-  effects: true,
-  smoothTouch: 2,
-});
 
 const tl = gsap.timeline({
   scrollTrigger: {

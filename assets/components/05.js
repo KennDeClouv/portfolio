@@ -1,4 +1,4 @@
-const fifSec = document.querySelector("#fifth-section")
+const fifSec = document.querySelector("#S5")
 fifSec.classList.add('fifth-section', 'd-none', 'd-md-block')
 fifSec.innerHTML = `
 <div class="container d-none d-md-block">
@@ -320,7 +320,7 @@ fifSec.innerHTML = `
 </div>
 </div>`
 
-let mobile = document.querySelector("#fifth-section-m")
+let mobile = document.querySelector("#S5-m")
 mobile.classList.add('d-md-none')
 mobile.innerHTML = `
 <div class="container mt-15 text-light">

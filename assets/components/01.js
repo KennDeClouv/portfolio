@@ -1,4 +1,4 @@
-const mainSec = document.querySelector("#main-section");
+const mainSec = document.querySelector("#S1");
 mainSec.classList.add("main-section")
 mainSec.innerHTML = `
 <div class="container-">

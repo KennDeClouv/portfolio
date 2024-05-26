@@ -1,4 +1,4 @@
-const sec = document.querySelector("#contact-section")
+const sec = document.querySelector("#S7")
 sec.classList.add("seventh-section")
 sec.innerHTML = `
 <div class="container">
@@ -29,6 +29,9 @@ sec.innerHTML = `
                 style="height: 150px"></textarea>
               <label for="floatingTextarea2">Comments</label>
             </div>
+          </div>
+          <div class="mt-4">
+            <div class="btn">Submit</div>
           </div>
         </div>
       </form>

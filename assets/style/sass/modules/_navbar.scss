@@ -1,0 +1,377 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.top {
+    z-index: 10000000000000;
+
+    //   position: fixed;
+    nav {
+        background-color: $white;
+        // width: 100px;
+        // height: 40px;
+        padding: 20px 40px 20px 100px;
+        transition: padding 0.4s ease;
+
+        &:hover {
+            padding: 20px 40px 20px 120px;
+        }
+
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        border-radius: 0 0 0 10px;
+
+        // mix-blend-mode: difference;
+        svg:nth-child(1) {
+            position: absolute;
+            top: 8px;
+            left: -13px;
+        }
+
+        svg:nth-child(2) {
+            position: absolute;
+            bottom: -13px;
+            right: 8px;
+        }
+
+        .frame-svg {
+            position: fixed;
+            left: 8px;
+            top: 7.4px;
+            transform: rotate(270deg);
+        }
+
+        .frame-svg-r {
+            position: fixed;
+            right: 8px;
+            bottom: 7.4px;
+            transform: rotate(90deg);
+        }
+
+        .frame-svg-b {
+            position: fixed;
+            left: 7.4px;
+            bottom: 8px;
+            transform: rotate(180deg);
+        }
+
+        .frame {
+            width: 100vw;
+            height: 8px;
+            background-color: $white;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .frame-r {
+            width: 8px;
+            height: 100vh;
+            background-color: $white;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        .frame-b {
+            width: 100vw;
+            height: 8px;
+            background-color: $white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .frame-l {
+            width: 8px;
+            height: 100vh;
+            background-color: $white;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: $white;
+            border-radius: 0 0 10px 0;
+            position: fixed;
+            top: -100px;
+            left: -100px;
+            transition: top 0.2s ease-in-out 0.2s, left 0.2s ease-in-out 0.2s,
+                width 0.2s ease-in 0.2s, height 0.2s ease-in 0.2s;
+            display: flex;
+
+            & svg:nth-child(3) {
+                position: absolute;
+                bottom: -12.2px;
+                left: 8px;
+                transform: rotate(-90deg);
+            }
+
+            & svg:nth-child(2) {
+                position: absolute;
+                top: 7.4px;
+                right: -13px;
+                transform: rotate(-90deg);
+            }
+
+            &:hover {
+                width: 110px;
+                height: 200px;
+            }
+        }
+
+        .logo-active {
+            top: 0;
+            left: 0;
+        }
+
+        .logo-zull {
+            color: $black;
+            font-family: "Chakra Petch";
+            font-size: 2.125rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 93.769%;
+            text-transform: uppercase;
+            /* 1.99256rem */
+
+            span:nth-child(2) {
+                color: $black;
+                letter-spacing: 0.21625rem;
+            }
+        }
+
+        &:hover .burger div {
+            opacity: 0.6;
+        }
+
+        & div:nth-child(1) {
+            width: 75%;
+            margin-left: auto;
+            // animation: bounce-nav .8s ease-in-out;
+        }
+
+        & div:nth-child(2) {
+            width: 60%;
+            margin-left: auto;
+            // animation: bounce-nav .8s ease-in-out;
+        }
+
+        &:hover .burger div {
+            width: 100%;
+            // animation: bounce-nav .8s ease-in-out;
+        }
+    }
+
+    .burger {
+        /* z-index: 1000; */
+        width: 75px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s linear;
+        gap: 8px;
+        cursor: pointer;
+
+        & div {
+            background-color: $black;
+            // mix-blend-mode: difference;
+            transition: all 0.2s ease-in-out;
+            // animation: bounce-nav .8s ease-in-out;
+            border-radius: 10px;
+            height: 6px;
+        }
+
+        @keyframes bounce-nav {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                // transform: translateX(0);
+                // transform: scaleX(1);
+                width: 100%;
+            }
+
+            40% {
+                // transform: translateX(-30px);
+                // transform: scaleX(1.5);
+                width: 130%;
+            }
+
+            60% {
+                // transform: translateX(-15px);
+                // transform: scaleX(1.3);
+                width: 115%;
+            }
+        }
+    }
+
+    .burger-body {
+        position: fixed;
+        height: 100vh;
+        /* width: 50%; */
+        top: 0;
+        right: 0;
+        background-color: $white;
+        mix-blend-mode: normal;
+        transform: translate(100%);
+        transition: all 0.4s ease-in-out;
+        padding: 100px 100px 0 100px;
+
+        ul li div {
+            position: relative;
+            top: -35px;
+            left: -7px;
+            width: 0px;
+            height: 20px;
+            background-color: #c0c0c0;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        & ul li:hover div {
+            width: 50%;
+        }
+
+        ul li p,
+        ul li a {
+            font-size: 1.5rem;
+            color: $black;
+            font-weight: 600;
+        }
+
+        svg:nth-child(1) {
+            position: absolute;
+            top: 8px;
+            left: -12.2px;
+        }
+
+        svg:nth-child(2) {
+            position: absolute;
+            bottom: 8px;
+            left: -12.2px;
+            transform: rotate(90deg);
+        }
+    }
+
+    .burger-body.active {
+        transform: translate(0%);
+    }
+
+    @keyframes wave {
+        0% {
+            transform: scaleY(1);
+        }
+
+        // 25% {
+        //   transform: scaleY(.2);
+        // }
+
+        50% {
+            transform: scaleY(2.6);
+        }
+
+        100% {
+            transform: scaleY(1);
+        }
+    }
+
+    .sound-bar-wrapper {
+        background-color: $white;
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        right: 8px;
+        bottom: 30px;
+        border-radius: 10px 0 0 10px;
+        display: flex;
+        gap: 1.5px;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            background-color: $black;
+            width: 3.2px;
+            height: 5px;
+        }
+
+        &.on div:nth-child(1) {
+            animation: wave 1.5s linear infinite;
+        }
+
+        &.on div:nth-child(2) {
+            animation: wave 1.5s linear infinite 0.4s;
+        }
+
+        &.on div:nth-child(3) {
+            animation: wave 1.5s linear infinite 0.8s;
+        }
+
+        &.on div:nth-child(4) {
+            animation: wave 1.5s linear infinite 1.2s;
+        }
+
+        svg:nth-child(5) {
+            position: absolute;
+            top: -12.2px;
+            right: 0;
+            transform: rotate(90deg);
+        }
+
+        svg:nth-child(6) {
+            position: absolute;
+            bottom: -12.2px;
+            right: 0;
+        }
+
+        transform: translateX(110%);
+        transition: transform 0.4s ease;
+
+        &.active {
+            transform: translateX(0%);
+        }
+
+        &.on:hover {
+            #soundOnText {
+                // display: block;
+                opacity: 1;
+            }
+        }
+
+        &.off:hover {
+            #soundOffText {
+                // display: block;
+                opacity: 1;
+            }
+        }
+
+        #soundOnText,
+        #soundOffText {
+            // transition: all .2s ease;
+            transition: all 0.2s ease;
+            // display: none;
+            opacity: 0;
+            position: absolute;
+            top: 15%;
+            left: -30px;
+            color: $gray;
+        }
+    }
+}
+
+.back-top {
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+    border-radius: 10px;
+    background-color: $black;
+    padding: 10px;
+    // display: block;
+    // padding: 20px;
+    // width: 40px;
+    // height: 40px;
+}

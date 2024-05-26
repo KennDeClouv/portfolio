@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+.second-section {
+    color: $black;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 45px;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font: $second-section-font;
+        font-size: clamp(2rem, 14vw, 10rem);
+    }
+}

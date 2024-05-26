@@ -1,0 +1,101 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.fourth-section {
+    padding-bottom: 60vh;
+    @include black-section();
+    // text-align: center;
+
+    // h1 {
+    //   color: $black;
+    //   background-color: $white;
+    // }
+
+    .fs_title {
+        color: $black;
+        background-color: $white;
+        // font-size: calc(3rem + 5vw);
+        font-size: clamp(2rem, 5vw, 8rem);
+        // display: inline;
+        position: relative;
+        text-align: center;
+        padding: 20px 0px;
+
+        // @mixin fs-title($l: 0, $r: 0, $rotate: 0deg) {
+        @mixin fs-title($rotate: 0deg, $p: b, $rl: l) {
+            position: absolute;
+            transform: rotate($rotate);
+
+            @if $p ==t {
+                top: -12px;
+            }
+
+            @else {
+                bottom: -12px;
+            }
+
+            @if $rl ==r {
+                right: 0;
+            }
+
+            @else {
+                left: -0.8px;
+            }
+        }
+
+        svg:nth-child(1) {
+            @include fs-title(90deg, t, r);
+        }
+
+        svg:nth-child(2) {
+            @include fs-title(0deg, b, r);
+        }
+
+        svg:nth-child(3) {
+            @include fs-title(180deg, t);
+        }
+
+        svg:nth-child(4) {
+            @include fs-title(-90deg);
+        }
+    }
+
+    .fs-main {
+        // padding: 0 20px;
+
+        .row {
+            .fs-main-hover {
+                border-image: url("../../img/frame1.png") 150 / 89px;
+                // margin: 0 10px;
+                transition: opacity 0.3s ease;
+                // opacity: 0;
+                width: calc(100% / 12 * 2.5);
+                height: calc(100% / 12 * 2.5);
+                // height: calc();
+                aspect-ratio: 1/1;
+            }
+
+            .fs-main-content {
+                padding: 20px 40px;
+                border-image: url("../../img/frame1.png") 150 / 89px;
+
+                h1 {
+                    font-size: calc(3rem + 3vw);
+                    font-weight: 900;
+                }
+
+                div.hr {
+                    width: 100%;
+                    height: 3px;
+                    background-color: $white;
+                    margin: 10px;
+                }
+
+                p,
+                h5 {
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}
