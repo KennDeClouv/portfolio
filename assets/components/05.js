@@ -17,236 +17,32 @@ fifSec.innerHTML = `
 </div>
 <div class="container">
 <a href="https://github.com" target="_blank" class="mt-5 main-work" id="link-click-hover">
-  <div class="work-hover-wrapper d-none d-md-grid">
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
-    <div class="work-hover"></div>
+  <div class="work-hover-wrapper d-none d-md-grid" id="main-hover-wrapper">
   </div>
-  <img src="./assets/img/main-work.png" alt="" />
+  <img src="./assets/img/main-work.png" alt="" data-speed="0.9" style="height:115%" />
 </a>
+<div class="work-des mt-3 d-flex justify-content-between">
+<a href="https://sisdps.com">Main work<span></span></a>
+<h6>2024</h6>
+</div>
 <div class="mt-4 row">
   <div class="col-12 col-md-6 mt-1">
-    <div class="side-work" id="link-click-hover">
-      <div class="work-hover-wrapper d-none d-md-grid">
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
+    <a href="https://sisdps.com" target="_blank" class="side-work" id="link-click-hover">
+      <div class="work-hover-wrapper d-none d-md-grid" id="side-hover-wrapper">
       </div>
-      <img src="./assets/img/medina-work.png" alt="" />
-    </div>
+      <img src="./assets/img/medina-work.png" alt="" class="mb-5" data-speed="0.9" style="height:110%"/>
+    </a>
     <div class="work-des mt-3 d-flex justify-content-between">
       <a href="https://sisdps.com">Medina residence web project <span></span></a>
       <h6>2023</h6>
     </div>
   </div>
   <div class="col-12 col-md-6 mt-1">
-    <div class="side-work" id="link-click-hover">
-      <div class="work-hover-wrapper d-none d-md-grid">
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
+    <a href="https://pioneercnc.id" target="_blank" class="side-work" id="link-click-hover">
+      <div class="work-hover-wrapper d-none d-md-grid" id="side-hover-wrapper">
       </div>
-      <img src="./assets/img/pioneer-work.png" alt="" />
-    </div>
+      <img src="./assets/img/pioneer-work.png" alt="" class="mb-5" data-speed="0.9" style="height:110%"/>
+    </a>
     <div class="work-des mt-3 d-flex justify-content-between">
       <a href="https://pioneercnc.id" target="_blank">Pioneer project<span></span></a>
       <h6>2023</h6>
@@ -255,49 +51,13 @@ fifSec.innerHTML = `
 </div>
 <div class="mt-4 row">
   <div class="col-12 col-md-6 mt-1">
-    <div class="side-work" id="link-click-hover">
-      <div class="work-hover-wrapper d-none d-md-grid">
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
-        <div class="work-hover"></div>
+    <a href="https://instagram.com/@averroes.is" target="_blank" class="side-work" id="link-click-hover">
+      <div class="work-hover-wrapper d-none d-md-grid" id="side-hover-wrapper">
       </div>
-      <img src="./assets/img/media-work.png" alt="" />
-    </div>
+      <img src="./assets/img/media-work.png" alt="" class="mb-5" data-speed="0.9" style="height:110%"/>
+    </a>
     <div class="work-des mt-3 d-flex justify-content-between">
-      <a href="https://sisdps.com">School media admin<span></span></a>
+      <a href="https://instagram.com/@averroes.is">School media admin<span></span></a>
       <h6>2023</h6>
     </div>
   </div>
@@ -326,41 +86,41 @@ mobile.innerHTML = `
 <div class="container mt-15 text-light">
 <h3 class="fs-4 opacity-50">works</h3>
 <h2 class="fs-12">PROJECTS</h2>
-<div class="mb-2 mt-6">
+<a href="https://" class="text-light mb-3 mt-6">
   <img src="assets/img/main-work.png" alt="" class="w-100 rounded-4">
   <div class="d-flex justify-content-between mt-1">
     <p>Main work</p>
     <p>2024</p>
   </div>
-</div>
+</a>
 
-<div class="mb-2">
+<a href="https://sisdps.com" class="text-light mb-3">
   <img src="assets/img/medina-work.png" alt="" class="w-100 rounded-4 mb-3">
   <div class="d-flex justify-content-between mt-1">
     <p>Medina residence</p>
     <p>2023</p>
   </div>
-</div>
-<div class="mb-2">
+</a>
+<a href="https://pioneercnc.id" class="text-light mb-3">
   <img src="assets/img/pioneer-work.png" alt="" class="w-100 rounded-4 mb-3">
   <div class="d-flex justify-content-between mt-1">
     <p>Pioneer cnc</p>
     <p>2023</p>
   </div>
-</div>
-<div class="mb-2">
+</a>
+<a href="https://instagram.com/@averroes.is" class="text-light mb-3">
   <img src="assets/img/media-work.png" alt="" class="w-100 rounded-4 mb-3">
   <div class="d-flex justify-content-between mt-1">
     <p>School content</p>
     <p>2024</p>
   </div>
-</div>
-<div class="mb-8">
+</a>
+<a href="https://" class="text-light mb-8">
   <img src="assets/img/main-work.png" alt="" class="w-100 rounded-4 mb-3">
   <div class="d-flex justify-content-between mt-1">
     <p>see another work</p>
   </div>
-</div>
+</a>
 </div>
 <div class="d-flex mb-4">
 <div class="mx-auto plus-play">
@@ -376,3 +136,27 @@ mobile.innerHTML = `
   </svg>
 </div>
 </div>`
+
+let block = document.createElement("div")
+block.classList.add("work-hover")
+
+let mainWorkBlockLength = 17 * 8;
+let sideWorkBlockLength = 9 * 5;
+const mainn = document.querySelector("#main-hover-wrapper")
+const side = document.querySelectorAll("#side-hover-wrapper")
+
+mainn.appendChild(block)
+
+for (let i = 0; i < mainWorkBlockLength; i++) {
+  let newBlock = block.cloneNode(true);
+  mainn.appendChild(newBlock);
+}
+
+side.forEach(e => {
+  for (let i = 0; i < sideWorkBlockLength; i++) {
+    let newBlock = block.cloneNode(true);
+    e.appendChild(newBlock);
+  }
+});
+
+console.log(mainWorkBlockLength)

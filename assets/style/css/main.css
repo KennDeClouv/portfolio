@@ -11,6 +11,7 @@
   font-family: "Chakra Petch", sans-serif;
   list-style: none;
   text-decoration: none !important;
+  cursor: none !important;
 }
 
 html {
@@ -436,7 +437,7 @@ html {
   display: grid;
   z-index: 0;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 .fifth-section .container .work-des:hover a span {
   width: 100%;

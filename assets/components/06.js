@@ -67,7 +67,7 @@ Sec.innerHTML = `
 let mobile = document.querySelector("#S6-m")
 mobile.classList.add("d-md-none")
 mobile.innerHTML = `
-<div class="container mt-7" >
+<div class="container mt-7 mb-6" >
 <h1 class="m-0 ms-2 fs-18" data-speed="1.09">SKILL</h1>
 <h1 class="m-0 ms-2 fs-10 opacity-50" data-speed="1.12">what can i do </h1>
 <div class="rounded-4 p-3 mt-4 text-light" style="background-color: #222831;">

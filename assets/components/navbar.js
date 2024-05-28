@@ -97,7 +97,7 @@ nav.innerHTML = `
 
 
 // BURGER TOGGLE
-let ac = document.querySelector("#nav");
+let ac = document.querySelector(".burger");
 let bc = document.querySelector(".burger-body");
 
   ac.addEventListener("click", () => {

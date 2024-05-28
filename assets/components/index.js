@@ -1,5 +1,5 @@
 import "./00.js";
-// import "./loader.js";
+import "./loader.js";
 import "./01.js";
 import "./02.js";
 import "./03.js";
