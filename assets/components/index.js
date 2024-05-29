@@ -1,5 +1,4 @@
 import "./00.js";
-import "./loader.js";
 import "./01.js";
 import "./02.js";
 import "./03.js";
@@ -9,6 +8,7 @@ import "./06.js";
 import "./07.js";
 import "./navbar.js";
 import "./footer.js";
+// import "./loader.js";
 import "./cursor.js";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -38,3 +38,4 @@ navigates.forEach((navigate, index) => {
     });
 });
 
+console.clear()

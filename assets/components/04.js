@@ -124,14 +124,14 @@ EDUCATION
 </div>
 <div style="margin-top: 15vh;">
 <h3 style="text-transform: uppercase;"><span
-    style="background-color: #fff;color: #212121;border-radius: 10px;padding: 4px 10px;margin-left: 30px;">10
+    style="background-color: #fff;color: #212121;border-radius: 10px;padding: 4px 10px;margin-left: 30px;">12
     Years</span></span>
   &nbsp;education &nbsp;<span
     style="border-radius: 10px;padding: 4px 10px;background-color: #c9c9c9;color: #212121;">20+</span>&nbsp;
   <span
     style="border-radius: 10px;border: 1px #fff solid;padding: 4px 10px;position: relative;">achievment
     <span
-      style="border-radius: 100%;background-color: #fff;position: absolute;top: -15px;right: -15px;color: #212121; font-size: 1rem;width: 30px;height: 30px;display: flex; justify-content: center;align-items: center;">31+</span></span>
+      style="border-radius: 100%;background-color: #fff;position: absolute;top: -15px;right: -15px;color: #212121; font-size: 1rem;width: 30px;height: 30px;display: flex; justify-content: center;align-items: center;">21+</span></span>
 </h3>
 </div>`
 

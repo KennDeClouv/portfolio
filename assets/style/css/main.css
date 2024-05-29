@@ -396,7 +396,7 @@ html {
   z-index: 10;
   position: absolute;
   display: grid;
-  z-index: 0;
+  z-index: 1000;
   grid-template-columns: repeat(17, 1fr);
   grid-template-rows: repeat(8, 1fr);
 }
@@ -435,7 +435,7 @@ html {
   z-index: 10;
   position: absolute;
   display: grid;
-  z-index: 0;
+  z-index: 1000;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(5, 1fr);
 }
@@ -991,15 +991,6 @@ footer {
   top: 15%;
   left: -30px;
   color: #9b9b9b;
-}
-
-.back-top {
-  position: fixed;
-  bottom: 8px;
-  left: 8px;
-  border-radius: 10px;
-  background-color: #121212;
-  padding: 10px;
 }
 
 .cursor {

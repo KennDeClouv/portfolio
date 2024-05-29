@@ -39,7 +39,7 @@
             z-index: 10;
             position: absolute;
             display: grid;
-            z-index: 0;
+            z-index: 1000;
         }
 
         @mixin work-hover {

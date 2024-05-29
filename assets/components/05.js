@@ -69,13 +69,9 @@ fifSec.innerHTML = `
           <path d="M45.5 4V87M4 45.5H87" stroke="#ffffff" stroke-width="8" stroke-linecap="round"
             stroke-linejoin="round" />
         </svg>
-        <p class="mt-3">MORE WORK</p>
+        <p class="mt-3">MORE WORKS</p>
       </div>
     </div>
-    <!-- <div class="work-des mt-3 d-flex justify-content-between">
-      <a href="https://sisdps.com">School media admin<span></span></a>
-      <h6>2023</h6>
-    </div> -->
   </div>
 </div>
 </div>`
@@ -115,12 +111,6 @@ mobile.innerHTML = `
     <p>2024</p>
   </div>
 </a>
-<a href="https://" class="text-light mb-8">
-  <img src="assets/img/main-work.png" alt="" class="w-100 rounded-4 mb-3">
-  <div class="d-flex justify-content-between mt-1">
-    <p>see another work</p>
-  </div>
-</a>
 </div>
 <div class="d-flex mb-4">
 <div class="mx-auto plus-play">
@@ -158,5 +148,3 @@ side.forEach(e => {
     e.appendChild(newBlock);
   }
 });
-
-console.log(mainWorkBlockLength)
