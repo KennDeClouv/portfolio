@@ -12,13 +12,16 @@ sec.innerHTML = `
   <div class="col-12 col-md-6" data-speed="1.1">
     <div class="contact-box" style="--focus-ring: 254, 254, 254;">
       <h3>Your data</h3>
-      <form action="" class="mt-4">
-        <div class="form-floating opacity-50" id="inputField">
-          <input type="name" class="form-control" id="floatingName" placeholder="Name">
+      <form action="https://formsubmit.co/zuuliziluuz@gmail.com" method="POST" />
+      <input type="hidden" name="_next" value="https://zulldevv.github.io/portfolio/thanks">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+        <div class="form-floating opacity-50 mt-4" id="inputField">
+          <input type="name" class="form-control" id="floatingName" placeholder="Name" name="name">
           <label for="floatingName">Name*</label>
         </div>
         <div class="form-floating mt-3 opacity-50" id="inputField">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
           <label for="floatingInput">Email address*</label>
         </div>
         <div class="mt-4">
@@ -26,12 +29,12 @@ sec.innerHTML = `
           <div class="mt-4">
             <div class="form-floating opacity-50" id="inputField">
               <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                style="height: 150px"></textarea>
+                style="height: 150px" name="comments"></textarea>
               <label for="floatingTextarea2">Comments</label>
             </div>
           </div>
           <div class="mt-4">
-            <div class="btn">Submit</div>
+            <button type="submit" class="btn">Submit</button>
           </div>
         </div>
       </form>

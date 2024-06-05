@@ -27,7 +27,7 @@ let images = document.images;
 let loaded = 0;
 let filesLength = images.length;
 
-console.log(filesLength, images);
+
 
 let loaderHTML = document.querySelector(".loader");
 

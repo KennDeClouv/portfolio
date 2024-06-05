@@ -1,0 +1,112 @@
+section {
+  background-color: #121212;
+  color: #fefefe;
+}
+
+.top {
+  z-index: 1000;
+}
+.top div,
+.top svg {
+  background-color: #fefefe;
+  position: absolute;
+  z-index: 10;
+}
+.top div:nth-child(1) {
+  width: 100vw;
+  height: 8px;
+  top: 0;
+  left: 0;
+}
+.top div:nth-child(2) {
+  width: 100vw;
+  height: 8px;
+  bottom: 0;
+  left: 0;
+}
+.top div:nth-child(3) {
+  width: 8px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.top div:nth-child(4) {
+  width: 8px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+}
+.top svg {
+  z-index: 10000;
+}
+.top svg:nth-child(5) {
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+.top svg:nth-child(6) {
+  top: 0;
+  right: 0;
+}
+.top svg:nth-child(7) {
+  bottom: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+.top svg:nth-child(8) {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.cursor {
+  border-radius: 100%;
+  z-index: 1000000000000000000000;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  width: 35px;
+  height: 35px;
+  background-color: #fefefe;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.cursor-outline {
+  border-radius: 100%;
+  z-index: 1000000000000000000000;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  width: 45px;
+  height: 45px;
+  border: #fefefe 3px solid;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.hover {
+  width: 55px;
+  height: 55px;
+}
+
+.hoverO {
+  width: 65px;
+  height: 65px;
+}
+
+.hover-link {
+  width: 75px;
+  height: 75px;
+}
+
+.hover-text {
+  width: 105px;
+  height: 105px;
+}
+
+.hoverO-link {
+  display: none;
+}
+
+/*# sourceMappingURL=thanks.css.map */

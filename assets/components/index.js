@@ -8,7 +8,7 @@ import "./06.js";
 import "./07.js";
 import "./navbar.js";
 import "./footer.js";
-import "./loader.js";
+// import "./loader.js";
 import "./cursor.js";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -38,4 +38,9 @@ navigates.forEach((navigate, index) => {
     });
 });
 
-console.clear()
+// console.clear()
+console.log(
+    "%cLook at my github profile",
+    "font-size: 15px; color: #151515; font-weight: bold; background-color: #fff; padding: 5px 20px;border-radius:10px",
+    "https://github.com/zulldevv"
+);

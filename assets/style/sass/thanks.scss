@@ -1,0 +1,114 @@
+@use 'modules/variables' as *;
+@use 'modules/mixins' as *;
+
+section {
+    background-color: $black;
+    color: $white;
+}
+
+.top {
+    z-index: 1000;
+
+    div,
+    svg {
+        background-color: $white;
+        position: absolute;
+        z-index: 10;
+    }
+
+    div:nth-child(1) {
+        width: 100vw;
+        height: 8px;
+        top: 0;
+        left: 0;
+    }
+
+    div:nth-child(2) {
+        width: 100vw;
+        height: 8px;
+        bottom: 0;
+        left: 0;
+    }
+
+    div:nth-child(3) {
+        width: 8px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+    div:nth-child(4) {
+        width: 8px;
+        height: 100vh;
+        top: 0;
+        right: 0;
+    }
+
+    svg {
+        z-index: 10000;
+    }
+
+    svg:nth-child(5) {
+        top: 0;
+        left: 0;
+        transform: rotate(-90deg);
+    }
+
+    svg:nth-child(6) {
+        top: 0;
+        right: 0;
+    }
+
+    svg:nth-child(7) {
+        bottom: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    svg:nth-child(8) {
+        bottom: 0;
+        left: 0;
+        transform: rotate(180deg);
+    }
+}
+
+
+.cursor {
+    @include cursor-global();
+    width: 35px;
+    height: 35px;
+    background-color: $white;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.cursor-outline {
+    @include cursor-global();
+    width: 45px;
+    height: 45px;
+    border: $white 3px solid;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.hover {
+    width: 55px;
+    height: 55px;
+}
+
+.hoverO {
+    width: 65px;
+    height: 65px;
+}
+
+.hover-link {
+    width: 75px;
+    height: 75px;
+}
+
+.hover-text {
+    width: 105px;
+    height: 105px;
+}
+
+.hoverO-link {
+    display: none;
+}
