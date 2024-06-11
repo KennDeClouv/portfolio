@@ -22,7 +22,7 @@ fifSec.innerHTML = `
   <img src="./assets/img/main-work.png" alt="" data-speed="0.9" style="height:115%" />
 </a>
 <div class="work-des mt-3 d-flex justify-content-between">
-<a href="https://sisdps.com">Main work<span></span></a>
+<a href="https://www.figma.com/@zulldevv">Figma design<span></span></a>
 <h6>2024</h6>
 </div>
 <div class="mt-4 row">
@@ -82,10 +82,10 @@ mobile.innerHTML = `
 <div class="container mt-15 text-light">
 <h3 class="fs-4 opacity-50">works</h3>
 <h2 class="fs-12">PROJECTS</h2>
-<a href="https://" class="text-light mb-3 mt-6">
+<a href="https://www.figma.com/@zulldevv" class="text-light mb-3 mt-6">
   <img src="assets/img/main-work.png" alt="" class="w-100 rounded-4">
   <div class="d-flex justify-content-between mt-1">
-    <p>Main work</p>
+    <p>Figma design</p>
     <p>2024</p>
   </div>
 </a>

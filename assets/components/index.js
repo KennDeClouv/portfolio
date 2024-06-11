@@ -8,7 +8,7 @@ import "./06.js";
 import "./07.js";
 import "./navbar.js";
 import "./footer.js";
-// import "./loader.js";
+import "./loader.js";
 import "./cursor.js";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);

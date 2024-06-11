@@ -112,3 +112,8 @@ section {
 .hoverO-link {
     display: none;
 }
+
+.btn{
+    @include button(70%)
+
+}
