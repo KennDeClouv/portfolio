@@ -2,7 +2,7 @@ document.querySelector(".loader-wrapper").innerHTML = `
 <div class="loader">
 <div style="display: flex;height: 100%;width: 100%;justify-content: space-between;">
   <h1 style="font-size: 6rem;" id="DOM">0%</h1>
-  <h1 style="font-size: 6rem; margin-top: auto;" id="MEH">ZULL</h1>
+  <h1 style="font-size: 6rem; margin-top: auto;" id="MEH">KennDeClouv</h1>
 </div>
 <div class="loader-bar">
   <div class="loader-bar-inner"></div>

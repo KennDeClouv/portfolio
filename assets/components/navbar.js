@@ -43,7 +43,6 @@ nav.innerHTML = `
   <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
 </svg>
 <div class="burger">
-  <!-- <h1>HIRE</h1> -->
   <div></div>
   <div></div>
   <div></div>
@@ -75,7 +74,7 @@ nav.innerHTML = `
     <path d="M0 0H6.5H13V6.5V13C13 3.25 9.75 0 0 0Z" fill="#fff" />
   </svg>
   <a href="#" class="logo-zull m-auto">
-    <span>zu</span><br /><span>ll</span>
+    <span>ke</span><br/><span>nn</span>
   </a>
 </div>
 </nav>

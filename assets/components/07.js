@@ -13,7 +13,7 @@ sec.innerHTML = `
     <div class="contact-box" style="--focus-ring: 254, 254, 254;">
       <h3>Your data</h3>
       <form action="https://formsubmit.co/zuuliziluuz@gmail.com" method="POST" />
-      <input type="hidden" name="_next" value="https://zulldevv.github.io/portfolio/thanks">
+      <input type="hidden" name="_next" value="https://kenndeclouv.github.io/portfolio/thanks">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
         <div class="form-floating opacity-50 mt-4" id="inputField">

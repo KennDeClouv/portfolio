@@ -28,14 +28,14 @@ html {
   font-family: fk;
   font-style: normal;
   font-weight: 400;
-  src: url(https://zulldevv.github.io/font/fk.woff2) format("woff2"), url(https://zulldevv.github.io/font/fk.woff) format("woff");
+  src: url(https://kenndeclouv.github.io/font/fk.woff2) format("woff2"), url(https://kenndeclouv.github.io/font/fk.woff) format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: Monorama;
   font-style: normal;
   font-weight: 400;
-  src: url(https://zulldevv.github.io/font/monorama.woff2) format("woff2"), url(https://zulldevv.github.io/font/monorama.woff) format("woff");
+  src: url(https://kenndeclouv.github.io/font/monorama.woff2) format("woff2"), url(https://kenndeclouv.github.io/font/monorama.woff) format("woff");
 }
 .main-section {
   margin: 8px;
@@ -57,7 +57,7 @@ html {
 .main-section .main-content h1 {
   color: #fefefe;
   font: 600 12rem "Chakra Petch", sans-serif;
-  font-size: clamp(2rem, 4rem + 10vw, 12rem);
+  font-size: clamp(2rem, 4rem + 6vw, 8rem);
 }
 .main-section .main-content svg {
   margin-bottom: 1rem;

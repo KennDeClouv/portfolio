@@ -42,5 +42,5 @@ navigates.forEach((navigate, index) => {
 console.log(
     "%cLook at my github profile",
     "font-size: 15px; color: #151515; font-weight: bold; background-color: #fff; padding: 5px 20px;border-radius:10px",
-    "https://github.com/zulldevv"
+    "https://github.com/KennDeClouv"
 );
